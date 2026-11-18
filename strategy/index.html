@@ -470,6 +470,18 @@ html.dialog-fallback-open { overflow: hidden }
 #campaigns { --divider-tile: url('images/artwork/tile-rose.jpg'); --divider-angle: 8deg }
 #research { --divider-tile: url('images/artwork/tile-botanical.jpg') }
 .tinted-note p { max-width: 77ch }
+.work-history { padding-block: clamp(22px, 3vw, 30px) }
+.work-history h2 { margin-bottom: 12px; font-size: clamp(1.45rem, 2.8vw, 2.04rem) }
+.work-history-list { padding: 0; list-style: none }
+.work-history-list li {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) max-content;
+  gap: 4px 18px; align-items: baseline; padding-block: 9px;
+  font-size: .93rem; line-height: 1.4; overflow-wrap: anywhere;
+}
+.work-history-list li + li { border-top: 1px solid var(--line) }
+.work-company { color: var(--wine) }
+.work-role { color: var(--brown) }
+.work-period { color: var(--muted); text-align: end; font-size: .86em }
 .strategy-card-body { gap: 8px; padding: clamp(14px, 1.8vw, 20px) }
 .strategy-card-body h4 { font-size: clamp(1.08rem, 1.7vw, 1.32rem); color: var(--wine) }
 .strategy-card-body p { margin: 0; font-size: .86rem; line-height: 1.58 }
@@ -489,6 +501,11 @@ html.dialog-fallback-open { overflow: hidden }
 .result-metrics .stat { min-height: 80px; padding: 9px 12px }
 .result-metrics .stat-wide { grid-column: 1 / -1 }
 .result-metrics .stat .stat-number { font-size: clamp(1.4rem, 2.5vw, 2.42rem) }
+.result-metrics .stat-breakdown {
+  display: grid; grid-template-columns: max-content minmax(0, 1fr);
+  align-items: center; align-content: center; justify-content: stretch; gap: 5px 8px;
+}
+.stat-breakdown > span { margin: 0; overflow-wrap: anywhere }
 .result-case > .case-details { margin-top: 14px }
 .campaign-feature h4, .project-group-head h4 {
   margin: 0; color: var(--wine); line-height: 1.25; font-size: clamp(1.12rem, 2.1vw, 1.55rem);
@@ -534,6 +551,8 @@ html.dialog-fallback-open { overflow: hidden }
 }
 @media (max-width: 690px) {
   .hero-role { font-size: clamp(2.21rem, 10.4vw, 3.9rem) }
+  .work-history-list li { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 12px }
+  .work-company { grid-column: 1 / -1 }
   .research-feature-grid { grid-template-columns: minmax(0, 1fr) }
   .target-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)) }
   .campaign-art { margin-bottom: 8px }
@@ -542,9 +561,11 @@ html.dialog-fallback-open { overflow: hidden }
 }
 @media (min-width: 901px) {
   .result-case h4 { min-height: 2.52em }
+  .result-case > .label { min-height: 2.8em }
   .result-metrics {
-    min-height: clamp(385px, calc(480px - 7.5vw), 415px);
-    grid-auto-rows: minmax(80px, 1fr);
+    min-height: clamp(290px, calc(435px - 10vw), 345px);
+    grid-auto-rows: minmax(80px, auto);
+    align-content: stretch;
   }
 }
 @media (min-width: 901px) and (max-width: 1000px) {
@@ -560,7 +581,7 @@ html.dialog-fallback-open { overflow: hidden }
     <a class="wordmark" href="#top">Софья Бекета</a>
     <nav aria-label="Навигация">
       <a href="#overview">Компетенции</a>
-      <a href="#experience">Опыт и проекты</a>
+      <a href="#experience">Кейсы и проекты</a>
       <a href="#education">Образование</a>
       <a href="#contact">Контакты <span aria-hidden="true">↗</span></a>
     </nav>
@@ -646,9 +667,35 @@ html.dialog-fallback-open { overflow: hidden }
       </section>
     </div>
 
+    <section class="section work-history" id="work-history" aria-labelledby="work-history-title">
+      <h2 id="work-history-title">Опыт работы</h2>
+      <ol class="work-history-list" role="list">
+        <li>
+          <strong class="work-company">SMIT TATTOO</strong>
+          <span class="work-role">Продвижение в TikTok и Instagram</span>
+          <span class="work-period"><time datetime="2026-05">Май 2026</time> — настоящее время</span>
+        </li>
+        <li>
+          <strong class="work-company">Telegram-каналы</strong>
+          <span class="work-role">Контент-менеджер / PR-специалист</span>
+          <span class="work-period"><time datetime="2023-09">Сентябрь 2023</time> — <time datetime="2026-04">апрель 2026</time></span>
+        </li>
+        <li>
+          <strong class="work-company">ГК ПИК</strong>
+          <span class="work-role">Маркетолог / PR (стажировка)</span>
+          <span class="work-period"><time datetime="2025-07">Июль</time> — <time datetime="2025-10">октябрь 2025</time></span>
+        </li>
+        <li>
+          <strong class="work-company">BARANOVA&amp;LAWGROUP</strong>
+          <span class="work-role">Ассистент PR-специалиста</span>
+          <span class="work-period"><time datetime="2023-08">Август</time> — <time datetime="2023-12">декабрь 2023</time></span>
+        </li>
+      </ol>
+    </section>
+
     <section id="experience" aria-labelledby="experience-title">
       <div class="section experience-intro">
-        <h2 id="experience-title">Опыт и проекты</h2>
+        <h2 id="experience-title">Кейсы и проекты</h2>
         <p>Ниже на примере своих проектов я рассказываю, какие задачи решала, какие подходы использовала и каких результатов достигла. Чтобы подробнее ознакомиться с моим портфолио, нажмите на кнопку под интересующим разделом. Внутри — стратегии, исследования, презентации и примеры работ.</p>
       </div>
 
@@ -761,15 +808,13 @@ html.dialog-fallback-open { overflow: hidden }
         <p class="case-intro">Применяю свои знания на практике: выстраиваю партнёрские коммуникации, организую рекламные интеграции, развиваю личные бренды и управляю контент-командами. Нахожу возможности для привлечения новой аудитории и клиентов без существенных затрат на продвижение.</p>
         <div class="result-cases">
           <article class="result-case blue" aria-labelledby="telegram-case-title">
-            <h4 id="telegram-case-title">Рекламные интеграции и развитие Telegram-каналов</h4>
-            <p class="label">2,5 года опыта</p>
+            <h4 id="telegram-case-title">Рекламные интеграции и развитие 12 Telegram-каналов</h4>
+            <p class="label">2,5 года опыта · Управление командой из 5–7 авторов одновременно</p>
             <div class="case-metrics result-metrics" aria-label="Ключевые результаты">
-              <div class="stat stat-featured"><strong class="stat-number">15–20</strong><span>рекламных интеграций в месяц</span></div>
-              <div class="stat"><strong class="stat-number"><small>До</small> 4 000</strong><span>новых подписчиков с одного размещения</span></div>
-              <div class="stat"><strong class="stat-number">30%+</strong><span>рост охватов в 9 из 12 каналов</span></div>
-              <div class="stat"><strong class="stat-number">5–7</strong><span>авторов под моим управлением</span></div>
-              <div class="stat"><strong class="stat-number">12</strong><span>Telegram-каналов</span></div>
-              <div class="stat"><strong class="stat-number">+40%</strong><span>рост охвата канала об этикете</span></div>
+              <div class="stat stat-featured"><strong class="stat-number">15–20</strong><span>рекламных интеграций ежемесячно</span></div>
+              <div class="stat"><strong class="stat-number"><small>До</small> 4 000</strong><span>новых подписчиков с одного партнёрского размещения</span></div>
+              <div class="stat"><strong class="stat-number">30%+</strong><span>рост охватов в 9 из 12 каналов по моей стратегии</span></div>
+              <div class="stat"><strong class="stat-number">40%</strong><span>рост охвата канала об этикете</span></div>
             </div>
             <details class="case-details">
               <summary class="btn" aria-describedby="telegram-case-title"><span class="closed-label">Подробнее о кейсе</span><span class="open-label">Свернуть описание</span><span class="toggle-icon arrow" aria-hidden="true">↓</span></summary>
@@ -796,12 +841,13 @@ html.dialog-fallback-open { overflow: hidden }
             <div class="case-metrics result-metrics" aria-label="Ключевые результаты">
               <div class="stat stat-featured"><strong class="stat-number">700 <small>тыс. ₽+</small></strong><span>выручки от клиентов из соцсетей</span></div>
               <div class="stat"><strong class="stat-number">0 <small>₽</small></strong><span>рекламного бюджета</span></div>
-              <div class="stat"><strong class="stat-number">5,7 <small>млн</small></strong><span>просмотров в TikTok за 365 дней</span></div>
-              <div class="stat"><strong class="stat-number">4,7 <small>млн</small></strong><span>зрителей в TikTok</span></div>
+              <div class="stat"><strong class="stat-number">5,7 <small>млн</small></strong><span>просмотров в TikTok за 6 месяцев</span></div>
               <div class="stat"><strong class="stat-number">11,3 <small>тыс.</small></strong><span>подписчиков в Instagram</span></div>
               <div class="stat"><strong class="stat-number">56,5 <small>тыс.</small></strong><span>репостов в TikTok</span></div>
-              <div class="stat"><strong class="stat-number">12</strong><span>роликов со 100 тыс.+ просмотров</span></div>
-              <div class="stat"><strong class="stat-number">41</strong><span>ролик с 10 тыс.+ просмотров</span></div>
+              <div class="stat stat-breakdown">
+                <strong class="stat-number">12</strong> <span>роликов со 100 тыс.+ просмотров и</span>
+                <strong class="stat-number">41</strong> <span>ролик с 10 тыс.+ просмотров</span>
+              </div>
             </div>
             <details class="case-details">
               <summary class="btn" aria-describedby="smit-case-title"><span class="closed-label">Подробнее о кейсе</span><span class="open-label">Свернуть описание</span><span class="toggle-icon arrow" aria-hidden="true">↓</span></summary>
@@ -838,7 +884,7 @@ html.dialog-fallback-open { overflow: hidden }
             </details>
           </article>
         </div>
-        <p class="notes">Период статистики TikTok — 15.11.2025–14.11.2026. Выручка — за время ведения аккаунтов, по данным клиента.</p>
+        <p class="notes">На скриншотах TikTok указан отчётный период 15.11.2025–14.11.2026. Выручка — за время ведения аккаунтов, по данным клиента.</p>
       </article>
 
       <article class="section case tile-divider" id="campaigns" aria-labelledby="campaigns-title">
@@ -865,10 +911,10 @@ html.dialog-fallback-open { overflow: hidden }
                 <div class="campaign-targets">
                   <h5>Плановые показатели кампании</h5>
                   <div class="case-metrics target-metrics" aria-label="Ключевые цифры">
-                    <div class="stat"><strong class="stat-number">2,5 <small>млн ₽</small></strong><span>планируемый рекламный бюджет</span></div>
-                    <div class="stat"><strong class="stat-number">27 <small>млн ₽+</small></strong><span>целевая выручка</span></div>
-                    <div class="stat"><strong class="stat-number">5 500+</strong><span>планируемое количество заказов</span></div>
-                    <div class="stat"><strong class="stat-number"><small>До</small> 500 <small>₽</small></strong><span>целевая стоимость заказа</span></div>
+                    <div class="stat"><strong class="stat-number">2,5 <small>млн ₽</small></strong><span>рекламный бюджет</span></div>
+                    <div class="stat"><strong class="stat-number">27 <small>млн ₽+</small></strong><span>выручка</span></div>
+                    <div class="stat"><strong class="stat-number">5 500+</strong><span>количество заказов</span></div>
+                    <div class="stat"><strong class="stat-number"><small>До</small> 500 <small>₽</small></strong><span>стоимость заказа</span></div>
                   </div>
                 </div>
               </article>
