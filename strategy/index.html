@@ -1,0 +1,1265 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Софья Бекета. Маркетинговые и коммуникационные стратегии, позиционирование и исследования. Резюме и портфолио.">
+  <title>Софья Бекета — Strategy &amp; Marketing</title>
+  <link rel="icon" href="images/artwork/pearl-shell.png" type="image/png">
+  <style>
+@font-face {
+  font-family: 'Manrope'; font-style: normal; font-weight: 400 800; font-display: swap;
+  src: url('fonts/manrope-normal-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Manrope'; font-style: normal; font-weight: 400 800; font-display: swap;
+  src: url('fonts/manrope-normal-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Manrope'; font-style: normal; font-weight: 400 800; font-display: swap;
+  src: url('fonts/manrope-normal-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap;
+  src: url('fonts/instrument-serif-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --ink: #302423;
+  --muted: #65564d;
+  --wine: #59172d;
+  --brown: #50302a;
+  --olive: #62692e;
+  --rose: #ae747e;
+  --blush: #f5dce4;
+  --blue: #dce7f5;
+  --paper: #faf6ed;
+  --paper-texture: url('images/textures/paper.jpg');
+  --line: #d8cdbf;
+  --radius: 10px;
+  --sans: 'Manrope', Arial, sans-serif;
+  --serif: 'Instrument Serif', Georgia, serif;
+}
+@supports (background-image: image-set(url('images/textures/paper.webp') type('image/webp'))) {
+  :root {
+    --paper-texture: image-set(
+      url('images/textures/paper.webp') type('image/webp'),
+      url('images/textures/paper.jpg') type('image/jpeg')
+    );
+  }
+}
+* { box-sizing: border-box }
+html { scroll-behavior: smooth }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: linear-gradient(#faf6eedb, #faf6eee8), var(--paper-texture) center top / 760px repeat;
+  background-color: var(--paper);
+  font: 500 16px/1.7 var(--sans);
+}
+a { color: inherit }
+button { font: inherit; color: inherit; cursor: pointer }
+:focus-visible { outline: 3px solid #777734; outline-offset: 4px }
+h1, h2, h3, p, ul, figure, blockquote { margin: 0 }
+h1, h2, h3 { line-height: 1.12 }
+h2, h3 { text-wrap: balance; overflow-wrap: anywhere }
+h2 { font-size: clamp(1.9rem, 4.1vw, 3.3rem); font-weight: 800; letter-spacing: -.055em }
+h3 { font-size: 1.2rem; font-weight: 800; letter-spacing: -.035em }
+p + p { margin-top: .72em }
+img { display: block; max-width: 100%; height: auto }
+strong { font-weight: 800 }
+.wrap { width: min(1180px, calc(100% - 72px)); margin-inline: auto }
+.top {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px 24px;
+  padding: 15px 0; border-bottom: 1px solid var(--line);
+}
+.top nav, .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px }
+.top nav { gap: 10px 22px }
+.top a { font-size: .78rem; font-weight: 750; text-decoration: none }
+.top a:hover { color: var(--wine); text-decoration: underline; text-underline-offset: .24em }
+.top .wordmark { font-size: .84rem; color: var(--wine); white-space: nowrap }
+.hero {
+  display: grid; grid-template-columns: minmax(0, 1.23fr) minmax(0, 1fr);
+  align-items: center; gap: clamp(24px, 5vw, 74px); padding: 51px 0 42px;
+}
+.hero h1 { font-size: clamp(3.5rem, 7.1vw, 6.2rem); font-weight: 800; letter-spacing: -.063em; word-spacing: .048em; color: var(--wine); line-height: .96 }
+.hero-role { margin: .14em 0 .25em; color: var(--wine); font: italic 400 clamp(3rem, 5.7vw, 5.15rem)/.96 var(--serif); letter-spacing: -.027em }
+.hero-facts { margin: 0 0 16px; font-size: clamp(.89rem, 1.4vw, 1.08rem); font-weight: 800; line-height: 1.5 }
+.hero-facts span { display: block }
+.hero-intro { max-width: 60ch; color: var(--ink); font-size: clamp(.95rem, 1.35vw, 1.07rem); margin-bottom: 19px }
+.btn {
+  display: inline-flex; max-width: 100%; min-height: 42px; align-items: center; justify-content: center;
+  gap: 9px; border: 1px solid currentColor; border-radius: 6px; background: transparent; padding: 8px 13px;
+  color: var(--wine); text-decoration: none; font-size: .82rem; font-weight: 800;
+  text-align: left; line-height: 1.35; overflow-wrap: anywhere;
+  transition: background-color 180ms, color 180ms, border-color 180ms;
+}
+.btn:hover, .btn.primary { color: #fff9f0; background-color: var(--wine); border-color: var(--wine) }
+.btn.primary:hover { background-color: #742842; border-color: #742842 }
+.arrow { flex: none; display: inline-block; font-size: 1.02em }
+.portrait {
+  overflow: hidden; position: relative; isolation: isolate; aspect-ratio: 1.03; border-radius: 6px;
+  background: radial-gradient(ellipse at 44% 53%, #ede3cc70, #f8f0de00 66%);
+}
+.portrait-photo {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center bottom; z-index: 1;
+  filter: drop-shadow(0 6px 10px #4a2a2e35);
+}
+.portrait-tile {
+  position: absolute; width: 31%; border-radius: 4px; aspect-ratio: 1; object-fit: cover;
+  box-shadow: 2px 5px 12px #50302a2b; border: 1px solid #47291c2b;
+}
+.portrait-tile:nth-child(1) { top: 10%; left: 5%; transform: rotate(-10deg) }
+.portrait-tile:nth-child(2) { top: 3%; left: 32%; transform: rotate(5deg) }
+.portrait-tile:nth-child(3) { top: 10%; right: 5%; transform: rotate(12deg) }
+.portrait-tile:nth-child(4) { top: 34%; right: 0; transform: rotate(5deg) }
+.portrait-tile:nth-child(5) { top: 38%; left: 1%; transform: rotate(-8deg) }
+.portrait-tile:nth-child(6) { top: 56%; right: 5%; transform: rotate(-11deg) }
+.metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px }
+.metric {
+  display: flex; flex-direction: column; justify-content: center; min-height: 112px; padding: 16px 18px;
+  border-radius: var(--radius); color: #fff9ed; background-color: var(--wine);
+  background-image: linear-gradient(var(--veil),var(--veil)), var(--tile), var(--pigment);
+  background-size: cover; background-position: center; background-blend-mode: normal, soft-light, normal;
+}
+.wine {
+  --veil: #390c1cc4; --tile: url('images/artwork/tile-wine.jpg'); --pigment: url('images/textures/wine.jpg');
+  background-color: var(--wine);
+}
+.brown {
+  --veil: #3a211bcc; --tile: url('images/artwork/tile-floral.jpg'); --pigment: url('images/textures/brown.jpg');
+  background-color: var(--brown);
+}
+.rose {
+  --veil: #efc8c9c7; --tile: url('images/artwork/tile-rose.jpg'); --pigment: url('images/textures/rose.jpg');
+  background-color: var(--rose); color: #43232c;
+}
+.olive {
+  --veil: #30341ac7; --tile: url('images/artwork/tile-olive.jpg'); --pigment: url('images/textures/olive.jpg');
+  background-color: var(--olive);
+}
+.metric-number, .stat-number {
+  display: block; font: 800 clamp(2.2rem, 4.2vw, 3.65rem)/1 var(--sans); letter-spacing: -.07em;
+}
+.metric-number small, .stat-number small {
+  font: 800 .34em/1 var(--sans); letter-spacing: -.025em; white-space: nowrap;
+}
+.metric > span { margin-top: 9px; font-size: .8rem; font-weight: 700; line-height: 1.4 }
+.notes, .note { margin-top: 9px; color: var(--muted); font-size: .77rem; line-height: 1.5 }
+.section { padding: 39px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 12px }
+.section h2 { margin-bottom: 16px }
+.tile-divider { position: relative }
+.tile-divider::after {
+  content: ''; position: absolute; right: clamp(17px, 4vw, 50px); bottom: -15px;
+  width: 31px; aspect-ratio: 1; pointer-events: none;
+  background: var(--divider-tile) center / cover; border: 1px solid #5a3a3047; border-radius: 3px;
+  box-shadow: 0 0 0 5px #f9f5eb, 0 3px 6px #4b2d2338; transform: rotate(var(--divider-angle, -8deg));
+}
+.eyebrow, .label {
+  display: block; color: var(--wine); font-size: .71rem; font-weight: 800; letter-spacing: .076em;
+  text-transform: uppercase; line-height: 1.4;
+}
+.section .eyebrow { margin-bottom: 8px }
+.overview {
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px;
+  margin: 22px 0 0; padding: 0; border: 0;
+}
+.overview-panel { border: 1px solid #bea6a455; padding: 22px 24px; border-radius: var(--radius) }
+.overview h2 { font-size: clamp(1.45rem, 2.8vw, 2.04rem); margin-bottom: 12px }
+.help-panel {
+  border-color: #a5b9ce;
+  color: var(--ink);
+  background: linear-gradient(115deg,#d6e7f5bf,#c7dff2b8), var(--paper-texture) center / 520px;
+  background-color: var(--blue);
+}
+.help-panel strong { color: var(--wine); font-weight: 800 }
+.help-panel .pearl-list { display: block; columns: 2; column-gap: 24px; text-align: left }
+.help-panel .pearl-list li {
+  break-inside: avoid; margin-bottom: 7px; font-size: calc(1rem + 1pt); line-height: 1.55;
+}
+.help-panel .pearl-list li:last-child { margin-bottom: 0 }
+.help-summary { margin-top: 12px; color: var(--wine); font-weight: 600; line-height: 1.55 }
+.skills-panel { background: #fff9f0c9; border-color: var(--line) }
+.skills-panel h2 { font-size: clamp(1.12rem, 2vw, 1.36rem) }
+.blush { background: linear-gradient(#f8e5e8ba,#f8e5e8e8), url('images/textures/blush.jpg') center / cover; background-color: var(--blush) }
+.blue { background: linear-gradient(#e4ebf6b9,#e2ebf6e8), url('images/textures/blue.jpg') center / cover; background-color: var(--blue) }
+.pearl-list { list-style: none; padding: 0; display: grid; gap: 5px }
+.pearl-list li { position: relative; padding-left: 25px }
+.pearl-list li::before {
+  content: ''; width: 16px; height: 16px; position: absolute; top: .35em; left: 0;
+  background: url('images/artwork/pearl-shell.png') center / contain no-repeat;
+}
+.skills-list { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; list-style: none }
+.skills-list li {
+  padding: 4px 8px; border: 1px solid #6d535331; border-radius: 5px;
+  background: #f2e3e4; color: var(--wine); font-size: .81rem; font-weight: 750; line-height: 1.4;
+}
+.skills-list li:nth-child(3n + 2) { background: var(--blue); color: #344252 }
+.skills-list li:nth-child(3n) { background: #e6e9d5; color: #41491e }
+.experience-intro { padding-bottom: 28px }
+.experience-intro h2 { margin-bottom: 10px }
+.experience-intro p { line-height: 1.55; color: var(--muted) }
+.case { display: grid; grid-template-columns: minmax(0, 1fr) }
+.case-with-metrics {
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); align-items: start;
+  column-gap: clamp(22px, 3.2vw, 40px);
+}
+#telegram {
+  grid-template-columns: clamp(180px, 25%, 270px) minmax(0, 1fr);
+  column-gap: clamp(14px, 1.6vw, 22px);
+}
+.case-head { grid-column: 1 / -1 }
+.case h3.case-title { font-size: clamp(1.62rem, 3.3vw, 2.75rem); letter-spacing: -.052em; margin-bottom: 10px }
+.case-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 3px 14px; color: var(--muted); margin-bottom: 14px; font-size: .84rem }
+.case-meta strong { color: var(--wine) }
+.case-meta.pik-meta { display: grid; gap: 4px; margin-top: 14px }
+.pik-meta .pik-logo { width: clamp(76px, 9vw, 110px); margin-bottom: 4px }
+.case-copy, .case-intro { max-width: 77ch }
+.case-copy strong, .case-intro strong { color: var(--wine) }
+.case-copy .achievement { font-size: 1.17em; font-weight: 800; line-height: 1.2 }
+.case-intro { grid-column: 1 / -1 }
+.case-intro + .case-intro { margin-top: 12px }
+.case-intro.tinted-note {
+  max-width: none; padding: 13px clamp(15px, 2.2vw, 25px);
+  border-inline-start: 4px solid var(--note-accent); border-radius: 0 8px 8px 0;
+  background: linear-gradient(var(--note-wash), var(--note-wash)), var(--note-texture) center / cover;
+}
+.tinted-note span { display: block; max-width: 77ch }
+.strategy-note { --note-accent: var(--wine); --note-wash: #f0daddde; --note-texture: url('images/textures/rose.jpg') }
+.case-metrics {
+  display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; align-content: start;
+}
+.case-metrics .stat {
+  --stat-veil: #fcf4e5e0; --stat-tile: url('images/artwork/tile-floral.jpg');
+  display: flex; flex-direction: column; justify-content: center;
+  min-width: 0; min-height: 94px; padding: clamp(11px, 1.32vw, 17px);
+  background: linear-gradient(var(--stat-veil),var(--stat-veil)), var(--stat-tile) center / cover;
+  border: 1px solid var(--line); border-radius: 7px; line-height: 1.2;
+}
+.case-metrics .stat:nth-child(4n + 2) { --stat-veil: #edf0dcd9; --stat-tile: url('images/artwork/tile-cameo.jpg') }
+.case-metrics .stat:nth-child(4n + 3) { --stat-veil: #f3d7dfdf; --stat-tile: url('images/artwork/tile-rose.jpg') }
+.case-metrics .stat:nth-child(4n + 4) { --stat-veil: #e6edf3de; --stat-tile: url('images/artwork/tile-flower.jpg') }
+.case-metrics .stat-featured { --stat-veil: #4a1429dc; --stat-tile: url('images/artwork/tile-wine.jpg'); border-color: var(--wine) }
+#smit .stat-featured { grid-column: 1 / -1 }
+.stat-number { color: var(--wine); font-size: clamp(1.56rem, 2.45vw, 2.35rem) }
+.case-metrics .stat-number { font-size: clamp(1.85rem, 3.5vw, 3.05rem) }
+.case-metrics .stat-featured .stat-number { font-size: clamp(2.2rem, 4.4vw, 3.75rem) }
+.stat > span { display: block; margin-top: 6px; color: var(--muted); font-size: .82rem; font-weight: 700 }
+.stat-featured strong, .stat-featured > span { color: #fff9ed }
+.telegram-key-result {
+  padding: 9px 13px; border-inline-start: 3px solid var(--olive); border-radius: 0 6px 6px 0;
+  background: linear-gradient(#edf0dfdb,#edf0dfdb), url('images/textures/olive.jpg') center / cover;
+}
+.thematic { padding-top: 12px }
+.themes { display: flex; flex-wrap: wrap; gap: 5px 15px; margin-top: 5px; font-size: .81rem }
+.metric.brand-stat { min-height: clamp(115px, 16vw, 185px); padding: clamp(16px, 2.8vw, 32px) }
+.brand-stat .metric-number { font-size: clamp(3rem, 5.5vw, 4.85rem) }
+.brand-stat > span { font-size: .87rem }
+.case-details { grid-column: 1 / -1; margin-top: 18px }
+.case-details > summary {
+  display: flex; width: 100%; min-height: 48px; list-style: none; cursor: pointer;
+  justify-content: center; text-align: center;
+  padding: 10px 16px; border: 3px solid var(--wine); border-radius: 7px;
+  background-color: #333e25; color: #fff9ed; font: 800 .86rem/1.35 var(--sans);
+  transition: background-color 180ms, transform 180ms;
+}
+.case-details > summary:hover { background-color: #465535; transform: translateY(-1px) }
+.case-details > summary::-webkit-details-marker { display: none }
+.case-details .toggle-icon { margin-left: 4px; transition: transform 180ms }
+.case-details[open] .toggle-icon { transform: rotate(180deg) }
+.case-details .open-label, .case-details[open] .closed-label { display: none }
+.case-details[open] .open-label { display: inline }
+.case-details[open] .case-materials { animation: reveal 200ms ease-out }
+@keyframes reveal { from { opacity: 0; transform: translateY(5px) } to { opacity: 1; transform: translateY(0) } }
+.case-materials { margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--line) }
+.case-materials > h3, .case-materials > h4 { margin: 0 0 12px }
+.material-end { margin-top: 14px }
+.papers, .work { background: #fffaf2de; border: 1px solid var(--line); border-radius: var(--radius) }
+.papers { padding: 16px 18px }
+.material-stats { margin-top: 15px }
+.material-stats .actions { margin-top: 9px }
+.material-stats h4 { margin: 4px 0; font-size: 1rem }
+.project-grid { display: grid; gap: 12px }
+.project-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) }
+.project-grid { grid-auto-rows: 1fr }
+@media (min-width: 691px) {
+  .project-grid-pairs { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+}
+.work { display: flex; flex-direction: column; min-width: 0 }
+.work-cover {
+  display: block; width: 100%; border: 0; border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
+  background-color: #e9dfd2; overflow: hidden;
+}
+.work-cover { aspect-ratio: 16 / 9 }
+.work-cover { object-fit: cover }
+.project-grid .work-cover {
+  object-fit: contain;
+  background: linear-gradient(#eee3d5c9,#eee3d5c9), var(--paper-texture) center / 430px;
+}
+.pik-cover {
+  display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); align-items: center;
+  gap: clamp(10px, 1.8vw, 22px); min-height: clamp(170px, 20vw, 250px); padding: clamp(14px, 2.2vw, 26px);
+  border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0; color: #43232c;
+  background: linear-gradient(110deg,#f8e7e6eb,#eecdd6c9), var(--paper-texture) center / 500px;
+}
+.pik-cover-iot {
+  color: #313b20;
+  background: linear-gradient(110deg,#edf0dbe8,#d9e2c5c9), var(--paper-texture) center / 500px;
+}
+.pik-cover-logo { width: clamp(42px, 5.5vw, 70px); margin-bottom: 13px }
+.pik-cover h4 { margin: 0 0 6px; font-size: clamp(1.19rem, 2.6vw, 2.15rem); line-height: 1.04; letter-spacing: -.045em }
+.pik-cover p { font-size: clamp(.73rem, 1.18vw, .96rem); font-weight: 700; line-height: 1.35 }
+.pik-cover-fragment {
+  width: 100%; height: auto; border: 3px solid #fff9ed; border-radius: 5px;
+  box-shadow: 0 6px 14px #43232c29; transform: rotate(-3deg);
+}
+.pik-cover-iot .pik-cover-fragment { transform: rotate(3deg) }
+#marketing { --divider-tile: url('images/artwork/tile-wine.jpg') }
+#strategy { --divider-tile: url('images/artwork/tile-botanical.jpg'); --divider-angle: 8deg }
+#tools { --divider-tile: url('images/artwork/tile-olive.jpg') }
+.work-body { display: flex; flex: 1; flex-direction: column; align-items: start; gap: 7px; padding: 13px }
+.work-body h4 { margin: 0; font-size: 1rem; font-weight: 800; line-height: 1.27 }
+.work-body p { font-size: .83rem; color: var(--muted); line-height: 1.52 }
+.work-body .actions { margin-top: auto; padding-top: 4px }
+.work-body .label { font-size: .65rem }
+.icon-btn {
+  display: inline-grid; flex: none; place-items: center; min-width: 42px; min-height: 42px; padding: 0 7px;
+  border: 1px solid currentColor; border-radius: 5px; background: transparent; color: var(--wine); font-size: 1.22rem;
+}
+.icon-btn:hover { color: #fff9f0; background: var(--wine) }
+.education, .tools, .review { display: grid; gap: 12px }
+.education { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); align-items: start }
+.review { grid-template-columns: minmax(0, 2.35fr) minmax(0, 1fr); align-items: start }
+.tools { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 1fr }
+.education article, .tool, .quote { padding: 18px; border: 1px solid var(--line); border-radius: var(--radius) }
+.education .education-main {
+  padding: clamp(18px, 3vw, 32px); color: #fff9ed; border-color: var(--wine);
+  background: linear-gradient(105deg,#481426f2 49%,#4b172bc2),
+    url('images/artwork/tile-wine.jpg') right center / 200px auto no-repeat,
+    url('images/textures/wine.jpg') center / cover;
+}
+.education-main h3 { font-size: clamp(1.55rem, 2.9vw, 2.12rem); letter-spacing: -.045em }
+.education-rose {
+  background: linear-gradient(#f2d8dadd,#edcfd2da), url('images/textures/rose.jpg') center / cover;
+}
+.tool { padding: clamp(13px, 1.7vw, 21px) }
+.education h3, .tool h3 { margin-bottom: 8px }
+.tool h3 { font-size: clamp(.98rem, 1.6vw, 1.18rem); line-height: 1.2 }
+.education .pearl-list { margin-top: 8px }
+.tool p, .education p { font-size: .91rem }
+.tool.brown, .tool.olive {
+  color: #fff9ed;
+  background-image: linear-gradient(var(--veil),var(--veil)),var(--tile),var(--pigment);
+  background-size: cover; background-position: center; background-blend-mode: normal, soft-light, normal;
+  border-color: transparent;
+}
+.review-section {
+  margin-top: 25px; padding: clamp(15px, 3.4vw, 38px); border: 1px solid #59172d;
+  border-radius: var(--radius); color: #fff9ed;
+  background: linear-gradient(108deg,#441327ee 58%,#3f1926ab),
+    url('images/artwork/tile-wine.jpg') right top / 145px auto no-repeat,
+    url('images/artwork/tile-floral.jpg') right 104px top / 96px auto no-repeat,
+    var(--paper-texture) center / 500px;
+}
+.quote { color: var(--ink); background: #fff9f0f5 }
+.quote blockquote { margin: 9px 0 12px; font-size: clamp(1.01rem, 1.7vw, 1.25rem); font-weight: 700; line-height: 1.54; color: var(--wine) }
+.quote cite { display: block; color: var(--muted); font-size: .77rem; margin-bottom: 10px; font-style: normal }
+.review-original { padding: 0 }
+.review-original .label { margin: 12px 14px 8px }
+.review-open {
+  display: grid; width: 100%; gap: 7px; padding: 0; border: 0; background: transparent;
+  color: var(--wine); text-align: left; font-size: .8rem; font-weight: 800; cursor: zoom-in;
+}
+.review-open img { width: 100%; height: auto }
+.review-open > span { margin: 0 14px 12px }
+.review-open:hover span { text-decoration: underline; text-underline-offset: .2em }
+.contact { position: relative; padding: 32px 0 42px; display: flex; justify-content: space-between; align-items: center; gap: 14px }
+.contact h2 { margin-top: 4px; font-size: clamp(1.9rem, 4.8vw, 3rem); color: var(--wine) }
+.contact::before, .contact::after {
+  content: ''; pointer-events: none; position: absolute; top: 37px; right: 42%; width: 44px; aspect-ratio: 1;
+  background: url('images/artwork/tile-clover.jpg') center / cover; border: 1px solid #6c512e42;
+  border-radius: 3px; box-shadow: 1px 3px 6px #412a2333; transform: rotate(-10deg);
+}
+.contact::after {
+  top: 48px; right: calc(42% - 31px); background-image: url('images/artwork/tile-rose.jpg'); transform: rotate(9deg);
+}
+.modal {
+  border: 1px solid var(--line); padding: 0; color: var(--ink); border-radius: var(--radius);
+  width: min(calc(100% - 24px), 914px); max-width: none; max-height: 91vh; max-height: 91dvh;
+  background: #fffaf0; overscroll-behavior: contain;
+}
+.modal:not([open]) { display: none }
+.modal.modal-wide { width: min(calc(100% - 24px), 990px) }
+.modal::backdrop { background: #241a18af }
+html.dialog-fallback-open { overflow: hidden }
+.modal-fallback[open] {
+  display: block; position: fixed; z-index: 11; top: 50%; left: 50%;
+  margin: 0; transform: translate(-50%, -50%); overflow: auto;
+}
+.dialog-shade:not([hidden]) {
+  position: fixed; z-index: 10; top: 0; right: 0; bottom: 0; left: 0; background: #241a18af;
+}
+.modal-head {
+  position: sticky; z-index: 1; top: 0; display: flex; justify-content: space-between; align-items: center; gap: 15px;
+  padding: 9px 16px; background: #fff9ed; border-bottom: 1px solid var(--line); color: var(--wine);
+}
+.modal-body { padding: 15px 17px 20px }
+.modal-body .gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 12px }
+.modal-body .gallery a, .full-slide a { display: block; cursor: zoom-in }
+.modal-body .gallery img { width: 100%; border-radius: 5px }
+.full-slide img { width: min(100%, 720px); border-radius: 6px; margin: auto }
+.full-slide .note { text-align: center }
+.image-viewer { min-width: 0 }
+.image-viewer .actions { justify-content: center; margin-bottom: 10px }
+.image-viewer [aria-pressed='true'] { color: #fff9ed; background: var(--wine) }
+.image-viewer .image-scroll { overflow: auto; border-radius: 6px }
+.image-viewer img { width: min(100%, var(--original-width)); max-width: none; height: auto; margin: auto }
+.image-viewer .image-scroll:focus-visible { outline-offset: -3px }
+.image-viewer.is-zoomed .image-scroll { max-height: 67vh; max-height: 67dvh; overscroll-behavior: contain }
+.image-viewer.is-zoomed img { width: max(135%, var(--original-width)); margin: 0 }
+@media (max-width: 925px) {
+  .wrap { width: calc(100% - 46px) }
+  .tools { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+}
+@media (max-width: 690px) {
+  .wrap { width: calc(100% - 30px) }
+  .top { align-items: start; flex-direction: column; gap: 6px; padding: 10px 0 }
+  .top nav { gap: 4px 13px }
+  .top nav a { font-size: .72rem }
+  .hero { grid-template-columns: minmax(0, 1fr); padding: 31px 0 20px; gap: 10px }
+  .hero h1 { font-size: clamp(2.65rem, 10.3vw, 4rem); line-height: 1 }
+  .hero-role { font-size: clamp(2.8rem, 12vw, 3.9rem); margin-top: .12em; margin-bottom: .29em }
+  .hero-facts { margin-bottom: 11px }
+  .hero-intro { margin-bottom: 13px }
+  .portrait { width: min(100%, 355px); margin: 4px auto 0 }
+  .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+  .metric { min-height: 100px; padding: 11px 12px }
+  .metric-number { font-size: clamp(1.85rem, 6.7vw, 2.52rem) }
+  .metric > span { font-size: .75rem }
+  .section { padding: 29px 0 }
+  .overview { padding: 0; gap: 10px; margin-top: 18px }
+  .overview-panel { padding: 16px }
+  .overview-panel li { font-size: .85rem }
+  .help-panel .pearl-list { columns: 1 }
+  .help-panel .pearl-list li { font-size: calc(.85rem + 1pt) }
+  .case-with-metrics { grid-template-columns: minmax(0, 1fr) }
+  .case { gap: 0 }
+  .case-with-metrics > .case-metrics, .case-with-metrics > .brand-stat { margin: 4px 0 15px }
+  .case-metrics .stat { min-height: 82px }
+  .case-details { margin-top: 15px }
+  .project-grid, .education, .review { grid-template-columns: minmax(0, 1fr) }
+  .review-section { padding-inline: 8px }
+  .tile-divider::after { bottom: -11px; width: 23px }
+  .contact { align-items: start; flex-direction: column }
+  .contact::before { top: 25px; right: 30px; width: 31px }
+  .contact::after { top: 35px; right: 11px; width: 31px }
+  .modal-body { padding: 12px 11px 15px }
+  .modal-body .gallery { grid-template-columns: minmax(0, 1fr) }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important }
+}
+
+/* Layouts for grouped Strategy & Marketing case studies. */
+#influence { --divider-tile: url('images/artwork/tile-olive.jpg') }
+#campaigns { --divider-tile: url('images/artwork/tile-rose.jpg'); --divider-angle: 8deg }
+#research { --divider-tile: url('images/artwork/tile-botanical.jpg') }
+.tinted-note p { max-width: 77ch }
+.strategy-card-body { gap: 8px; padding: clamp(14px, 1.8vw, 20px) }
+.strategy-card-body h4 { font-size: clamp(1.08rem, 1.7vw, 1.32rem); color: var(--wine) }
+.strategy-card-body p { margin: 0; font-size: .86rem; line-height: 1.58 }
+.strategy-card-body strong { color: var(--wine) }
+.project-credit { margin: 5px 0 8px }
+.result-cases {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start; gap: 12px; margin-top: 15px;
+}
+.result-case {
+  min-width: 0;
+  border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(12px, 2vw, 20px);
+}
+.result-case h4 { margin: 0 0 4px; color: var(--wine); font-size: clamp(1rem, 1.65vw, 1.22rem); line-height: 1.26 }
+.result-olive { background: linear-gradient(#edf0dfb8,#edf0dfe8), url('images/textures/olive.jpg') center / cover }
+.result-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 10px }
+.result-metrics .stat { min-height: 80px; padding: 9px 12px }
+.result-metrics .stat-wide { grid-column: 1 / -1 }
+.result-metrics .stat .stat-number { font-size: clamp(1.4rem, 2.5vw, 2.42rem) }
+.result-case > .case-details { margin-top: 14px }
+.campaign-feature h4, .project-group-head h4 {
+  margin: 0; color: var(--wine); line-height: 1.25; font-size: clamp(1.12rem, 2.1vw, 1.55rem);
+}
+.story-actions { margin-top: 13px }
+.campaign-feature {
+  display: grid; align-items: start; row-gap: 13px;
+  background: linear-gradient(110deg,#edf0dbe8,#faf6e9cb), var(--paper-texture) center / 500px;
+}
+.campaign-art { display: grid; gap: 9px; justify-items: start }
+.campaign-art .work-cover, .hr-source .work-cover { border-radius: 5px; object-fit: contain }
+.campaign-targets { grid-column: 1 / -1 }
+.campaign-targets h5 { margin: 0 0 8px; font-size: .93rem; color: var(--wine) }
+.target-metrics { grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: stretch }
+.target-metrics .stat, .target-metrics .stat-featured { min-height: 92px; padding: 9px 13px }
+.target-metrics .stat-number { font-size: clamp(1.62rem, 2.8vw, 2.64rem) }
+.project-group-head { margin: 20px 0 14px }
+.research-group { display: grid; gap: 14px }
+.research-group + .research-group { margin-top: 23px }
+.research-group > h4, .research-feature h5 {
+  margin: 0; font-size: clamp(1.13rem, 2.25vw, 1.68rem); line-height: 1.22; color: var(--wine);
+}
+.research-feature { display: grid; gap: 12px }
+.research-feature-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 16px; align-items: start }
+.research-chart { padding: clamp(12px, 2vw, 18px); background: #fffaf2de; border: 1px solid var(--line); border-radius: 7px }
+.research-chart figcaption { margin-bottom: 11px; line-height: 1.35; font-size: .91rem; font-weight: 800 }
+.chart-row {
+  display: grid; grid-template-columns: minmax(3rem, auto) minmax(0, 1fr) 3.4rem;
+  gap: 8px; align-items: center; margin-top: 8px; font-size: .82rem;
+}
+.chart-row strong { color: var(--wine); text-align: right }
+.chart-track { display: block; height: 12px; border-radius: 3px; background: #efe7db; overflow: hidden }
+.chart-track > span { display: block; width: var(--share); height: 100%; background: var(--wine); border-radius: 3px }
+.chart-row + .chart-row .chart-track > span { background: var(--olive) }
+.hr-source { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px }
+.hr-source .work-cover { width: min(100%, 192px) }
+.tool-paper { background: linear-gradient(#f2e5d7bf,#f2e5d7e8), var(--paper-texture) center / 470px }
+@media (min-width: 926px) {
+  .tools { grid-template-columns: repeat(5, minmax(0, 1fr)) }
+}
+@media (max-width: 925px) {
+  .tool-paper { grid-column: 1 / -1 }
+}
+@media (max-width: 690px) {
+  .hero-role { font-size: clamp(2.21rem, 10.4vw, 3.9rem) }
+  .research-feature-grid { grid-template-columns: minmax(0, 1fr) }
+  .target-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+  .campaign-art { margin-bottom: 8px }
+  .result-case { padding: 12px }
+  .result-metrics .stat { padding-inline: 8px }
+}
+@media (min-width: 901px) {
+  .result-case h4 { min-height: 2.52em }
+  .result-metrics {
+    min-height: clamp(385px, calc(480px - 7.5vw), 415px);
+    grid-auto-rows: minmax(80px, 1fr);
+  }
+}
+@media (min-width: 901px) and (max-width: 1000px) {
+  .result-case h4 { min-height: 3.78em }
+}
+@media (max-width: 900px) {
+  .result-cases { grid-template-columns: minmax(0, 1fr) }
+}
+  </style>
+</head>
+<body>
+  <header class="top wrap" id="top">
+    <a class="wordmark" href="#top">Софья Бекета</a>
+    <nav aria-label="Навигация">
+      <a href="#overview">Компетенции</a>
+      <a href="#experience">Опыт и проекты</a>
+      <a href="#education">Образование</a>
+      <a href="#contact">Контакты <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="name">
+      <div>
+        <h1 id="name">Софья Бекета</h1>
+        <p class="hero-role" lang="en">Strategy &amp; Marketing</p>
+        <p class="hero-facts">
+          <span>2+ года опыта в сфере коммуникаций</span>
+          <span>Окончила НИУ ВШЭ по направлению «Реклама и связи с общественностью».</span>
+        </p>
+        <p class="hero-intro">Разрабатываю маркетинговые и коммуникационные стратегии, исследую рынки, анализирую поведение аудитории и конкурентную среду. Нахожу точки роста бизнеса и формирую позиционирование брендов. Имею опыт реализации стратегий продвижения с измеримыми бизнес-результатами.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://t.me/s_beketa" target="_blank" rel="noopener" aria-label="Telegram @s_beketa">@s_beketa <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="btn" href="mailto:beketasofya@yandex.ru">beketasofya@yandex.ru <span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <figure class="portrait" id="portrait">
+        <img class="portrait-tile" src="images/artwork/tile-clover.jpg" alt="">
+        <img class="portrait-tile" src="images/artwork/tile-botanical.jpg" alt="">
+        <img class="portrait-tile" src="images/artwork/tile-rose.jpg" alt="">
+        <img class="portrait-tile" src="images/artwork/tile-flower.jpg" alt="">
+        <img class="portrait-tile" src="images/artwork/tile-floral.jpg" alt="">
+        <img class="portrait-tile" src="images/artwork/tile-cameo.jpg" alt="">
+        <picture>
+          <source type="image/webp"
+            srcset="images/artwork/sofya-portrait-480.webp 480w, images/artwork/sofya-portrait-640.webp 640w, images/artwork/sofya-portrait-790.webp 790w"
+            sizes="(max-width: 385px) 82vw, (max-width: 690px) 320px, (max-width: 925px) 36vw, (max-width: 1252px) 37vw, 450px">
+          <img class="portrait-photo" src="images/artwork/sofya-portrait.png" alt="Софья Бекета в розовом худи" width="790" height="853" fetchpriority="high">
+        </picture>
+      </figure>
+    </section>
+
+    <section aria-label="Главные достижения">
+      <div class="metrics">
+        <div class="metric wine"><strong class="metric-number">700 <small>тыс. ₽+</small></strong><span>выручки от клиентов из соцсетей без рекламного бюджета</span></div>
+        <div class="metric brown"><strong class="metric-number">120 <small>тыс.</small></strong><span>суммарный охват коммуникационной кампании ПИК</span></div>
+        <div class="metric rose"><strong class="metric-number">30%+</strong><span>рост охватов в 9 из 12 Telegram-каналов по моей стратегии</span></div>
+        <div class="metric olive"><strong class="metric-number"><small>До</small> 4 000</strong><span>новых подписчиков с одного партнёрского размещения</span></div>
+      </div>
+    </section>
+
+    <div class="section overview" id="overview">
+      <section class="overview-panel help-panel" aria-labelledby="activities">
+        <h2 id="activities">С чем я могу помочь</h2>
+        <ul class="pearl-list" role="list">
+          <li>Нахожу <strong>новые возможности для роста бизнеса</strong> через анализ рынка и конкурентов.</li>
+          <li>Помогаю брендам <strong>выделяться среди конкурентов</strong> и формировать узнаваемый образ.</li>
+          <li>Выявляю, <strong>что мотивирует клиентов к покупке</strong> и что мешает им принять решение.</li>
+          <li>Помогаю новым продуктам <strong>найти свою аудиторию</strong> и занять место на рынке.</li>
+          <li><strong>Снижаю риски маркетинговых решений</strong> за счёт проверки гипотез на данных.</li>
+          <li>Нахожу <strong>эффективные способы продвижения</strong> с учётом целей и бюджета бизнеса.</li>
+          <li>Нахожу <strong>потребительские инсайты</strong>, которые помогают создавать востребованные продукты и коммуникации.</li>
+          <li>Повышаю <strong>узнаваемость бренда</strong> и укрепляю доверие аудитории через коммуникацию.</li>
+          <li>Привлекаю новую аудиторию через <strong>рекламные интеграции и партнёрства</strong>.</li>
+          <li>Выстраиваю <strong>долгосрочное сотрудничество</strong> с партнёрами и подрядчиками.</li>
+          <li>Организую <strong>работу команды</strong> для реализации маркетинговых проектов.</li>
+          <li>Превращаю маркетинговые стратегии в <strong>измеримые бизнес-результаты</strong>.</li>
+        </ul>
+        <p class="help-summary">Помогаю бизнесу достигать своих целей через продуманную стратегию и эффективный маркетинг.</p>
+      </section>
+      <section class="overview-panel skills-panel" aria-labelledby="skills">
+        <h2 id="skills">Ключевые навыки</h2>
+        <ul class="skills-list" role="list">
+          <li>Brand Strategy</li>
+          <li>Маркетинговые исследования</li>
+          <li>Сегментация ЦА</li>
+          <li>CJM</li>
+          <li>Brand Ladder</li>
+          <li>Конкурентный анализ</li>
+          <li>Медиапланирование</li>
+          <li>Коммуникационная стратегия</li>
+          <li>Статистический анализ</li>
+          <li>Анализ KPI</li>
+          <li>Influence Marketing</li>
+          <li>Project Management</li>
+          <li>Управление подрядчиками</li>
+        </ul>
+      </section>
+    </div>
+
+    <section id="experience" aria-labelledby="experience-title">
+      <div class="section experience-intro">
+        <h2 id="experience-title">Опыт и проекты</h2>
+        <p>Ниже на примере своих проектов я рассказываю, какие задачи решала, какие подходы использовала и каких результатов достигла. Чтобы подробнее ознакомиться с моим портфолио, нажмите на кнопку под интересующим разделом. Внутри — стратегии, исследования, презентации и примеры работ.</p>
+      </div>
+
+      <article class="section case case-with-metrics tile-divider" id="marketing" aria-labelledby="marketing-title">
+        <header class="case-head">
+          <h3 class="case-title" id="marketing-title">Разработка и реализация коммуникационных стратегий</h3>
+          <div class="case-meta pik-meta">
+            <img class="pik-logo" src="images/artwork/pik-logo.png" alt="ПИК" width="370" height="112" loading="lazy">
+            <span>Июль — октябрь 2025</span>
+            <span>Стажировка в отделе продвижения проектов</span>
+          </div>
+        </header>
+        <div class="metric brand-stat brown"><strong class="metric-number">120 <small>тыс.</small></strong><span>суммарный охват коммуникационной кампании</span></div>
+        <div class="case-copy">
+          <p>Разработала и внедрила <strong>коммуникационную стратегию продвижения образовательных программ</strong> «Лаборатории ПИК», чтобы привлечь новую аудиторию и укрепить имидж компании как девелопера, развивающего социальную инфраструктуру.</p>
+          <p>Совместно с командой Яндекса разработала <strong>стратегию анонса</strong> образовательной программы «Интернет вещей».</p>
+          <p>Создала информационные и <strong>прогревающие email-рассылки</strong> для родителей. Продумала последовательность писем, ключевые сообщения и призывы к действию, чтобы стимулировать подачу заявок на образовательные программы.</p>
+          <p>Сформировала концепцию и <strong>смысловое наполнение лендинга «Школы с отличием»</strong>, чтобы раскрыть преимущества образовательной инфраструктуры ПИК для потенциальных покупателей недвижимости и повысить привлекательность жилых комплексов для семей с детьми.</p>
+          <p>Успешно работала в связке с другими отделами: <strong>продукт, digital, дизайн, SMM и PR</strong>.</p>
+        </div>
+        <details class="case-details">
+          <summary class="btn"><span class="closed-label">Смотреть примеры работ</span><span class="open-label">Свернуть примеры работ</span><span class="toggle-icon arrow" aria-hidden="true">↓</span></summary>
+          <template>
+            <div class="case-materials">
+              <div class="project-grid project-grid-pairs">
+                <article class="work">
+                  <header class="pik-cover">
+                    <div>
+                      <img class="pik-cover-logo" data-src="images/artwork/pik-logo.png" alt="ПИК" width="370" height="112" loading="lazy">
+                      <h4>Школы с отличием</h4>
+                      <p>Концепция и смысловое наполнение лендинга</p>
+                    </div>
+                    <img class="pik-cover-fragment" data-src="images/projects/pik-school-fragment.png" alt="Фотография из материалов «Школы с отличием»" width="430" height="231" loading="lazy">
+                  </header>
+                  <div class="work-body">
+                    <p>Работала над концепцией и смысловым наполнением лендинга.</p>
+                    <div class="actions"><button class="btn" type="button" data-gallery="pik-landing">Смотреть лендинг <span class="arrow" aria-hidden="true">↗</span></button></div>
+                  </div>
+                </article>
+                <article class="work">
+                  <header class="pik-cover pik-cover-iot">
+                    <div>
+                      <img class="pik-cover-logo" data-src="images/artwork/pik-logo.png" alt="ПИК" width="370" height="112" loading="lazy">
+                      <h4>Интернет вещей</h4>
+                      <p>Материалы образовательной программы</p>
+                    </div>
+                    <img class="pik-cover-fragment" data-src="images/projects/pik-iot-fragment.png" alt="Фрагмент иллюстраций образовательной программы" width="421" height="287" loading="lazy">
+                  </header>
+                  <div class="work-body">
+                    <p>Материалы образовательной программы «Лаборатории ПИК».</p>
+                    <div class="actions"><button class="btn" type="button" data-gallery="pik-article">Читать материал <span class="arrow" aria-hidden="true">↗</span></button></div>
+                  </div>
+                </article>
+              </div>
+              <div class="material-end"><button class="btn" type="button" data-collapse>Свернуть материалы <span class="arrow" aria-hidden="true">↑</span></button></div>
+            </div>
+          </template>
+        </details>
+      </article>
+
+      <article class="section case" id="brand" aria-labelledby="brand-title">
+        <header class="case-head"><h3 class="case-title" id="brand-title">Позиционирование и бренд-стратегия</h3></header>
+        <p class="case-intro tinted-note strategy-note"><span>Разрабатываю позиционирование, которое помогает брендам отстраиваться от конкурентов, формировать понятное ценностное предложение и выстраивать коммуникацию с разными сегментами аудитории.</span></p>
+        <details class="case-details">
+          <summary class="btn"><span class="closed-label">Смотреть бренд-стратегии</span><span class="open-label">Свернуть материалы</span><span class="toggle-icon arrow" aria-hidden="true">↓</span></summary>
+          <template>
+            <div class="case-materials">
+              <div class="project-grid">
+                <article class="work">
+                  <img class="work-cover" data-src="images/projects/iks.jpg" data-srcset="images/projects/iks-560.jpg 560w, images/projects/iks.jpg 900w" sizes="(max-width: 690px) 86vw, (max-width: 1200px) 29vw, 380px" width="900" height="507" loading="lazy" decoding="async" alt="Обложка презентации «ИКС Холдинг — HR-бренд и стратегия позиционирования»">
+                  <div class="work-body strategy-card-body">
+                    <h4>ИКС Холдинг — HR-бренд и стратегия позиционирования</h4>
+                    <span class="label project-credit">Индивидуальный проект</span>
+                    <p>Разработала <strong>бренд-платформу технологического холдинга</strong> для привлечения инженерных и IT-кадров.</p>
+                    <p>Выделила три сегмента аудитории, сформулировала ценностное предложение и стратегию коммуникации на всех этапах воронки. Составила контент-план на полгода, определила KPI и распределение бюджета.</p>
+                    <p>Могу сделать то же для вашей компании, чтобы <strong>донести ценность бренда до аудитории и привлечь больше клиентов</strong>.</p>
+                    <div class="actions"><a class="btn" href="https://drive.google.com/file/d/1v-GujA4dPVt5rilUcWdimjeBTO6TO9rz/view" target="_blank" rel="noopener">Смотреть презентацию <span class="arrow" aria-hidden="true">↗</span></a></div>
+                  </div>
+                </article>
+                <article class="work">
+                  <img class="work-cover" data-src="images/projects/raffaello.jpg" width="900" height="506" loading="lazy" decoding="async" alt="Обложка презентации «Raffaello — разработка позиционирования»">
+                  <div class="work-body strategy-card-body">
+                    <h4>Raffaello — разработка позиционирования</h4>
+                    <span class="label project-credit">Командный проект</span>
+                    <p>Разработала позиционирование бренда по модели Brand Ladder. Сформулировала потребительский инсайт, функциональные и эмоциональные преимущества продукта.</p>
+                    <p>Предложила <strong>коммуникационную концепцию «Любовь в каждом моменте»</strong>, основанную на ключевых ценностях бренда: романтике, заботе и внимании к близким.</p>
+                    <p>В концепции я представила продукт как доступный способ выразить чувства в повседневной жизни. Так предложила <strong>расширить потенциальные сценарии покупки продукта</strong>.</p>
+                    <div class="actions"><a class="btn" href="https://drive.google.com/file/d/1zHxk89sqq98XmWPq4BMaJcIFuDCT9nLU/view" target="_blank" rel="noopener">Смотреть презентацию <span class="arrow" aria-hidden="true">↗</span></a></div>
+                  </div>
+                </article>
+                <article class="work">
+                  <img class="work-cover" data-src="images/projects/scramble.jpg" data-srcset="images/projects/scramble-560.jpg 560w, images/projects/scramble.jpg 900w" sizes="(max-width: 690px) 86vw, (max-width: 1200px) 29vw, 380px" width="900" height="507" loading="lazy" decoding="async" alt="Обложка презентации «SCRAMBLE — концепция студенческого медиа»">
+                  <div class="work-body strategy-card-body">
+                    <h4>SCRAMBLE — концепция студенческого медиа</h4>
+                    <span class="label project-credit">Командный проект</span>
+                    <p>Участвовала в разработке концепции студенческого медиа о креативных индустриях. Работала над позиционированием, анализом аудитории и конкурентной среды.</p>
+                    <p>Проект вошёл в <strong>шорт-лист лучших студенческих инициатив</strong>.</p>
+                    <div class="actions"><a class="btn" href="https://drive.google.com/file/d/1dx3DRL-BsyrNHrKLVme8Hjd5XB2mNx-T/view" target="_blank" rel="noopener">Смотреть презентацию <span class="arrow" aria-hidden="true">↗</span></a></div>
+                  </div>
+                </article>
+              </div>
+              <div class="material-end"><button class="btn" type="button" data-collapse>Свернуть материалы <span class="arrow" aria-hidden="true">↑</span></button></div>
+            </div>
+          </template>
+        </details>
+      </article>
+
+      <article class="section case tile-divider" id="influence" aria-labelledby="influence-title">
+        <header class="case-head"><h3 class="case-title" id="influence-title">Influence-маркетинг, партнёрства и digital-продвижение</h3></header>
+        <p class="case-intro">Применяю свои знания на практике: выстраиваю партнёрские коммуникации, организую рекламные интеграции, развиваю личные бренды и управляю контент-командами. Нахожу возможности для привлечения новой аудитории и клиентов без существенных затрат на продвижение.</p>
+        <div class="result-cases">
+          <article class="result-case blue" aria-labelledby="telegram-case-title">
+            <h4 id="telegram-case-title">Рекламные интеграции и развитие Telegram-каналов</h4>
+            <p class="label">2,5 года опыта</p>
+            <div class="case-metrics result-metrics" aria-label="Ключевые результаты">
+              <div class="stat stat-featured"><strong class="stat-number">15–20</strong><span>рекламных интеграций в месяц</span></div>
+              <div class="stat"><strong class="stat-number"><small>До</small> 4 000</strong><span>новых подписчиков с одного размещения</span></div>
+              <div class="stat"><strong class="stat-number">30%+</strong><span>рост охватов в 9 из 12 каналов</span></div>
+              <div class="stat"><strong class="stat-number">5–7</strong><span>авторов под моим управлением</span></div>
+              <div class="stat"><strong class="stat-number">12</strong><span>Telegram-каналов</span></div>
+              <div class="stat"><strong class="stat-number">+40%</strong><span>рост охвата канала об этикете</span></div>
+            </div>
+            <details class="case-details">
+              <summary class="btn" aria-describedby="telegram-case-title"><span class="closed-label">Подробнее о кейсе</span><span class="open-label">Свернуть описание</span><span class="toggle-icon arrow" aria-hidden="true">↓</span></summary>
+              <div class="case-materials">
+                <div class="case-copy">
+                  <p>Выстроила работу с рекламодателями и партнёрами в сети из 12 Telegram-каналов с аудиторией от 20 до 150 тыс. подписчиков.</p>
+                  <p>Стабильно готовила и согласовывала <strong>15–20 рекламных интеграций в месяц</strong>.</p>
+                  <p>Организовывала коллаборации и взаимные размещения с тематическими каналами. В среднем привлекала 500–700 новых подписчиков с одного размещения, наиболее успешные интеграции приносили <strong>до 4 000 подписчиков</strong>.</p>
+                  <p>Одновременно управляла командой из 5–7 авторов.</p>
+                  <p>Пересмотрела контент-стратегии каналов, увеличив охваты более чем на 30% в 9 из 12 каналов.</p>
+                  <div class="thematic">
+                    <strong class="label">Тематики каналов</strong>
+                    <ul class="pearl-list themes" role="list">
+                      <li>Этикет и культура</li><li>Здоровье</li><li>Реставрация</li><li>Психология</li><li>Детское развитие</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </article>
+          <article class="result-case blush" aria-labelledby="smit-case-title">
+            <h4 id="smit-case-title">SMIT TATTOO — стратегия продвижения личного бренда</h4>
+            <p class="label">Активное ведение с мая 2026</p>
+            <div class="case-metrics result-metrics" aria-label="Ключевые результаты">
+              <div class="stat stat-featured"><strong class="stat-number">700 <small>тыс. ₽+</small></strong><span>выручки от клиентов из соцсетей</span></div>
+              <div class="stat"><strong class="stat-number">0 <small>₽</small></strong><span>рекламного бюджета</span></div>
+              <div class="stat"><strong class="stat-number">5,7 <small>млн</small></strong><span>просмотров в TikTok за 365 дней</span></div>
+              <div class="stat"><strong class="stat-number">4,7 <small>млн</small></strong><span>зрителей в TikTok</span></div>
+              <div class="stat"><strong class="stat-number">11,3 <small>тыс.</small></strong><span>подписчиков в Instagram</span></div>
+              <div class="stat"><strong class="stat-number">56,5 <small>тыс.</small></strong><span>репостов в TikTok</span></div>
+              <div class="stat"><strong class="stat-number">12</strong><span>роликов со 100 тыс.+ просмотров</span></div>
+              <div class="stat"><strong class="stat-number">41</strong><span>ролик с 10 тыс.+ просмотров</span></div>
+            </div>
+            <details class="case-details">
+              <summary class="btn" aria-describedby="smit-case-title"><span class="closed-label">Подробнее о кейсе</span><span class="open-label">Свернуть описание</span><span class="toggle-icon arrow" aria-hidden="true">↓</span></summary>
+              <div class="case-materials">
+                <div class="case-copy">
+                  <p>Разработала и реализовала стратегию органического продвижения тату-мастера. <strong>Выстроила канал привлечения клиентов без рекламного бюджета.</strong></p>
+                  <p>Проанализировала конкурентов, выявила перспективные форматы контента и выстроила коммуникацию вокруг трёх задач: повышения узнаваемости, формирования доверия и демонстрации экспертности мастера.</p>
+                  <p>Тестировала контентные гипотезы, анализировала метрики и масштабировала успешные форматы.</p>
+                  <p>Предложила новые форматы контента. Один из роликов набрал <strong>1,15 млн просмотров и принёс более 10 тыс. подписок</strong> суммарно на двух площадках.</p>
+                  <p>Адаптировала популярный тренд под тату-нишу. Ролик набрал 297 тыс. просмотров в Instagram, привёл четырёх клиентов на крупные проекты, а сам формат подхватили другие мастера.</p>
+                  <p>Первые заявки начали поступать уже в первый месяц работы. Сейчас практически вся запись мастера формируется через социальные сети.</p>
+                  <div class="actions story-actions"><button class="btn" type="button" data-gallery="analytics">Смотреть статистику TikTok <span class="arrow" aria-hidden="true">↗</span></button></div>
+                </div>
+              </div>
+            </details>
+          </article>
+          <article class="result-case result-olive" aria-labelledby="championship-case-title">
+            <h4 id="championship-case-title">Продвижение кейс-чемпионата для школьников</h4>
+            <p class="label">9–11 классы</p>
+            <div class="case-metrics result-metrics" aria-label="Ключевые результаты">
+              <div class="stat stat-featured"><strong class="stat-number"><small>Около</small> 500</strong><span>участников отборочного этапа</span></div>
+              <div class="stat"><strong class="stat-number">100</strong><span>школьников в финале</span></div>
+              <div class="stat stat-wide"><strong class="stat-number">Лауреат</strong><span>команда под моим менторством</span></div>
+            </div>
+            <details class="case-details">
+              <summary class="btn" aria-describedby="championship-case-title"><span class="closed-label">Подробнее о кейсе</span><span class="open-label">Свернуть описание</span><span class="toggle-icon arrow" aria-hidden="true">↓</span></summary>
+              <div class="case-materials">
+                <div class="case-copy">
+                  <p>Участвовала в продвижении образовательного кейс-чемпионата среди школьников 9–11 классов.</p>
+                  <p>Использовала тематические Telegram-каналы, школьные сообщества, партнёрские публикации и информационные рассылки для привлечения целевой аудитории.</p>
+                  <p>Работала с командами участников в качестве ментора. Одна из моих команд из Ростовской области вышла в финал и <strong>стала лауреатом одной из номинаций</strong>.</p>
+                </div>
+              </div>
+            </details>
+          </article>
+        </div>
+        <p class="notes">Период статистики TikTok — 15.11.2025–14.11.2026. Выручка — за время ведения аккаунтов, по данным клиента.</p>
+      </article>
+
+      <article class="section case tile-divider" id="campaigns" aria-labelledby="campaigns-title">
+        <header class="case-head"><h3 class="case-title" id="campaigns-title">Разработка маркетинговых кампаний</h3></header>
+        <p class="case-intro tinted-note strategy-note"><span>Разрабатываю маркетинговые кампании с учётом бизнес-целей, потребностей аудитории и бюджета. Продумываю клиентский путь, каналы продвижения, креативные решения и показатели эффективности.</span></p>
+        <details class="case-details">
+          <summary class="btn"><span class="closed-label">Смотреть маркетинговые кампании</span><span class="open-label">Свернуть материалы</span><span class="toggle-icon arrow" aria-hidden="true">↓</span></summary>
+          <template>
+            <div class="case-materials">
+              <article class="papers campaign-feature case-with-metrics">
+                <header class="case-head">
+                  <h4>Lamoda — performance-кампания Back to Office</h4>
+                  <p class="label project-credit">Командный проект</p>
+                </header>
+                <div class="campaign-art">
+                  <img class="work-cover" data-src="images/projects/lamoda.jpg" width="900" height="506" loading="lazy" decoding="async" alt="Обложка презентации кампании Lamoda Back to Office">
+                  <div class="actions"><a class="btn" href="https://drive.google.com/file/d/1ZafuO0Qkaxx4FaT5-Cj5JguGmSZXbwmI/view" target="_blank" rel="noopener">Смотреть презентацию <span class="arrow" aria-hidden="true">↗</span></a></div>
+                </div>
+                <div class="case-copy">
+                  <p>Приняла участие в разработке <strong>стратегии сезонной рекламной кампании</strong>, чтобы привлечь новых покупателей и увеличить онлайн-продажи Lamoda в период возвращения к учёбе и работе.</p>
+                  <p>Вместе с командой проработала сегментацию аудитории, клиентский путь, сообщения на разных этапах воронки и медиаплан для Яндекс Директа и VK Ads.</p>
+                  <p>Вместе с командой составила план кампании с прогнозом продаж, системой KPI, оценкой юнит-экономики и предложениями по отслеживанию конверсий в Яндекс Метрике.</p>
+                </div>
+                <div class="campaign-targets">
+                  <h5>Плановые показатели кампании</h5>
+                  <div class="case-metrics target-metrics" aria-label="Ключевые цифры">
+                    <div class="stat"><strong class="stat-number">2,5 <small>млн ₽</small></strong><span>планируемый рекламный бюджет</span></div>
+                    <div class="stat"><strong class="stat-number">27 <small>млн ₽+</small></strong><span>целевая выручка</span></div>
+                    <div class="stat"><strong class="stat-number">5 500+</strong><span>планируемое количество заказов</span></div>
+                    <div class="stat"><strong class="stat-number"><small>До</small> 500 <small>₽</small></strong><span>целевая стоимость заказа</span></div>
+                  </div>
+                </div>
+              </article>
+              <header class="project-group-head">
+                <h4>POLA STORE — разработка рекламной кампании</h4>
+                <p class="label project-credit">Командный проект</p>
+                <div class="case-copy">
+                  <p>Участвовала в разработке концепции продвижения магазина плёночных фотоаппаратов, основанной на ностальгии, эмоциональной ценности фотографии и связи поколений.</p>
+                  <p>Работала над созданием <strong>трёх сценариев рекламных роликов</strong> и подбором подрядчиков для видеопродакшена.</p>
+                  <p>Вместе с командой сравнила варианты работы с агентствами, студиями и фрилансерами. Предложила модель видеопроизводства под задачи проекта и плановый бюджет <strong>до 150 тыс. ₽</strong>. Идеи команды <strong>использовали в стратегии продвижения магазина</strong>.</p>
+                </div>
+              </header>
+              <div class="project-grid project-grid-pairs">
+                <article class="work">
+                  <img class="work-cover" data-src="images/projects/pola.jpg" data-srcset="images/projects/pola-560.jpg 560w, images/projects/pola.jpg 900w" sizes="(max-width: 690px) 86vw, (max-width: 1200px) 29vw, 380px" width="900" height="507" loading="lazy" decoding="async" alt="Обложка презентации «Креативная концепция и сценарии»">
+                  <div class="work-body strategy-card-body">
+                    <h4>Креативная концепция и сценарии</h4>
+                    
+                    <p>Предложила раскрыть ценность плёночной фотографии через связь поколений и воспоминания о близких.</p>
+                    <div class="actions"><a class="btn" href="https://drive.google.com/file/d/1ZuWM1yKv5SnPrxZ-DKdbcuFhhcPjYxHz/view" target="_blank" rel="noopener">Смотреть презентацию <span class="arrow" aria-hidden="true">↗</span></a></div>
+                  </div>
+                </article>
+                <article class="work">
+                  <img class="work-cover" data-src="images/projects/pola-contractors.jpg" width="900" height="506" loading="lazy" decoding="async" alt="Обложка презентации «Подбор подрядчиков»">
+                  <div class="work-body strategy-card-body">
+                    <h4>Подбор подрядчиков</h4>
+                    
+                    <p>Сравнила варианты сотрудничества по объёму работ, составу команды и бюджету производства.</p>
+                    <div class="actions"><a class="btn" href="https://drive.google.com/file/d/104kpn6wb6f3eBbxvTtkUVpROWnnbIe8K/view" target="_blank" rel="noopener">Смотреть презентацию <span class="arrow" aria-hidden="true">↗</span></a></div>
+                  </div>
+                </article>
+              </div>
+              <div class="material-end"><button class="btn" type="button" data-collapse>Свернуть материалы <span class="arrow" aria-hidden="true">↑</span></button></div>
+            </div>
+          </template>
+        </details>
+      </article>
+
+      <article class="section case tile-divider" id="research" aria-labelledby="research-title">
+        <header class="case-head"><h3 class="case-title" id="research-title">Маркетинговые исследования и аналитика</h3></header>
+        <div class="case-intro tinted-note strategy-note">
+          <p>При разработке маркетинговых стратегий <strong>опираюсь на данные</strong>. Провожу глубокие исследования рынка, чтобы определить потребности аудитории, отраслевые тренды и изменения в поведении потребителей.</p>
+          <p>Выявляю потребительские инсайты, нахожу точки роста бизнеса и снижаю риски при принятии маркетинговых решений.</p>
+        </div>
+        <details class="case-details">
+          <summary class="btn"><span class="closed-label">Смотреть исследования</span><span class="open-label">Свернуть материалы</span><span class="toggle-icon arrow" aria-hidden="true">↓</span></summary>
+          <template>
+            <div class="case-materials">
+              <div class="research-group">
+                <h4>Маркетинговая аналитика</h4>
+                <article class="papers research-feature blue" aria-labelledby="hr-title">
+                  <header>
+                    <h5 id="hr-title">Исследование HR-бренда на IT-рынке</h5>
+                    <p class="label project-credit">Индивидуальное исследование</p>
+                  </header>
+                  <div class="case-metrics target-metrics" aria-label="Ключевые цифры">
+                    <div class="stat"><strong class="stat-number">10</strong><span>глубинных интервью</span></div>
+                    <div class="stat"><strong class="stat-number">194</strong><span>респондента в итоговой выборке</span></div>
+                    <div class="stat"><strong class="stat-number">5</strong><span>проверенных гипотез</span></div>
+                    <div class="stat"><strong class="stat-number">3</strong><span>подтверждённые гипотезы</span></div>
+                  </div>
+                  <div class="research-feature-grid">
+                    <div class="case-copy">
+                      <p>Исследовала, как экономическая нестабильность меняет приоритеты IT-специалистов при выборе работодателя.</p>
+                      <p>Провела качественный и количественный этапы исследования, сформулировала и проверила гипотезы с помощью статистического анализа в SPSS.</p>
+                      <p>Выявила <strong>различия в восприятии HR-бренда специалистами разных грейдов</strong>.</p>
+                      <p>На основе результатов разработала рекомендации для компаний по <strong>адаптации HR-коммуникаций, позиционирования работодателя и процесса найма</strong> под потребности разных сегментов аудитории.</p>
+                    </div>
+                    <figure class="research-chart" aria-labelledby="chart-title">
+                      <figcaption id="chart-title">Выбрали работодателя с сильным HR-брендом при зарплате ниже рынка</figcaption>
+                      <div class="chart-row">
+                        <span lang="en">Junior</span><span class="chart-track" aria-hidden="true"><span style="--share:58.3%"></span></span><strong>58,3%</strong>
+                      </div>
+                      <div class="chart-row">
+                        <span lang="en">Senior</span><span class="chart-track" aria-hidden="true"><span style="--share:27.8%"></span></span><strong>27,8%</strong>
+                      </div>
+                      <p class="note">Доли ответов в исследуемой выборке для каждого грейда.</p>
+                    </figure>
+                  </div>
+                  <div class="hr-source">
+                    <img class="work-cover" data-src="images/projects/hr.jpg" data-srcset="images/projects/hr-560.jpg 560w, images/projects/hr.jpg 900w" sizes="(max-width: 690px) 86vw, (max-width: 1200px) 29vw, 380px" width="900" height="507" loading="lazy" decoding="async" alt="Обложка исследования HR-бренда на IT-рынке">
+                    <div class="actions"><a class="btn" href="https://drive.google.com/file/d/1q__8t49vQucLOkiAGEdCGBDs2ryZJ3Nl/view" target="_blank" rel="noopener">Смотреть исследование <span class="arrow" aria-hidden="true">↗</span></a></div>
+                  </div>
+                </article>
+                <div class="project-grid">
+                  <article class="work">
+                    <img class="work-cover" data-src="images/projects/nazivin.jpg" width="900" height="506" loading="lazy" decoding="async" alt="Обложка презентации «Називин — анализ бренд-метрик на фармацевтическом рынке»">
+                    <div class="work-body strategy-card-body">
+                      <h4>Називин — анализ бренд-метрик на фармацевтическом рынке</h4>
+                      <span class="label project-credit">Индивидуальный проект</span>
+                      <p>Мне интересно работать с категориями, где особенно важны доверие к бренду и потребительские привычки.</p>
+                      <p>Проанализировала конкурентную среду на рынке средств от насморка и заложенности носа. Построила карты брендов, карты конверсий и маркетинговые воронки, проанализировала NPS.</p>
+                      <p>По данным исследуемого периода <strong>определила потенциал роста конверсии</strong> из знания о продукте в намерение купить и фактическую покупку.</p>
+                      <p>Сформулировала рекомендации по укреплению лояльности существующей аудитории и привлечению новых потребителей.</p>
+                      <div class="actions"><a class="btn" href="https://drive.google.com/file/d/1RJjmNtBjcXqgETaHBI4P3liOvsDVkmfn/view" target="_blank" rel="noopener">Смотреть презентацию <span class="arrow" aria-hidden="true">↗</span></a></div>
+                    </div>
+                  </article>
+                  <article class="work">
+                    <img class="work-cover" data-src="images/projects/sunny.jpg" width="900" height="506" loading="lazy" decoding="async" alt="Обложка презентации «Благотворительный фонд «Солнечный город» — анализ медиаполя»">
+                    <div class="work-body strategy-card-body">
+                      <h4>Благотворительный фонд «Солнечный город» — анализ медиаполя</h4>
+                      
+                      <p>Провела исследование информационного поля в сфере благотворительности и профилактики социального сиротства с помощью Brand Analytics и Медиалогии.</p>
+                      <p>В тематической выборке было <strong>около 60 тыс. сообщений</strong>. На ВКонтакте пришлось <strong>50,5%</strong>. Проанализировала тональность, географию, источники, динамику и инфоповоды.</p>
+                      <p><strong>Обнаружила высокий интерес аудитории к тематике фонда</strong> при отсутствии его прямых упоминаний в выборке.</p>
+                      <p>Выявила возможность повысить узнаваемость фонда через существующую повестку и наиболее активные площадки.</p>
+                      <div class="actions"><a class="btn" href="https://drive.google.com/file/d/1y5ifrHv18AnlRVcPQSaNz-izzXphT9cb/view" target="_blank" rel="noopener">Смотреть презентацию <span class="arrow" aria-hidden="true">↗</span></a></div>
+                    </div>
+                  </article>
+                  <article class="work">
+                    <img class="work-cover" data-src="images/projects/happy.jpg" width="900" height="573" loading="lazy" decoding="async" alt="Обложка презентации «Happy Dog — анализ клиентского пути»">
+                    <div class="work-body strategy-card-body">
+                      <h4>Happy Dog — анализ клиентского пути</h4>
+                      
+                      <p>Разработала Customer Journey Map для студии груминга. Проработала точки контакта, потребности, мотивацию и ожидания клиентов на каждом этапе.</p>
+                      <p><strong>Выделила потенциальный барьер</strong> — страх доверить питомца незнакомому специалисту.</p>
+                      <p>Предложила показывать работу мастеров и результаты стрижек, работать с отзывами и давать понятную информацию об услугах, чтобы клиенты могли оценить студию до записи.</p>
+                      <div class="actions"><a class="btn" href="https://drive.google.com/file/d/1ZhZxMQ-19vjfelJ8PQNHe7_ZatKbN6Pa/view" target="_blank" rel="noopener">Смотреть презентацию <span class="arrow" aria-hidden="true">↗</span></a></div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="research-group">
+                <h4>Исследование рекламных трендов и коммуникаций</h4>
+                <div class="project-grid">
+                  <article class="work">
+                    <img class="work-cover" data-src="images/projects/ikea.jpg" data-srcset="images/projects/ikea-560.jpg 560w, images/projects/ikea.jpg 900w" sizes="(max-width: 690px) 86vw, (max-width: 1200px) 29vw, 380px" width="900" height="507" loading="lazy" decoding="async" alt="Обложка презентации «IKEA — тренд на естественность в рекламе»">
+                    <div class="work-body strategy-card-body">
+                      <h4>IKEA — тренд на естественность в рекламе</h4>
+                      <span class="label project-credit">Командное исследование</span>
+                      <p>Исследовала переход от идеализированных рекламных образов к демонстрации повседневной жизни на примере кампаний IKEA.</p>
+                      <p>Изучила научные работы о влиянии аутентичности на восприятие брендов и потребительское поведение.</p>
+                      <p><strong>Выявила потенциал естественных образов для эмоциональной связи с аудиторией</strong> и сформулировала рекомендации с учётом продукта и позиционирования бренда.</p>
+                      <div class="actions"><a class="btn" href="https://drive.google.com/file/d/1jEV6TPUgJ2owtSyelwQeXcIjfIxW0NgM/view" target="_blank" rel="noopener">Смотреть исследование <span class="arrow" aria-hidden="true">↗</span></a></div>
+                    </div>
+                  </article>
+                  <article class="work">
+                    <img class="work-cover" data-src="images/projects/aviasales.jpg" data-srcset="images/projects/aviasales-560.jpg 560w, images/projects/aviasales.jpg 900w" sizes="(max-width: 690px) 86vw, (max-width: 1200px) 29vw, 380px" width="900" height="507" loading="lazy" decoding="async" alt="Обложка презентации «Aviasales — провокация как инструмент продвижения»">
+                    <div class="work-body strategy-card-body">
+                      <h4>Aviasales — провокация как инструмент продвижения</h4>
+                      <span class="label project-credit">Командное исследование</span>
+                      <p>Исследовала, как юмор, ситуативный маркетинг и провокации помогают привлекать внимание аудитории.</p>
+                      <p>Проанализировала кампании Aviasales и научные работы об эффективности провокационной рекламы.</p>
+                      <p>Изучила, <strong>где проходит граница между эффективной провокацией и репутационным риском</strong>. Сформулировала рекомендации с учётом культурного контекста и ценностей аудитории.</p>
+                      <div class="actions"><a class="btn" href="https://drive.google.com/file/d/1kUzhZpRWAZlo9FuUTxuLMn0yYb6RYWNL/view" target="_blank" rel="noopener">Смотреть исследование <span class="arrow" aria-hidden="true">↗</span></a></div>
+                    </div>
+                  </article>
+                  <article class="work">
+                    <img class="work-cover" data-src="images/projects/film.jpg" data-srcset="images/projects/film-560.jpg 560w, images/projects/film.jpg 900w" sizes="(max-width: 690px) 86vw, (max-width: 1200px) 29vw, 380px" width="900" height="507" loading="lazy" decoding="async" alt="Обложка презентации «Визуальный язык кино»">
+                    <div class="work-body strategy-card-body">
+                      <h4>Визуальный язык кино</h4>
+                      <span class="label project-credit">Командное исследование</span>
+                      <p>Исследовала роль визуальных приёмов кино в формировании образа политического лидера. Рассматривала, как визуальная коммуникация влияет на восприятие лидера зрителями.</p>
+                      <div class="actions"><a class="btn" href="https://drive.google.com/file/d/138W9dwSk-IQrmDvawCMwSbVuqB6NONZ7/view" target="_blank" rel="noopener">Смотреть исследование <span class="arrow" aria-hidden="true">↗</span></a></div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="material-end"><button class="btn" type="button" data-collapse>Свернуть материалы <span class="arrow" aria-hidden="true">↑</span></button></div>
+            </div>
+          </template>
+        </details>
+      </article>
+    </section>
+
+    <section class="section" id="education" aria-labelledby="education-title">
+      <h2 id="education-title">Образование</h2>
+      <div class="education">
+        <article class="education-main">
+          <h3>НИУ ВШЭ</h3>
+          <p><strong>Реклама и связи с общественностью</strong><br>Бакалавриат, 2022–2026</p>
+          <ul class="pearl-list" role="list">
+            <li>Специализация — «Культура и коммуникации»</li>
+            <li>Майнор — «Школа бизнес-трекеров»</li>
+          </ul>
+        </article>
+        <article class="education-rose">
+          <span class="eyebrow">Дополнительное образование</span>
+          <h3>Образовательный центр «Сириус»</h3>
+          <p>Программа «Литературное творчество»: сторителлинг, копирайтинг, драматургия.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section tile-divider" id="tools" aria-labelledby="tools-title">
+      <h2 id="tools-title">Профессиональные инструменты</h2>
+      <div class="tools">
+        <article class="tool brown"><h3>Статистический анализ</h3><p>SPSS Statistics</p></article>
+        <article class="tool blue"><h3>Маркетинговая аналитика</h3><p>Excel, Google Sheets</p></article>
+        <article class="tool olive"><h3>Исследование медиаполя</h3><p>Brand Analytics, Медиалогия</p></article>
+        <article class="tool blush"><h3>Digital-аналитика</h3><p>TikTok Studio, Instagram Insights</p></article>
+        <article class="tool tool-paper"><h3>Визуализация и презентации</h3><p>Figma, Canva</p></article>
+      </div>
+    </section>
+
+    <section class="section review-section" id="reviews" aria-labelledby="reviews-title">
+      <h2 id="reviews-title">Что говорят о работе со мной</h2>
+      <div class="review">
+        <article class="quote review-original">
+          <span class="label">SMIT TATTOO / клиент</span>
+          <button class="review-open" type="button" data-post="review" aria-label="Смотреть отзыв тату-мастера в полном размере">
+            <img src="images/stats/smit-review-clean.png" alt="Скриншот отзыва тату-мастера" width="951" height="644" loading="lazy">
+            <span>Смотреть в полном размере <span class="arrow" aria-hidden="true">↗</span></span>
+          </button>
+        </article>
+        <article class="quote">
+          <span class="label">ГК ПИК / руководитель группы</span>
+          <blockquote>«Софья способна не только выполнять операционные задачи, но и анализировать информацию и видеть общую картину».</blockquote>
+          <cite>Из рекомендательного письма от 21 ноября 2025 г.</cite>
+          <button class="btn" type="button" data-gallery="pik-letter">Смотреть письмо <span class="arrow" aria-hidden="true">↗</span></button>
+        </article>
+      </div>
+    </section>
+
+    <footer class="contact" id="contact">
+      <div><span class="label">Связаться со мной</span><h2>Софья Бекета</h2></div>
+      <div class="actions">
+        <a class="btn primary" href="https://t.me/s_beketa" target="_blank" rel="noopener" aria-label="Telegram @s_beketa">@s_beketa <span class="arrow" aria-hidden="true">↗</span></a>
+        <a class="btn" href="mailto:beketasofya@yandex.ru">beketasofya@yandex.ru <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </footer>
+  </main>
+
+  <div id="dialog-shade" class="dialog-shade" aria-hidden="true" hidden></div>
+  <dialog id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <header class="modal-head">
+      <strong id="modal-title"></strong>
+      <button id="close" class="icon-btn" type="button" aria-label="Закрыть">×</button>
+    </header>
+    <div id="modal-body" class="modal-body"></div>
+  </dialog>
+
+  <template id="post-review">
+    <article class="image-viewer review-image-viewer" style="--original-width: 951px">
+      <div class="actions">
+        <button class="btn" type="button" data-image-zoom aria-pressed="false">Увеличение</button>
+        <a class="btn" href="images/stats/smit-review-clean.png" target="_blank" rel="noopener">Открыть оригинал <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+      <div class="image-scroll" role="region" aria-label="Полный скриншот отзыва тату-мастера" tabindex="0">
+        <img data-src="images/stats/smit-review-clean.png" alt="Оригинальный отзыв тату-мастера о совместной работе" width="951" height="644">
+      </div>
+    </article>
+  </template>
+
+  <script>
+const root = 'images/';
+const galleries = {
+  analytics: ['Статистика TikTok', ['stats/00-00-31.jpg', 'stats/00-00-34.jpg'], 942, 2048],
+  'pik-landing': ['Школы с отличием', [1, 2, 3].map(id => `projects/pik-${id}.jpg`), 900, 1272],
+  'pik-article': ['Интернет вещей', [4, 5].map(id => `projects/pik-${id}.jpg`), 900, 1272],
+  'pik-letter': ['Рекомендательное письмо ПИК', ['projects/pik-reference.jpg'], 1200, 1706]
+};
+
+function attachImages(container) {
+  for (const image of container.querySelectorAll('img[data-src]')) {
+    if (image.dataset.srcset) {
+      image.srcset = image.dataset.srcset;
+      image.removeAttribute('data-srcset');
+    }
+    image.src = image.dataset.src;
+    image.removeAttribute('data-src');
+  }
+}
+
+document.addEventListener('toggle', event => {
+  const details = event.target;
+  if (details.tagName !== 'DETAILS' || !details.open) return;
+  const template = details.querySelector('template');
+  if (!template) return;
+  attachImages(template.content);
+  template.replaceWith(template.content);
+}, true);
+
+const modal = document.getElementById('modal');
+const modalBody = document.getElementById('modal-body');
+const closeButton = document.getElementById('close');
+const dialogShade = document.getElementById('dialog-shade');
+const nativeDialog = typeof modal.showModal === 'function';
+let opener = null;
+
+function openModal(title, content, trigger) {
+  opener = trigger;
+  document.getElementById('modal-title').textContent = title;
+  if (typeof content === 'string') {
+    modalBody.innerHTML = content;
+  } else {
+    modalBody.textContent = '';
+    attachImages(content);
+    modalBody.appendChild(content);
+  }
+  modal.classList.toggle('modal-wide', Boolean(modalBody.querySelector('.review-image-viewer')));
+  if (!modal.hasAttribute('open')) {
+    if (nativeDialog) {
+      modal.showModal();
+    } else {
+      modal.classList.add('modal-fallback');
+      modal.setAttribute('open', '');
+      dialogShade.hidden = false;
+      document.documentElement.classList.add('dialog-fallback-open');
+    }
+  }
+  modal.scrollTop = 0;
+  closeButton.focus({ preventScroll: true });
+}
+
+function closeModal() {
+  if (!modal.hasAttribute('open')) return;
+  const trigger = opener;
+  opener = null;
+  modalBody.textContent = '';
+  if (nativeDialog) {
+    modal.close();
+  } else {
+    modal.removeAttribute('open');
+    dialogShade.hidden = true;
+    document.documentElement.classList.remove('dialog-fallback-open');
+  }
+  if (trigger) trigger.focus({ preventScroll: true });
+}
+
+function clickOutside(event) {
+  const bounds = modal.getBoundingClientRect();
+  return event.target === modal && (event.clientX < bounds.left || event.clientX > bounds.right ||
+    event.clientY < bounds.top || event.clientY > bounds.bottom);
+}
+
+let startedOutside = false;
+modal.addEventListener('pointerdown', event => { startedOutside = clickOutside(event); });
+modal.addEventListener('click', event => {
+  if (startedOutside && clickOutside(event)) closeModal();
+  startedOutside = false;
+});
+modal.addEventListener('cancel', event => {
+  event.preventDefault();
+  closeModal();
+});
+closeButton.addEventListener('click', closeModal);
+if (!nativeDialog) {
+  dialogShade.addEventListener('click', closeModal);
+  document.addEventListener('focusin', event => {
+    if (modal.hasAttribute('open') && !modal.contains(event.target)) closeButton.focus();
+  });
+  document.addEventListener('keydown', event => {
+    if (!modal.hasAttribute('open')) return;
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeModal();
+    } else if (event.key === 'Tab') {
+      const items = Array.from(modal.querySelectorAll('a[href], button, [tabindex="0"]'))
+        .filter(element => !element.disabled && element.getClientRects().length);
+      const from = event.shiftKey ? items[0] : items[items.length - 1];
+      const to = event.shiftKey ? items[items.length - 1] : items[0];
+      if (document.activeElement === from && to) {
+        event.preventDefault();
+        to.focus();
+      }
+    }
+  });
+}
+
+function linkedImage(path, caption, width, height) {
+  return `<a href="${root + path}" target="_blank" rel="noopener" aria-label="${caption}. Открыть изображение в полном размере">
+    <img src="${root + path}" alt="${caption}" width="${width}" height="${height}" loading="lazy" decoding="async">
+  </a>`;
+}
+
+function openGallery(key, trigger) {
+  const [title, files, width, height] = galleries[key];
+  const thumbnails = files.map((path, i) => linkedImage(path, `${title}, изображение ${i + 1}`, width, height));
+  const layout = files.length === 1 ? 'full-slide' : 'gallery';
+  openModal(title, `<div class="${layout}">${thumbnails.join('')}</div>`, trigger);
+}
+
+document.addEventListener('click', event => {
+  const button = event.target.closest('button');
+  if (!button) return;
+  if (button.dataset.gallery) {
+    openGallery(button.dataset.gallery, button);
+  } else if (button.dataset.post === 'review') {
+    const template = document.getElementById('post-review');
+    openModal('Отзыв тату-мастера', template.content.cloneNode(true), button);
+  } else if (button.hasAttribute('data-image-zoom')) {
+    const viewer = button.closest('.image-viewer');
+    const zoomed = viewer.classList.toggle('is-zoomed');
+    button.setAttribute('aria-pressed', String(zoomed));
+  } else if (button.hasAttribute('data-collapse')) {
+    const disclosure = button.closest('.case-details');
+    disclosure.open = false;
+    disclosure.querySelector('summary').focus();
+  }
+});
+  </script>
+</body>
+</html>
