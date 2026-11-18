@@ -58,17 +58,27 @@
   --blush: #f5dce4;
   --blue: #dce7f5;
   --paper: #faf6ed;
+  --paper-texture: url('images/textures/paper.jpg');
   --line: #d8cdbf;
   --radius: 10px;
   --sans: 'Manrope', Arial, sans-serif;
   --serif: 'Instrument Serif', Georgia, serif;
+}
+@supports (background-image: image-set(url('images/textures/paper.webp') type('image/webp'))) {
+  :root {
+    --paper-texture: image-set(
+      url('images/textures/paper.webp') type('image/webp'),
+      url('images/textures/paper.jpg') type('image/jpeg')
+    );
+  }
 }
 * { box-sizing: border-box }
 html { scroll-behavior: smooth }
 body {
   margin: 0;
   color: var(--ink);
-  background: linear-gradient(#faf6eedb, #faf6eee8), url('images/textures/paper.jpg') center top / 760px repeat;
+  background: linear-gradient(#faf6eedb, #faf6eee8), var(--paper-texture) center top / 760px repeat;
+  background-color: var(--paper);
   font: 500 16px/1.7 var(--sans);
 }
 a { color: inherit }
@@ -183,7 +193,7 @@ strong { font-weight: 800 }
 .help-panel {
   border-color: #a5b9ce;
   color: var(--ink);
-  background: linear-gradient(115deg,#d6e7f5bf,#c7dff2b8), url('images/textures/paper.jpg') center / 520px;
+  background: linear-gradient(115deg,#d6e7f5bf,#c7dff2b8), var(--paper-texture) center / 520px;
   background-color: var(--blue);
 }
 .help-panel strong { color: var(--wine); font-weight: 800 }
@@ -307,8 +317,7 @@ strong { font-weight: 800 }
 .project-grid, .post-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) }
 .project-grid { grid-auto-rows: 1fr }
 @media (min-width: 691px) {
-  .project-grid:has(> .work:nth-child(2):last-child),
-  .project-grid:has(> .work:nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+  .project-grid-pairs { grid-template-columns: repeat(2, minmax(0, 1fr)) }
 }
 .work { display: flex; flex-direction: column; min-width: 0 }
 .work-cover, .text-only, .video-cover {
@@ -320,7 +329,7 @@ strong { font-weight: 800 }
 .work-cover.full-art { object-fit: contain; background: #eee3d4 }
 .project-grid .work-cover {
   object-fit: contain;
-  background: linear-gradient(#eee3d5c9,#eee3d5c9), url('images/textures/paper.jpg') center / 430px;
+  background: linear-gradient(#eee3d5c9,#eee3d5c9), var(--paper-texture) center / 430px;
 }
 .chanel-cover {
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center;
@@ -331,11 +340,11 @@ strong { font-weight: 800 }
   display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); align-items: center;
   gap: clamp(10px, 1.8vw, 22px); min-height: clamp(170px, 20vw, 250px); padding: clamp(14px, 2.2vw, 26px);
   border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0; color: #43232c;
-  background: linear-gradient(110deg,#f8e7e6eb,#eecdd6c9), url('images/textures/paper.jpg') center / 500px;
+  background: linear-gradient(110deg,#f8e7e6eb,#eecdd6c9), var(--paper-texture) center / 500px;
 }
 .pik-cover-iot {
   color: #313b20;
-  background: linear-gradient(110deg,#edf0dbe8,#d9e2c5c9), url('images/textures/paper.jpg') center / 500px;
+  background: linear-gradient(110deg,#edf0dbe8,#d9e2c5c9), var(--paper-texture) center / 500px;
 }
 .pik-cover-logo { width: clamp(42px, 5.5vw, 70px); margin-bottom: 13px }
 .pik-cover h4 { margin: 0 0 6px; font-size: clamp(1.19rem, 2.6vw, 2.15rem); line-height: 1.04; letter-spacing: -.045em }
@@ -361,6 +370,7 @@ strong { font-weight: 800 }
 .work-body .actions { margin-top: auto; padding-top: 4px }
 .work-body .label { font-size: .65rem }
 .video-cover { padding: 0; aspect-ratio: 3 / 4; position: relative }
+.video-cover picture { display: block; height: 100% }
 .video-cover img { width: 100%; height: 100%; object-fit: cover }
 .play {
   position: absolute; display: grid; width: 39px; aspect-ratio: 1; place-items: center; bottom: 10px; left: 10px;
@@ -424,7 +434,7 @@ strong { font-weight: 800 }
   background: linear-gradient(108deg,#441327ee 58%,#3f1926ab),
     url('images/artwork/tile-wine.jpg') right top / 145px auto no-repeat,
     url('images/artwork/tile-floral.jpg') right 104px top / 96px auto no-repeat,
-    url('images/textures/paper.jpg') center / 500px;
+    var(--paper-texture) center / 500px;
 }
 .quote { color: var(--ink); background: #fff9f0f5 }
 .quote blockquote { margin: 9px 0 12px; font-size: clamp(1.01rem, 1.7vw, 1.25rem); font-weight: 700; line-height: 1.54; color: var(--wine) }
@@ -450,17 +460,37 @@ strong { font-weight: 800 }
 }
 .modal {
   border: 1px solid var(--line); padding: 0; color: var(--ink); border-radius: var(--radius);
-  width: min(calc(100% - 24px), 914px); max-width: none; max-height: 91vh;
+  width: min(calc(100% - 24px), 914px); max-width: none; max-height: 91vh; max-height: 91dvh;
   background: #fffaf0; overscroll-behavior: contain;
 }
-.modal:has(.review-image-viewer) { width: min(calc(100% - 24px), 990px) }
+.modal:not([open]) { display: none }
+.modal.modal-wide { width: min(calc(100% - 24px), 990px) }
 .modal::backdrop { background: #241a18af }
+html.dialog-fallback-open { overflow: hidden }
+.modal-fallback[open] {
+  display: block; position: fixed; z-index: 11; top: 50%; left: 50%;
+  margin: 0; transform: translate(-50%, -50%); overflow: auto;
+}
+.dialog-shade:not([hidden]) {
+  position: fixed; z-index: 10; top: 0; right: 0; bottom: 0; left: 0; background: #241a18af;
+}
 .modal-head {
   position: sticky; z-index: 1; top: 0; display: flex; justify-content: space-between; align-items: center; gap: 15px;
   padding: 9px 16px; background: #fff9ed; border-bottom: 1px solid var(--line); color: var(--wine);
 }
 .modal-body { padding: 15px 17px 20px }
-.modal-body video { display: block; width: auto; max-width: 100%; max-height: 64vh; margin: 0 auto 10px; background: #1d1716; border-radius: 6px }
+.modal-body video {
+  display: block; width: auto; max-width: 100%; max-height: 64vh; max-height: 64dvh;
+  margin: 0 auto; background: #1d1716; border-radius: 6px;
+}
+.video-stage { position: relative; width: max-content; max-width: 100%; margin: 0 auto 10px }
+.video-start {
+  top: 50%; left: 50%; bottom: auto; transform: translate(-50%, -50%);
+  width: 48px; border: 1px solid var(--wine);
+}
+.video-start:hover { color: #fff8ed; background-color: var(--wine) }
+.video-start[hidden] { display: none }
+.video-fallback .actions { margin: 7px 0 12px }
 .modal-body .gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 12px }
 .modal-body .gallery a, .full-slide a { display: block; cursor: zoom-in }
 .modal-body .gallery img { width: 100%; border-radius: 5px }
@@ -477,7 +507,7 @@ strong { font-weight: 800 }
 .image-viewer .image-scroll { overflow: auto; border-radius: 6px }
 .image-viewer img { width: min(100%, var(--original-width)); max-width: none; height: auto; margin: auto }
 .image-viewer .image-scroll:focus-visible { outline-offset: -3px }
-.image-viewer.is-zoomed .image-scroll { max-height: 67dvh; overscroll-behavior: contain }
+.image-viewer.is-zoomed .image-scroll { max-height: 67vh; max-height: 67dvh; overscroll-behavior: contain }
 .image-viewer.is-zoomed img { width: max(135%, var(--original-width)); margin: 0 }
 .image-viewer .full-post { margin-top: 16px }
 @media (max-width: 925px) {
@@ -565,7 +595,12 @@ strong { font-weight: 800 }
         <img class="portrait-tile" src="images/artwork/tile-flower.jpg" alt="">
         <img class="portrait-tile" src="images/artwork/tile-floral.jpg" alt="">
         <img class="portrait-tile" src="images/artwork/tile-cameo.jpg" alt="">
-        <img class="portrait-photo" src="images/artwork/sofya-portrait.png" alt="Софья Бекета в розовом худи" width="790" height="853" fetchpriority="high">
+        <picture>
+          <source type="image/webp"
+            srcset="images/artwork/sofya-portrait-480.webp 480w, images/artwork/sofya-portrait-640.webp 640w, images/artwork/sofya-portrait-790.webp 790w"
+            sizes="(max-width: 385px) 82vw, (max-width: 690px) 320px, (max-width: 925px) 36vw, (max-width: 1252px) 37vw, 450px">
+          <img class="portrait-photo" src="images/artwork/sofya-portrait.png" alt="Софья Бекета в розовом худи" width="790" height="853" fetchpriority="high">
+        </picture>
       </figure>
     </section>
 
@@ -639,53 +674,55 @@ strong { font-weight: 800 }
         </div>
         <details class="case-details">
           <summary class="btn"><span class="closed-label">Смотреть видео и примеры работ</span><span class="open-label">Свернуть видео и примеры работ</span><span class="toggle-icon arrow" aria-hidden="true">↓</span></summary>
-          <div class="case-materials">
-            <h4 class="label">Примеры работ</h4>
-            <div id="videos" class="video-grid" aria-label="Видеокейсы"></div>
-            <p class="note">Сумма просмотров и подписок разных площадок не равна уникальной аудитории.</p>
+          <template>
+            <div class="case-materials">
+              <h4 class="label">Примеры работ</h4>
+              <div id="videos" class="video-grid" aria-label="Видеокейсы"></div>
+              <p class="note">Сумма просмотров и подписок разных площадок не равна уникальной аудитории.</p>
 
-            <div class="papers material-stats">
-              <h4>Статистика роликов и аккаунтов</h4>
-              <p>Ещё один ролик с работой на искусственной коже набрал 1,03 млн просмотров, охватил 840 тыс. аккаунтов и принёс 1 374 подписки.</p>
-              <p>91,7% трафика в TikTok пришло из рекомендаций.</p>
-              <div class="actions">
-                <button class="btn" type="button" data-gallery="analytics">Смотреть статистику аккаунта <span class="arrow" aria-hidden="true">↗</span></button>
-                <button class="btn" type="button" data-gallery="more-results">Другие результаты Reels и TikTok <span class="arrow" aria-hidden="true">↗</span></button>
-                <button class="btn" type="button" data-gallery="reels-million">Статистика Reels с 1,03 млн просмотров <span class="arrow" aria-hidden="true">↗</span></button>
-              </div>
-            </div>
-
-            <div class="papers material-stats">
-              <h4>Контент-стратегия</h4>
-              <ul class="pearl-list" role="list">
-                <li><strong>Доверие.</strong> Показываю мастера и атмосферу сеанса ещё до знакомства.</li>
-                <li><strong>Экспертность.</strong> Показываю процесс и результат татуировки.</li>
-                <li><strong>Охват.</strong> Использую юмор, мемы и адаптирую тренды, чтобы выйти на новую аудиторию.</li>
-              </ul>
-            </div>
-
-            <div class="carousel blush" aria-label="Карусель «Обо мне»">
-              <div class="carousel-frame">
-                <button class="slide-open" id="slide-open" type="button" aria-label="Открыть слайд 1 в полном размере">
-                  <img id="carousel-image" loading="lazy" src="images/carousel/01-obo-mne.jpg" alt="Карусель «Обо мне», слайд 1">
-                </button>
-                <div class="carousel-controls">
-                  <button id="prev" class="icon-btn" type="button" aria-label="Предыдущий слайд">←</button>
-                  <span id="carousel-count" class="carousel-count" aria-live="polite">01 / 08</span>
-                  <button id="next" class="icon-btn" type="button" aria-label="Следующий слайд">→</button>
-                </div>
-              </div>
-              <div class="carousel-copy">
-                <span class="label">Instagram-карусель</span>
-                <h4>Обо мне</h4>
-                <p>Разработала оформление и историю знакомства с тату-мастером: его путь, образование, принципы работы и атмосфера на сеансе.</p>
+              <div class="papers material-stats">
+                <h4>Статистика роликов и аккаунтов</h4>
+                <p>Ещё один ролик с работой на искусственной коже набрал 1,03 млн просмотров, охватил 840 тыс. аккаунтов и принёс 1 374 подписки.</p>
+                <p>91,7% трафика в TikTok пришло из рекомендаций.</p>
                 <div class="actions">
-                  <button class="btn" type="button" data-gallery="carousel">Смотреть все слайды <span class="arrow" aria-hidden="true">↗</span></button>
+                  <button class="btn" type="button" data-gallery="analytics">Смотреть статистику аккаунта <span class="arrow" aria-hidden="true">↗</span></button>
+                  <button class="btn" type="button" data-gallery="more-results">Другие результаты Reels и TikTok <span class="arrow" aria-hidden="true">↗</span></button>
+                  <button class="btn" type="button" data-gallery="reels-million">Статистика Reels с 1,03 млн просмотров <span class="arrow" aria-hidden="true">↗</span></button>
                 </div>
               </div>
+
+              <div class="papers material-stats">
+                <h4>Контент-стратегия</h4>
+                <ul class="pearl-list" role="list">
+                  <li><strong>Доверие.</strong> Показываю мастера и атмосферу сеанса ещё до знакомства.</li>
+                  <li><strong>Экспертность.</strong> Показываю процесс и результат татуировки.</li>
+                  <li><strong>Охват.</strong> Использую юмор, мемы и адаптирую тренды, чтобы выйти на новую аудиторию.</li>
+                </ul>
+              </div>
+
+              <div class="carousel blush" aria-label="Карусель «Обо мне»">
+                <div class="carousel-frame">
+                  <button class="slide-open" id="slide-open" type="button" aria-label="Открыть слайд 1 в полном размере">
+                    <img id="carousel-image" width="958" height="1197" loading="lazy" decoding="async" data-src="images/carousel/01-obo-mne.jpg" alt="Карусель «Обо мне», слайд 1">
+                  </button>
+                  <div class="carousel-controls">
+                    <button id="prev" class="icon-btn" type="button" aria-label="Предыдущий слайд">←</button>
+                    <span id="carousel-count" class="carousel-count" aria-live="polite">01 / 08</span>
+                    <button id="next" class="icon-btn" type="button" aria-label="Следующий слайд">→</button>
+                  </div>
+                </div>
+                <div class="carousel-copy">
+                  <span class="label">Instagram-карусель</span>
+                  <h4>Обо мне</h4>
+                  <p>Разработала оформление и историю знакомства с тату-мастером: его путь, образование, принципы работы и атмосфера на сеансе.</p>
+                  <div class="actions">
+                    <button class="btn" type="button" data-gallery="carousel">Смотреть все слайды <span class="arrow" aria-hidden="true">↗</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="material-end"><button class="btn" type="button" data-collapse>Свернуть материалы <span class="arrow" aria-hidden="true">↑</span></button></div>
             </div>
-            <div class="material-end"><button class="btn" type="button" data-collapse>Свернуть материалы <span class="arrow" aria-hidden="true">↑</span></button></div>
-          </div>
+          </template>
         </details>
       </article>
 
@@ -713,35 +750,37 @@ strong { font-weight: 800 }
         </div>
         <details class="case-details">
           <summary class="btn"><span class="closed-label">Читать мои посты</span><span class="open-label">Свернуть примеры постов</span><span class="toggle-icon arrow" aria-hidden="true">↓</span></summary>
-          <div class="case-materials">
-            <div class="post-grid">
-              <article class="work">
-                <figure class="work-cover chanel-cover">
-                  <img src="images/posts/chanel-portrait.png" alt="Коко Шанель" width="334" height="324" loading="lazy">
-                  <img src="images/posts/chanel-bag.png" alt="Стёганая сумка Chanel на цепочке" width="334" height="313" loading="lazy">
-                </figure>
-                <div class="work-body">
-                  <span class="label">Этикет</span><h4>Как Шанель перевернула индустрию сумок?</h4>
-                  <div class="actions"><button class="btn" type="button" data-post="chanel">Читать пост <span class="arrow" aria-hidden="true">↗</span></button></div>
-                </div>
-              </article>
-              <article class="work">
-                <div class="text-only olive" aria-hidden="true">Про «будь проще»</div>
-                <div class="work-body">
-                  <span class="label">Психология</span><h4>Про «будь проще»</h4>
-                  <div class="actions"><button class="btn" type="button" data-post="simple">Читать пост <span class="arrow" aria-hidden="true">↗</span></button></div>
-                </div>
-              </article>
-              <article class="work">
-                <img class="work-cover full-art" loading="lazy" src="images/posts/gym-original.jpg" alt="Иллюстрация «Мысли-помощники»">
-                <div class="work-body">
-                  <span class="label">Психология</span><h4>Почему мы так боимся идти в зал?</h4>
-                  <div class="actions"><button class="btn" type="button" data-post="gym">Читать пост <span class="arrow" aria-hidden="true">↗</span></button></div>
-                </div>
-              </article>
+          <template>
+            <div class="case-materials">
+              <div class="post-grid">
+                <article class="work">
+                  <figure class="work-cover chanel-cover">
+                    <img data-src="images/posts/chanel-portrait.png" alt="Коко Шанель" width="334" height="324" loading="lazy">
+                    <img data-src="images/posts/chanel-bag.png" alt="Стёганая сумка Chanel на цепочке" width="334" height="313" loading="lazy">
+                  </figure>
+                  <div class="work-body">
+                    <span class="label">Этикет</span><h4>Как Шанель перевернула индустрию сумок?</h4>
+                    <div class="actions"><button class="btn" type="button" data-post="chanel">Читать пост <span class="arrow" aria-hidden="true">↗</span></button></div>
+                  </div>
+                </article>
+                <article class="work">
+                  <div class="text-only olive" aria-hidden="true">Про «будь проще»</div>
+                  <div class="work-body">
+                    <span class="label">Психология</span><h4>Про «будь проще»</h4>
+                    <div class="actions"><button class="btn" type="button" data-post="simple">Читать пост <span class="arrow" aria-hidden="true">↗</span></button></div>
+                  </div>
+                </article>
+                <article class="work">
+                  <img class="work-cover full-art" loading="lazy" data-src="images/posts/gym-original.jpg" alt="Иллюстрация «Мысли-помощники»">
+                  <div class="work-body">
+                    <span class="label">Психология</span><h4>Почему мы так боимся идти в зал?</h4>
+                    <div class="actions"><button class="btn" type="button" data-post="gym">Читать пост <span class="arrow" aria-hidden="true">↗</span></button></div>
+                  </div>
+                </article>
+              </div>
+              <div class="material-end"><button class="btn" type="button" data-collapse>Свернуть материалы <span class="arrow" aria-hidden="true">↑</span></button></div>
             </div>
-            <div class="material-end"><button class="btn" type="button" data-collapse>Свернуть материалы <span class="arrow" aria-hidden="true">↑</span></button></div>
-          </div>
+          </template>
         </details>
       </article>
 
@@ -754,10 +793,12 @@ strong { font-weight: 800 }
         </ul>
         <details class="case-details">
           <summary class="btn"><span class="closed-label">Смотреть креативные проекты</span><span class="open-label">Свернуть креативные проекты</span><span class="toggle-icon arrow" aria-hidden="true">↓</span></summary>
-          <div class="case-materials">
-            <div class="project-grid" id="concept-grid"></div>
-            <div class="material-end"><button class="btn" type="button" data-collapse>Свернуть материалы <span class="arrow" aria-hidden="true">↑</span></button></div>
-          </div>
+          <template>
+            <div class="case-materials">
+              <div class="project-grid" id="concept-grid"></div>
+              <div class="material-end"><button class="btn" type="button" data-collapse>Свернуть материалы <span class="arrow" aria-hidden="true">↑</span></button></div>
+            </div>
+          </template>
         </details>
       </article>
 
@@ -780,39 +821,41 @@ strong { font-weight: 800 }
         </div>
         <details class="case-details">
           <summary class="btn"><span class="closed-label">Смотреть примеры работ</span><span class="open-label">Свернуть примеры работ</span><span class="toggle-icon arrow" aria-hidden="true">↓</span></summary>
-          <div class="case-materials">
-            <div class="project-grid">
-              <article class="work">
-                <header class="pik-cover">
-                  <div>
-                    <img class="pik-cover-logo" src="images/artwork/pik-logo.png" alt="ПИК" width="370" height="112" loading="lazy">
-                    <h4>Школы с отличием</h4>
-                    <p>Концепция и смысловое наполнение лендинга</p>
+          <template>
+            <div class="case-materials">
+              <div class="project-grid project-grid-pairs">
+                <article class="work">
+                  <header class="pik-cover">
+                    <div>
+                      <img class="pik-cover-logo" data-src="images/artwork/pik-logo.png" alt="ПИК" width="370" height="112" loading="lazy">
+                      <h4>Школы с отличием</h4>
+                      <p>Концепция и смысловое наполнение лендинга</p>
+                    </div>
+                    <img class="pik-cover-fragment" data-src="images/projects/pik-school-fragment.png" alt="Фотография из материалов «Школы с отличием»" width="430" height="231" loading="lazy">
+                  </header>
+                  <div class="work-body">
+                    <p>Работала над концепцией и смысловым наполнением лендинга.</p>
+                    <div class="actions"><button class="btn" type="button" data-gallery="pik-landing">Смотреть лендинг <span class="arrow" aria-hidden="true">↗</span></button></div>
                   </div>
-                  <img class="pik-cover-fragment" src="images/projects/pik-school-fragment.png" alt="Фотография из материалов «Школы с отличием»" width="430" height="231" loading="lazy">
-                </header>
-                <div class="work-body">
-                  <p>Работала над концепцией и смысловым наполнением лендинга.</p>
-                  <div class="actions"><button class="btn" type="button" data-gallery="pik-landing">Смотреть лендинг <span class="arrow" aria-hidden="true">↗</span></button></div>
-                </div>
-              </article>
-              <article class="work">
-                <header class="pik-cover pik-cover-iot">
-                  <div>
-                    <img class="pik-cover-logo" src="images/artwork/pik-logo.png" alt="ПИК" width="370" height="112" loading="lazy">
-                    <h4>Интернет вещей</h4>
-                    <p>Материалы образовательной программы</p>
+                </article>
+                <article class="work">
+                  <header class="pik-cover pik-cover-iot">
+                    <div>
+                      <img class="pik-cover-logo" data-src="images/artwork/pik-logo.png" alt="ПИК" width="370" height="112" loading="lazy">
+                      <h4>Интернет вещей</h4>
+                      <p>Материалы образовательной программы</p>
+                    </div>
+                    <img class="pik-cover-fragment" data-src="images/projects/pik-iot-fragment.png" alt="Фрагмент иллюстраций образовательной программы" width="421" height="287" loading="lazy">
+                  </header>
+                  <div class="work-body">
+                    <p>Материалы образовательной программы «Лаборатории ПИК».</p>
+                    <div class="actions"><button class="btn" type="button" data-gallery="pik-article">Читать материал <span class="arrow" aria-hidden="true">↗</span></button></div>
                   </div>
-                  <img class="pik-cover-fragment" src="images/projects/pik-iot-fragment.png" alt="Фрагмент иллюстраций образовательной программы" width="421" height="287" loading="lazy">
-                </header>
-                <div class="work-body">
-                  <p>Материалы образовательной программы «Лаборатории ПИК».</p>
-                  <div class="actions"><button class="btn" type="button" data-gallery="pik-article">Читать материал <span class="arrow" aria-hidden="true">↗</span></button></div>
-                </div>
-              </article>
+                </article>
+              </div>
+              <div class="material-end"><button class="btn" type="button" data-collapse>Свернуть материалы <span class="arrow" aria-hidden="true">↑</span></button></div>
             </div>
-            <div class="material-end"><button class="btn" type="button" data-collapse>Свернуть материалы <span class="arrow" aria-hidden="true">↑</span></button></div>
-          </div>
+          </template>
         </details>
       </article>
 
@@ -821,10 +864,12 @@ strong { font-weight: 800 }
         <p class="case-intro tinted-note research-note"><span>Изучаю рекламные тренды и особенности их восприятия аудиторией, чтобы понимать, какие креативные подходы актуальны для брендов и как их можно применять в коммуникациях.</span></p>
         <details class="case-details">
           <summary class="btn"><span class="closed-label">Смотреть исследования</span><span class="open-label">Свернуть исследования</span><span class="toggle-icon arrow" aria-hidden="true">↓</span></summary>
-          <div class="case-materials">
-            <div class="project-grid" id="trend-grid"></div>
-            <div class="material-end"><button class="btn" type="button" data-collapse>Свернуть материалы <span class="arrow" aria-hidden="true">↑</span></button></div>
-          </div>
+          <template>
+            <div class="case-materials">
+              <div class="project-grid" id="trend-grid"></div>
+              <div class="material-end"><button class="btn" type="button" data-collapse>Свернуть материалы <span class="arrow" aria-hidden="true">↑</span></button></div>
+            </div>
+          </template>
         </details>
       </article>
 
@@ -833,21 +878,23 @@ strong { font-weight: 800 }
         <p class="case-intro tinted-note strategy-note"><span>Использую исследования и маркетинговую аналитику при разработке стратегий. Изучаю потребности аудитории, конкурентную среду и позиционирование брендов. Формулирую гипотезы и проверяю их на данных.</span></p>
         <details class="case-details">
           <summary class="btn"><span class="closed-label">Смотреть стратегические проекты</span><span class="open-label">Свернуть стратегические проекты</span><span class="toggle-icon arrow" aria-hidden="true">↓</span></summary>
-          <div class="case-materials">
-            <div class="project-grid" id="strategy-grid"></div>
-            <article class="papers material-stats case case-with-metrics">
-              <header class="case-head">
-                <span class="label">Продвижение и менторство</span>
-                <h4>Кейс-чемпионат для школьников</h4>
-              </header>
-              <div class="case-metrics" aria-label="Результаты в цифрах">
-                <div class="stat"><strong class="stat-number"><small>около</small> 500</strong><span>участников на отборочном этапе</span></div>
-                <div class="stat"><strong class="stat-number">100</strong><span>школьников в финале</span></div>
-              </div>
-              <p class="case-copy">Продвигала чемпионат через образовательные Telegram-каналы, школьные сообщества, партнёрские публикации и рассылки. На отборочном этапе — около 500 участников, в финале — 100 школьников. Одна из команд, которую менторила, вышла в финал и стала лауреатом номинации.</p>
-            </article>
-            <div class="material-end"><button class="btn" type="button" data-collapse>Свернуть материалы <span class="arrow" aria-hidden="true">↑</span></button></div>
-          </div>
+          <template>
+            <div class="case-materials">
+              <div class="project-grid" id="strategy-grid"></div>
+              <article class="papers material-stats case case-with-metrics">
+                <header class="case-head">
+                  <span class="label">Продвижение и менторство</span>
+                  <h4>Кейс-чемпионат для школьников</h4>
+                </header>
+                <div class="case-metrics" aria-label="Результаты в цифрах">
+                  <div class="stat"><strong class="stat-number"><small>около</small> 500</strong><span>участников на отборочном этапе</span></div>
+                  <div class="stat"><strong class="stat-number">100</strong><span>школьников в финале</span></div>
+                </div>
+                <p class="case-copy">Продвигала чемпионат через образовательные Telegram-каналы, школьные сообщества, партнёрские публикации и рассылки. На отборочном этапе — около 500 участников, в финале — 100 школьников. Одна из команд, которую менторила, вышла в финал и стала лауреатом номинации.</p>
+              </article>
+              <div class="material-end"><button class="btn" type="button" data-collapse>Свернуть материалы <span class="arrow" aria-hidden="true">↑</span></button></div>
+            </div>
+          </template>
         </details>
       </article>
     </section>
@@ -909,7 +956,8 @@ strong { font-weight: 800 }
     </footer>
   </main>
 
-  <dialog id="modal" class="modal" aria-labelledby="modal-title">
+  <div id="dialog-shade" class="dialog-shade" aria-hidden="true" hidden></div>
+  <dialog id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <header class="modal-head">
       <strong id="modal-title"></strong>
       <button id="close" class="icon-btn" type="button" aria-label="Закрыть">×</button>
@@ -924,7 +972,7 @@ strong { font-weight: 800 }
         <a class="btn" href="images/posts/chanel.jpg" target="_blank" rel="noopener">Открыть оригинал <span class="arrow" aria-hidden="true">↗</span></a>
       </div>
       <div class="image-scroll" role="region" aria-label="Полный скриншот поста о сумках Chanel" tabindex="0">
-        <img src="images/posts/chanel.jpg" alt="Оригинальный пост о сумках Chanel с фото и полным текстом" width="768" height="1874">
+        <img data-src="images/posts/chanel.jpg" alt="Оригинальный пост о сумках Chanel с фото и полным текстом" width="768" height="1874">
       </div>
       <details class="full-post">
         <summary>Читать текст поста</summary>
@@ -941,12 +989,17 @@ strong { font-weight: 800 }
       <p>Вам тоже регулярно <strong>советуют «не усложнять», «расслабиться» и «принять как есть»?</strong> За этой якобы безобидной рекомендацией часто скрывается, на мой взгляд, <strong>некое обесценивание вашего видения.</strong></p>
       <p><strong>Этот совет особенно опасен, когда речь идет о важных решениях или глубоких переживаниях.</strong> Анализировать, сомневаться, искать оптимальные пути — не «усложнение», а проявление ответственности. <strong>Тот, кто действительно разбирается в теме, знает: за кажущейся простотой часто скрываются нюансы, требующие внимания.</strong></p>
       <p>Кроме того, призыв «быть проще» часто используют, чтобы избежать сложных разговоров или закрыть глаза на реальные проблемы. <strong>Вместо того чтобы разобраться в конфликте, нам предлагают не драматизировать.</strong> Гораздо ценнее умение балансировать между простотой и сложностью. <strong>Да, некоторые вещи действительно не стоят нашего внимания. Но есть сферы, где упрощение преступно</strong> — отношения, здоровье, профессиональное развитие. Вот такие дела, друзья :)</p>
-      <details><summary>Посмотреть скриншот</summary><a href="images/posts/simple-clean.png" target="_blank" rel="noopener"><img loading="lazy" src="images/posts/simple-clean.png" alt="Скриншот полного поста «Про „будь проще“». Открыть в полном размере"></a></details>
+      <details>
+        <summary>Посмотреть скриншот</summary>
+        <template>
+          <a href="images/posts/simple-clean.png" target="_blank" rel="noopener"><img loading="lazy" decoding="async" data-src="images/posts/simple-clean.png" alt="Скриншот полного поста «Про „будь проще“». Открыть в полном размере"></a>
+        </template>
+      </details>
     </article>
   </template>
   <template id="post-gym">
     <article class="full-post">
-      <a href="images/posts/gym-original.jpg" target="_blank" rel="noopener"><img src="images/posts/gym-original.jpg" alt="Полная иллюстрация «Мысли-помощники». Открыть в полном размере"></a>
+      <a href="images/posts/gym-original.jpg" target="_blank" rel="noopener"><img data-src="images/posts/gym-original.jpg" alt="Полная иллюстрация «Мысли-помощники». Открыть в полном размере"></a>
       <p>Первый поход в тренажерный зал часто <strong>вызывает настоящую панику.</strong> Я думаю, друзья, многие из вас испытывали подобные чувства. Этот страх заставляет откладывать заботу о здоровье снова и снова. <strong>Но что, если это лишь иллюзия, созданная нашим мозгом?</strong></p>
       <p>Синдром новичка создает ощущение, что все вокруг являются экспертами, в то время как ты один не разбираешься в процессе и выглядишь неуместно. Кажется, что опытные посетители зала осуждают каждого новичка за каждую ошибку. А еще может казаться, что другие посетители идеально подтянуты, <strong>а твое тело недостаточно спортивное, недостаточно сильное или недостаточно красивое.</strong></p>
       <p><strong>Мысль-вредитель</strong><br>«Все уже знают, что делают, а я буду выглядеть как неподтянутый неумеха»</p>
@@ -961,7 +1014,7 @@ strong { font-weight: 800 }
         <a class="btn" href="images/stats/smit-review-clean.png" target="_blank" rel="noopener">Открыть оригинал <span class="arrow" aria-hidden="true">↗</span></a>
       </div>
       <div class="image-scroll" role="region" aria-label="Полный скриншот отзыва тату-мастера" tabindex="0">
-        <img src="images/stats/smit-review-clean.png" alt="Оригинальный отзыв тату-мастера о совместной работе" width="951" height="644">
+        <img data-src="images/stats/smit-review-clean.png" alt="Оригинальный отзыв тату-мастера о совместной работе" width="951" height="644">
       </div>
     </article>
   </template>
@@ -978,7 +1031,8 @@ const videos = [
     unit: 'просмотров в Instagram', detail: 'Четыре клиента на крупные проекты. Формат подхватили другие мастера.' },
   { id: 'trend-1', format: 'Адаптация тренда', name: 'Тату-контент', number: '647,3', scale: 'тыс.',
     unit: 'просмотров в TikTok', detail: '42 тыс. лайков и 3 031 сохранение.' },
-  { id: 'trend-2', format: 'Адаптация тренда', name: 'Тату-контент', number: '434,9', scale: 'тыс.',
+  { id: 'trend-2', mp4: 'trend-2-compatible.mp4', avcCodec: 'avc1.42c01f',
+    format: 'Адаптация тренда', name: 'Тату-контент', number: '434,9', scale: 'тыс.',
     unit: 'просмотров в TikTok', detail: '55 тыс. лайков и 5 441 сохранение.' }
 ];
 
@@ -1020,7 +1074,9 @@ const externalArrow = '<span class="arrow" aria-hidden="true">↗</span>';
 function projectCard({ id, label, title, description, links }) {
   const cover = id === 'lamoda'
     ? '<div class="text-only brown" lang="en" aria-hidden="true">Lamoda<br>Back to Office</div>'
-    : `<img class="work-cover" loading="lazy" src="${root}projects/${id}.jpg" alt="Обложка презентации «${title}»">`;
+    : `<img class="work-cover" loading="lazy" decoding="async" width="900" height="507"
+        src="${root}projects/${id}.jpg" srcset="${root}projects/${id}-560.jpg 560w, ${root}projects/${id}.jpg 900w"
+        sizes="(max-width: 690px) 86vw, (max-width: 1200px) 43vw, 560px" alt="Обложка презентации «${title}»">`;
   const buttons = links.map(([name, file]) =>
     `<a class="btn" href="https://drive.google.com/file/d/${file}/view" target="_blank" rel="noopener">${name} ${externalArrow}</a>`
   ).join('');
@@ -1038,7 +1094,10 @@ function projectCard({ id, label, title, description, links }) {
 function videoCard({ id, format, name, number, scale, unit, detail }) {
   return `<article class="work">
     <button class="video-cover" type="button" data-video="${id}" aria-label="Смотреть ролик «${name.replace(/[«»]/g, '')}» с ${number} ${scale} просмотров">
-      <img loading="lazy" src="${root}video/${id}.jpg" alt="">
+      <picture>
+        <source type="image/webp" media="(max-resolution: 2dppx)" srcset="${root}video/${id}-preview.webp">
+        <img loading="lazy" decoding="async" src="${root}video/${id}.jpg" alt="">
+      </picture>
       <span class="play" aria-hidden="true">▶</span>
     </button>
     <div class="work-body video-info">
@@ -1052,63 +1111,93 @@ function videoCard({ id, format, name, number, scale, unit, detail }) {
   </article>`;
 }
 
-for (const [id, cards] of Object.entries(projects)) {
-  document.getElementById(id).innerHTML = cards.map(projectCard).join('');
-}
-document.getElementById('videos').innerHTML = videos.map(videoCard).join('');
-
 const slides = ['01-obo-mne.jpg', '02-privet.jpg', '03-moy-put.jpg', '04-zapovedi.jpg',
   '05-obrazovanie.jpg', '06-na-seanse.jpg', '07-lyublyu.jpg', '08-pishi-v-direkt.jpg'].map(file => `carousel/${file}`);
-const carouselImage = document.getElementById('carousel-image');
-const carouselCount = document.getElementById('carousel-count');
-const slideButton = document.getElementById('slide-open');
-let slide = 0;
 
-function showSlide(index) {
-  slide = (index + slides.length) % slides.length;
-  const position = slide + 1;
-  carouselImage.src = root + slides[slide];
-  carouselImage.alt = `Карусель «Обо мне», слайд ${position}`;
-  carouselCount.textContent = `${String(position).padStart(2, '0')} / 08`;
-  slideButton.setAttribute('aria-label', `Открыть слайд ${position} в полном размере`);
+function attachImages(container) {
+  for (const image of container.querySelectorAll('img[data-src]')) {
+    image.src = image.dataset.src;
+    image.removeAttribute('data-src');
+  }
 }
 
-document.getElementById('prev').addEventListener('click', () => showSlide(slide - 1));
-document.getElementById('next').addEventListener('click', () => showSlide(slide + 1));
-document.querySelector('.carousel-frame').addEventListener('keydown', event => {
-  if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-    event.preventDefault();
-    showSlide(slide + (event.key === 'ArrowRight' ? 1 : -1));
-  }
-});
+function initializeCarousel(carousel) {
+  const image = carousel.querySelector('#carousel-image');
+  const count = carousel.querySelector('#carousel-count');
+  const slideButton = carousel.querySelector('#slide-open');
+  let slide = 0;
+  let touchStart = null;
+  let lastSwipe = 0;
 
-let touchStart = null;
-let lastSwipe = 0;
-slideButton.addEventListener('touchstart', event => {
-  touchStart = event.touches.length === 1 ? event.touches[0] : null;
-}, { passive: true });
-slideButton.addEventListener('touchcancel', () => { touchStart = null; }, { passive: true });
-slideButton.addEventListener('touchend', event => {
-  if (!touchStart) return;
-  const finish = event.changedTouches[0];
-  const deltaX = finish.clientX - touchStart.clientX;
-  const deltaY = finish.clientY - touchStart.clientY;
-  touchStart = null;
-  if (Math.abs(deltaX) > 42 && Math.abs(deltaX) > Math.abs(deltaY) * 1.3) {
-    lastSwipe = Date.now();
-    showSlide(slide + (deltaX < 0 ? 1 : -1));
+  function showSlide(index) {
+    slide = (index + slides.length) % slides.length;
+    const position = slide + 1;
+    image.src = root + slides[slide];
+    image.alt = `Карусель «Обо мне», слайд ${position}`;
+    count.textContent = `${String(position).padStart(2, '0')} / 08`;
+    slideButton.setAttribute('aria-label', `Открыть слайд ${position} в полном размере`);
   }
-}, { passive: true });
+
+  carousel.querySelector('#prev').addEventListener('click', () => showSlide(slide - 1));
+  carousel.querySelector('#next').addEventListener('click', () => showSlide(slide + 1));
+  carousel.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      showSlide(slide + (event.key === 'ArrowRight' ? 1 : -1));
+    }
+  });
+  slideButton.addEventListener('touchstart', event => {
+    touchStart = event.touches.length === 1 ? event.touches[0] : null;
+  }, { passive: true });
+  slideButton.addEventListener('touchcancel', () => { touchStart = null; }, { passive: true });
+  slideButton.addEventListener('touchend', event => {
+    if (!touchStart) return;
+    const finish = event.changedTouches[0];
+    const deltaX = finish.clientX - touchStart.clientX;
+    const deltaY = finish.clientY - touchStart.clientY;
+    touchStart = null;
+    if (Math.abs(deltaX) > 42 && Math.abs(deltaX) > Math.abs(deltaY) * 1.3) {
+      lastSwipe = Date.now();
+      showSlide(slide + (deltaX < 0 ? 1 : -1));
+    }
+  }, { passive: true });
+  slideButton.addEventListener('click', event => {
+    if (event.detail && Date.now() - lastSwipe < 450) return;
+    const title = `Карусель «Обо мне», слайд ${slide + 1} из ${slides.length}`;
+    const image = linkedImage(slides[slide], title, 958, 1197);
+    openModal(title, `<div class="full-slide">${image}<p class="note">Нажмите на изображение, чтобы открыть оригинал.</p></div>`, slideButton);
+  });
+}
+
+document.addEventListener('toggle', event => {
+  const details = event.target;
+  if (details.tagName !== 'DETAILS' || !details.open) return;
+  const template = details.querySelector(':scope > template');
+  if (!template) return;
+  const content = template.content;
+  attachImages(content);
+  const projectGrid = content.querySelector('.project-grid[id]');
+  if (projectGrid) {
+    const cards = projects[projectGrid.id];
+    projectGrid.classList.toggle('project-grid-pairs', cards.length === 2 || cards.length === 4);
+    projectGrid.innerHTML = cards.map(projectCard).join('');
+  }
+  const videoGrid = content.querySelector('#videos');
+  if (videoGrid) videoGrid.innerHTML = videos.map(videoCard).join('');
+  const carousel = content.querySelector('.carousel-frame');
+  if (carousel) initializeCarousel(carousel);
+  template.replaceWith(content);
+}, true);
 
 const galleries = {
-  analytics: ['Статистика TikTok', ['stats/00-00-31.jpg', 'stats/00-00-34.jpg']],
-  'reels-million': ['Статистика Reels', ['stats/16-34-17.jpg', 'stats/16-34-20.jpg']],
+  analytics: ['Статистика TikTok', ['stats/00-00-31.jpg', 'stats/00-00-34.jpg'], 942, 2048],
+  'reels-million': ['Статистика Reels', ['stats/16-34-17.jpg', 'stats/16-34-20.jpg'], 946, 2048],
   'more-results': ['Статистика отдельных роликов', ['stats/00-01-02.jpg', 'stats/00-01-21.jpg', 'stats/00-01-29.jpg',
-    'stats/00-02-45.jpg', 'stats/16-34-24.jpg', 'stats/16-34-28.jpg']],
-  carousel: ['Карусель «Обо мне»', slides],
-  'pik-landing': ['Школы с отличием', [1, 2, 3].map(id => `projects/pik-${id}.jpg`)],
-  'pik-article': ['Интернет вещей', [4, 5].map(id => `projects/pik-${id}.jpg`)],
-  'pik-letter': ['Рекомендательное письмо ПИК', ['projects/pik-reference.jpg']]
+    'stats/00-02-45.jpg', 'stats/16-34-24.jpg', 'stats/16-34-28.jpg'], 942, 2048],
+  carousel: ['Карусель «Обо мне»', slides, 958, 1197],
+  'pik-landing': ['Школы с отличием', [1, 2, 3].map(id => `projects/pik-${id}.jpg`), 900, 1272],
+  'pik-article': ['Интернет вещей', [4, 5].map(id => `projects/pik-${id}.jpg`), 900, 1272],
+  'pik-letter': ['Рекомендательное письмо ПИК', ['projects/pik-reference.jpg'], 1200, 1706]
 };
 const posts = {
   chanel: 'Как Шанель перевернула индустрию сумок?',
@@ -1120,6 +1209,8 @@ const posts = {
 const modal = document.getElementById('modal');
 const modalBody = document.getElementById('modal-body');
 const closeButton = document.getElementById('close');
+const dialogShade = document.getElementById('dialog-shade');
+const nativeDialog = typeof modal.showModal === 'function';
 let opener = null;
 
 function openModal(title, content, trigger) {
@@ -1128,21 +1219,44 @@ function openModal(title, content, trigger) {
   if (typeof content === 'string') {
     modalBody.innerHTML = content;
   } else {
-    modalBody.replaceChildren(content);
+    modalBody.textContent = '';
+    attachImages(content);
+    modalBody.appendChild(content);
   }
-  if (!modal.open) modal.showModal();
+  modal.classList.toggle('modal-wide', Boolean(modalBody.querySelector('.review-image-viewer')));
+  if (!modal.hasAttribute('open')) {
+    if (nativeDialog) {
+      modal.showModal();
+    } else {
+      modal.classList.add('modal-fallback');
+      modal.setAttribute('open', '');
+      dialogShade.hidden = false;
+      document.documentElement.classList.add('dialog-fallback-open');
+    }
+  }
   modal.scrollTop = 0;
   closeButton.focus({ preventScroll: true });
 }
 
 function closeModal() {
-  if (!modal.open) return;
+  if (!modal.hasAttribute('open')) return;
   const trigger = opener;
   opener = null;
-  modalBody.querySelector('video')?.pause();
-  modalBody.replaceChildren();
-  modal.close();
-  trigger?.focus({ preventScroll: true });
+  const player = modalBody.querySelector('video');
+  if (player && player.querySelector('source')) {
+    player.pause();
+    player.textContent = '';
+    player.load();
+  }
+  modalBody.textContent = '';
+  if (nativeDialog) {
+    modal.close();
+  } else {
+    modal.removeAttribute('open');
+    dialogShade.hidden = true;
+    document.documentElement.classList.remove('dialog-fallback-open');
+  }
+  if (trigger) trigger.focus({ preventScroll: true });
 }
 
 function clickOutside(event) {
@@ -1162,36 +1276,100 @@ modal.addEventListener('cancel', event => {
   closeModal();
 });
 closeButton.addEventListener('click', closeModal);
+if (!nativeDialog) {
+  dialogShade.addEventListener('click', closeModal);
+  document.addEventListener('focusin', event => {
+    if (modal.hasAttribute('open') && !modal.contains(event.target)) closeButton.focus();
+  });
+  document.addEventListener('keydown', event => {
+    if (!modal.hasAttribute('open')) return;
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeModal();
+    } else if (event.key === 'Tab') {
+      const items = Array.from(modal.querySelectorAll('a[href], button, video[controls], summary, [tabindex="0"]'))
+        .filter(element => !element.disabled && element.getClientRects().length);
+      const from = event.shiftKey ? items[0] : items[items.length - 1];
+      const to = event.shiftKey ? items[items.length - 1] : items[0];
+      if (document.activeElement === from && to) {
+        event.preventDefault();
+        to.focus();
+      }
+    }
+  });
+}
 
-function linkedImage(path, caption) {
+function linkedImage(path, caption, width, height) {
   return `<a href="${root + path}" target="_blank" rel="noopener" aria-label="${caption}. Открыть изображение в полном размере">
-    <img src="${root + path}" alt="${caption}">
+    <img src="${root + path}" alt="${caption}" width="${width}" height="${height}" loading="lazy" decoding="async">
   </a>`;
 }
 
 function openGallery(key, trigger) {
-  const [title, files] = galleries[key];
-  const thumbnails = files.map((path, i) => linkedImage(path, `${title}, изображение ${i + 1}`));
+  const [title, files, width, height] = galleries[key];
+  const thumbnails = files.map((path, i) => linkedImage(path, `${title}, изображение ${i + 1}`, width, height));
   const layout = files.length === 1 ? 'full-slide' : 'gallery';
   openModal(title, `<div class="${layout}">${thumbnails.join('')}</div>`, trigger);
 }
 
-slideButton.addEventListener('click', event => {
-  if (event.detail && Date.now() - lastSwipe < 450) return;
-  const title = `Карусель «Обо мне», слайд ${slide + 1} из ${slides.length}`;
-  const image = linkedImage(slides[slide], title);
-  openModal(title, `<div class="full-slide">${image}<p class="note">Нажмите на изображение, чтобы открыть оригинал.</p></div>`, slideButton);
-});
+function openVideo(id, trigger) {
+  const entry = videos.find(item => item.id === id);
+  const base = `${root}video/`;
+  const mp4 = base + (entry.mp4 || `${id}.mp4`);
+  const webm = `${base}${id}.webm`;
+  const avcCodec = entry.avcCodec || 'avc1.64001f';
+  openModal(entry.name, `<div class="video-stage">
+      <video playsinline preload="none" poster="${base}${id}.jpg" aria-label="${entry.name}"></video>
+      <button class="play video-start" type="button" aria-label="Воспроизвести видео"><span aria-hidden="true">▶</span></button>
+    </div>
+    <div class="video-fallback" hidden aria-live="polite">
+      <p>Видео не удалось воспроизвести в плеере. Можно открыть файл напрямую.</p>
+      <div class="actions">
+        <a class="btn" href="${mp4}" target="_blank" rel="noopener">Открыть MP4 ${externalArrow}</a>
+        <a class="btn" href="${webm}" target="_blank" rel="noopener">Открыть WebM ${externalArrow}</a>
+      </div>
+    </div>
+    <p><strong>${entry.number} ${entry.scale}</strong> ${entry.unit}. ${entry.detail}</p>`, trigger);
+  const player = modalBody.querySelector('video');
+  const start = modalBody.querySelector('.video-start');
+  const fallback = modalBody.querySelector('.video-fallback');
+  const showFallback = () => { fallback.hidden = false; };
+  player.addEventListener('error', showFallback);
+  player.addEventListener('loadedmetadata', () => { fallback.hidden = true; });
+  start.addEventListener('click', () => {
+    const formats = [[mp4, `video/mp4; codecs="${avcCodec}, mp4a.40.2"`], [webm, 'video/webm; codecs="vp9, opus"']];
+    const failed = new Set();
+    for (const [url, type] of formats) {
+      const source = document.createElement('source');
+      source.src = url;
+      source.type = type;
+      if (!player.canPlayType(type)) failed.add(source);
+      source.addEventListener('error', () => {
+        failed.add(source);
+        if (failed.size === formats.length) showFallback();
+      });
+      player.appendChild(source);
+    }
+    player.controls = true;
+    player.tabIndex = 0;
+    start.hidden = true;
+    player.focus({ preventScroll: true });
+    if (failed.size === formats.length) showFallback();
+    player.preload = 'metadata';
+    player.load();
+    const playback = player.play();
+    if (playback) playback.catch(error => {
+      if (error.name === 'NotSupportedError') showFallback();
+    });
+  }, { once: true });
+}
 
 document.addEventListener('click', event => {
   const button = event.target.closest('button');
   if (!button) return;
   const { video, gallery, post } = button.dataset;
   if (video) {
-    const entry = videos.find(item => item.id === video);
-    openModal(entry.name, `<video controls playsinline preload="metadata"
-      poster="${root}video/${video}.jpg" src="${root}video/${video}.mp4" aria-label="${entry.name}"></video>
-      <p><strong>${entry.number} ${entry.scale}</strong> ${entry.unit}. ${entry.detail}</p>`, button);
+    openVideo(video, button);
   } else if (gallery) {
     openGallery(gallery, button);
   } else if (post) {
