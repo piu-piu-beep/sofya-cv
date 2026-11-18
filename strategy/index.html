@@ -501,11 +501,6 @@ html.dialog-fallback-open { overflow: hidden }
 .result-metrics .stat { min-height: 80px; padding: 9px 12px }
 .result-metrics .stat-wide { grid-column: 1 / -1 }
 .result-metrics .stat .stat-number { font-size: clamp(1.4rem, 2.5vw, 2.42rem) }
-.result-metrics .stat-breakdown {
-  display: grid; grid-template-columns: max-content minmax(0, 1fr);
-  align-items: center; align-content: center; justify-content: stretch; gap: 5px 8px;
-}
-.stat-breakdown > span { margin: 0; overflow-wrap: anywhere }
 .result-case > .case-details { margin-top: 14px }
 .campaign-feature h4, .project-group-head h4 {
   margin: 0; color: var(--wine); line-height: 1.25; font-size: clamp(1.12rem, 2.1vw, 1.55rem);
@@ -839,15 +834,10 @@ html.dialog-fallback-open { overflow: hidden }
             <h4 id="smit-case-title">SMIT TATTOO — стратегия продвижения личного бренда</h4>
             <p class="label">Активное ведение с мая 2026</p>
             <div class="case-metrics result-metrics" aria-label="Ключевые результаты">
-              <div class="stat stat-featured"><strong class="stat-number">700 <small>тыс. ₽+</small></strong><span>выручки от клиентов из соцсетей</span></div>
-              <div class="stat"><strong class="stat-number">0 <small>₽</small></strong><span>рекламного бюджета</span></div>
+              <div class="stat stat-featured stat-wide"><strong class="stat-number">700 <small>тыс. ₽</small></strong><span>выручки без рекламного бюджета</span></div>
               <div class="stat"><strong class="stat-number">5,7 <small>млн</small></strong><span>просмотров в TikTok за 6 месяцев</span></div>
-              <div class="stat"><strong class="stat-number">11,3 <small>тыс.</small></strong><span>подписчиков в Instagram</span></div>
-              <div class="stat"><strong class="stat-number">56,5 <small>тыс.</small></strong><span>репостов в TikTok</span></div>
-              <div class="stat stat-breakdown">
-                <strong class="stat-number">12</strong> <span>роликов со 100 тыс.+ просмотров и</span>
-                <strong class="stat-number">41</strong> <span>ролик с 10 тыс.+ просмотров</span>
-              </div>
+              <div class="stat"><strong class="stat-number">11 <small>тыс.</small></strong><span>подписчиков в Instagram</span></div>
+              <div class="stat stat-wide"><strong class="stat-number">56 <small>тыс.</small></strong><span>репостов в TikTok</span></div>
             </div>
             <details class="case-details">
               <summary class="btn" aria-describedby="smit-case-title"><span class="closed-label">Подробнее о кейсе</span><span class="open-label">Свернуть описание</span><span class="toggle-icon arrow" aria-hidden="true">↓</span></summary>
