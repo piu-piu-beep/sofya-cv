@@ -1,0 +1,1227 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Софья Бекета. Маркетинговые и коммуникационные стратегии, позиционирование и исследования. Резюме и портфолио.">
+  <title>Софья Бекета — Strategy &amp; Marketing</title>
+  <link rel="icon" href="images/artwork/pearl-shell.png" type="image/png">
+  <style>
+@font-face {
+  font-family: 'Manrope'; font-style: normal; font-weight: 400 800; font-display: swap;
+  src: url('fonts/manrope-normal-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Manrope'; font-style: normal; font-weight: 400 800; font-display: swap;
+  src: url('fonts/manrope-normal-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Manrope'; font-style: normal; font-weight: 400 800; font-display: swap;
+  src: url('fonts/manrope-normal-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap;
+  src: url('fonts/instrument-serif-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --ink: #302423;
+  --muted: #65564d;
+  --wine: #59172d;
+  --brown: #50302a;
+  --olive: #62692e;
+  --dark-olive: #30341a;
+  --rose: #ae747e;
+  --blush: #f5dce4;
+  --blue: #dce7f5;
+  --paper: #faf6ed;
+  --milk: #fffaf2;
+  --line: rgba(80, 48, 42, .16);
+  --paper-texture: url('images/textures/paper.jpg');
+  --pink-panel: rgba(245, 220, 228, .56);
+  --blue-panel: rgba(220, 231, 245, .59);
+  --olive-panel: rgba(98, 105, 46, .115);
+  --neutral-panel: rgba(255, 250, 242, .84);
+  --radius: 22px;
+  --small-radius: 14px;
+  --sans: 'Manrope', Arial, sans-serif;
+  --serif: 'Instrument Serif', Georgia, serif;
+}
+@supports (background-image: image-set(url('images/textures/paper.webp') type('image/webp'))) {
+  :root { --paper-texture: image-set(url('images/textures/paper.webp') type('image/webp'), url('images/textures/paper.jpg') type('image/jpeg')); }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 26px; }
+body {
+  margin: 0;
+  background-color: var(--paper);
+  background-image: linear-gradient(rgba(250, 246, 237, .925), rgba(250, 246, 237, .925)), var(--paper-texture);
+  background-size: auto, 680px auto;
+  color: var(--ink);
+  font: 400 1rem/1.65 var(--sans);
+  -webkit-text-size-adjust: 100%;
+}
+h1, h2, h3, h4, p, figure, blockquote { margin: 0; }
+h1, h2, h3, h4 { color: var(--wine); font-weight: 800; line-height: 1.12; letter-spacing: -.042em; }
+h2 { font-size: clamp(2rem, 4.2vw, 3.55rem); }
+h3 { font-size: clamp(1.46rem, 2.8vw, 2.16rem); }
+strong { font-weight: 800; }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+img { display: block; max-width: 100%; height: auto; }
+:focus-visible { outline: 2px solid var(--wine); outline-offset: 4px; }
+.wrap { width: min(1120px, calc(100% - 96px)); margin-inline: auto; }
+.top {
+  min-height: 74px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px 28px;
+  border-bottom: 1px solid var(--line);
+}
+.wordmark { white-space: nowrap; font-weight: 800; color: var(--wine); text-decoration: none; letter-spacing: -.02em; }
+.top nav { display: flex; color: var(--brown); flex-wrap: wrap; align-items: center; gap: 3px 24px; }
+.top nav a { font-size: .87rem; font-weight: 750; text-decoration: none; padding: 8px 0; }
+.top nav a:hover { color: var(--wine); text-decoration: underline; text-underline-offset: .32em; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 17px;
+  min-height: 44px;
+  max-width: 100%;
+  background: rgba(255, 250, 242, .45);
+  color: var(--wine);
+  border: 1px solid rgba(89, 23, 45, .31);
+  border-radius: 999px;
+  font-size: .875rem;
+  line-height: 1.3;
+  font-weight: 800;
+  text-decoration: none;
+  text-align: center;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+  transition: background-color .18s ease, border-color .18s ease, color .18s ease;
+}
+.btn:hover { background: var(--pink-panel); border-color: var(--wine); }
+.btn.primary { color: var(--milk); background: var(--wine); border-color: var(--wine); }
+.btn.primary:hover { background: var(--brown); border-color: var(--brown); }
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.62fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(32px, 7.5vw, 104px);
+  padding: clamp(34px, 4.4vw, 58px) 0 31px;
+}
+.hero h1 { color: var(--wine); font-size: clamp(3.18rem, 6.4vw, 6.05rem); line-height: 1; letter-spacing: -.074em; }
+.hero-role {
+  color: var(--wine);
+  font: italic 400 clamp(2.13rem, 4.2vw, 3.72rem)/1 var(--serif);
+  margin: 9px 0 26px;
+}
+.hero-facts { display: grid; gap: 3px; font-size: .9rem; font-weight: 800; color: var(--brown); }
+.hero-intro { max-width: 61ch; margin: 12px 0 24px; }
+.portrait { position: relative; isolation: isolate; margin: 0 16px 5px 0; }
+.portrait::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 9% -16px -12px 12%;
+  background: var(--pink-panel);
+  border-radius: var(--radius);
+}
+.portrait-photo {
+  width: 100%;
+  aspect-ratio: 1.03;
+  object-fit: cover;
+  object-position: center 48%;
+  border-radius: var(--radius);
+}
+.portrait picture { position: relative; display: block; }
+.portrait-tiles { position: absolute; inset: 0; pointer-events: none; }
+.portrait-tile {
+  position: absolute;
+  width: 29%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--small-radius);
+  box-shadow: 0 3px 7px rgba(80, 48, 42, .18);
+}
+.portrait-tile:nth-child(1) { top: 10%; left: 1%; transform: rotate(-10deg); }
+.portrait-tile:nth-child(2) { top: 1%; left: 31%; transform: rotate(5deg); }
+.portrait-tile:nth-child(3) { top: 8%; right: 1%; transform: rotate(12deg); }
+.portrait-tile:nth-child(4) { top: 36%; right: -3%; transform: rotate(5deg); }
+.portrait-tile:nth-child(5) { top: 45%; left: -2%; transform: rotate(-8deg); }
+.portrait-tile:nth-child(6) { top: 58%; right: 2%; transform: rotate(-11deg); }
+.metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 11px; }
+.metric {
+  min-width: 0;
+  min-height: 120px;
+  padding: 17px 20px;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  border-radius: var(--small-radius);
+  color: var(--milk);
+  background: linear-gradient(var(--glaze), var(--glaze)), var(--tile) center / cover;
+  background-color: var(--ink);
+}
+.metric.wine { --glaze: rgba(57, 12, 28, .74); --tile: url('images/artwork/tile-wine.jpg'); }
+.metric.brown { --glaze: rgba(58, 33, 27, .80); --tile: url('images/artwork/tile-floral.jpg'); }
+.metric.rose { --glaze: rgba(245, 220, 228, .75); --tile: url('images/artwork/tile-rose.jpg'); color: var(--wine); }
+.metric.olive { --glaze: rgba(48, 52, 26, .75); --tile: url('images/artwork/tile-olive.jpg'); }
+.metric-number {
+  color: inherit;
+  font-size: clamp(2rem, 4.15vw, 3.55rem);
+  line-height: 1;
+  letter-spacing: -.075em;
+  white-space: nowrap;
+}
+.metric-number small { font-size: .43em; letter-spacing: -.02em; }
+.metric span { font-size: .85rem; line-height: 1.32; font-weight: 720; max-width: 24ch; }
+.section { margin-top: clamp(41px, 6vw, 86px); }
+.section > h2 { margin-bottom: 23px; }
+.overview { display: grid; gap: 28px; }
+.overview-panel { min-width: 0; }
+.help-panel { background: var(--blue-panel); border-radius: var(--radius); padding: clamp(20px, 4.4vw, 48px); }
+.help-panel h2 { margin-bottom: 22px; }
+.pearl-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
+.pearl-list li { position: relative; padding-left: 29px; }
+.pearl-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .23em;
+  width: 21px;
+  height: 21px;
+  background: url('images/artwork/pearl-shell.png') center / contain no-repeat;
+}
+.help-panel .pearl-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px 36px; }
+.pearl-list strong, .help-summary, .label { color: var(--wine); }
+.help-summary { margin-top: 20px; font-weight: 750; }
+.skills-panel h2 { font-size: clamp(1.6rem, 2.8vw, 2.15rem); margin-bottom: 13px; }
+.skills-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; }
+.skills-list li { padding: 5px 12px; border-radius: 999px; background: var(--olive-panel); color: var(--brown); font-size: .825rem; font-weight: 730; }
+.work-history-list { list-style: none; padding: 0; margin: 0; }
+.work-history-list li {
+  display: grid;
+  grid-template-columns: minmax(0, .87fr) minmax(0, 1.45fr) minmax(0, 1fr);
+  align-items: baseline;
+  gap: 4px 24px;
+  padding: 13px 0;
+  border-top: 1px solid var(--line);
+}
+.work-history-list li:last-child { border-bottom: 1px solid var(--line); }
+.work-company { color: var(--wine); overflow-wrap: anywhere; }
+.work-role { color: var(--brown); }
+.work-period { text-align: right; color: var(--muted); font-size: .86rem; }
+#projects {
+  padding: clamp(16px, 3.1vw, 36px);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(89, 23, 45, .50), transparent 68%), var(--brown);
+}
+#projects > h2 { color: var(--milk); }
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.brand-tile {
+  --tile: url('images/artwork/tile-floral.jpg');
+  --glaze: rgba(255, 250, 242, .83);
+  grid-column: span 3;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 13px 14px;
+  border-radius: var(--small-radius);
+  background: linear-gradient(var(--glaze), var(--glaze)), var(--tile) center / cover;
+  background-color: var(--paper);
+}
+.brand-tile:nth-child(4n+1) { --tile: url('images/artwork/tile-rose.jpg'); --glaze: rgba(245, 220, 228, .80); }
+.brand-tile:nth-child(4n+3) { --tile: url('images/artwork/tile-botanical.jpg'); --glaze: rgba(250, 246, 237, .72); }
+.brand-tile:nth-child(4n+4) { --tile: url('images/artwork/tile-flower.jpg'); --glaze: rgba(220, 231, 245, .79); }
+.brand-tile:nth-last-child(-n+3) { grid-column: span 4; }
+@media (min-width: 961px) {
+  .brand-grid { grid-template-columns: repeat(30, minmax(0, 1fr)); }
+  .brand-tile, .brand-tile:nth-last-child(-n+3) { grid-column: span 5; }
+  .brand-tile:nth-child(n+7) { grid-column: span 6; }
+}
+.brand-mark {
+  min-height: 37px;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  color: var(--wine);
+  font-size: 1.08rem;
+  line-height: 1.12;
+  letter-spacing: -.025em;
+  font-weight: 800;
+}
+.brand-mark.raffaello img { max-height: 40px; }
+.brand-mark.sunny { padding: 4px 8px; border-radius: 12px; background: rgba(80, 48, 42, .88); }
+.brand-mark.sunny img { max-height: 28px; }
+.brand-mark img { display: block; width: auto; height: auto; max-height: 34px; max-width: min(100%, 128px); object-fit: contain; }
+.brand-tile span:last-child { color: var(--brown); font-size: .825rem; font-weight: 600; line-height: 1.3; }
+.portfolio-head { margin-bottom: 27px; }
+.portfolio-head h2 { margin-bottom: 7px; }
+.portfolio-head > p { color: var(--muted); }
+.portfolio-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 15px;
+}
+.portfolio-jump a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 37px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--neutral-panel);
+  color: var(--wine);
+  font-size: .8rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background-color .18s ease;
+}
+.portfolio-jump a:hover { background: var(--pink-panel); }
+.portfolio-group { padding: 20px 0 0; border-top: 1px solid var(--line); }
+.portfolio-group + .portfolio-group { margin-top: clamp(28px, 5.5vw, 65px); }
+.portfolio-group > h3 { margin-bottom: 16px; }
+.case-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+.case-card {
+  min-width: 0;
+  display: grid;
+  align-content: start;
+  background: var(--neutral-panel);
+  border-radius: var(--radius);
+  border: 1px solid rgba(80, 48, 42, .095);
+}
+.case-card.featured { grid-column: 1 / -1; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; }
+.case-grid .case-card:nth-child(even) { background: rgba(245, 220, 228, .30); }
+.case-media {
+  position: relative;
+  align-self: start;
+  display: grid;
+  padding: 0;
+  margin: 9px 9px 0;
+  background: rgba(80, 48, 42, .055);
+  border: 0;
+  border-radius: var(--small-radius);
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+}
+.case-media picture, .case-media img { width: 100%; display: block; }
+.case-media img { aspect-ratio: 16 / 9; object-fit: contain; transition: transform .23s ease; }
+.case-media:hover img { transform: scale(1.022); }
+.case-cover { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; }
+.case-cover picture { display: block; }
+.case-cover img { height: auto; aspect-ratio: auto; }
+.telegram-cover {
+  background:
+    radial-gradient(ellipse at 12% 12%, rgba(255, 250, 242, .78), transparent 62%),
+    linear-gradient(133deg, var(--blue), #acc6df);
+}
+.telegram-cover .telegram-logo {
+  position: absolute;
+  z-index: 2;
+  left: 8%;
+  top: 15%;
+  width: 20%;
+  aspect-ratio: 1;
+  filter: drop-shadow(0 5px 10px rgba(26, 79, 120, .22));
+}
+.telegram-post {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  border-radius: clamp(5px, 1.3vw, 13px);
+  box-shadow: 0 8px 16px rgba(39, 55, 78, .24);
+}
+.telegram-post:first-of-type { top: 12%; left: 32%; width: 36%; height: 82%; transform: rotate(-6deg); }
+.telegram-post:last-of-type { top: 30%; right: 5%; width: 39%; transform: rotate(7deg); }
+.smit-cover { background: #222; }
+.smit-cover picture {
+  position: absolute;
+  width: 66%;
+  right: 0;
+  top: -17%;
+}
+.smit-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #222 58%, rgba(34, 34, 34, 0) 66%);
+  pointer-events: none;
+}
+.smit-wordmark {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 7%;
+  transform: translateY(-50%);
+  color: var(--milk);
+  text-align: left;
+  font-size: clamp(1.15rem, 3.3vw, 3.2rem);
+  font-weight: 800;
+  line-height: .93;
+  letter-spacing: -.065em;
+}
+.featured .case-media { align-self: center; margin-bottom: 9px; }
+.case-content { padding: 17px 21px 21px; }
+.featured .case-content { padding: 22px 25px; }
+.case-ident { display: flex; flex-wrap: wrap; gap: 3px 9px; line-height: 1.26; margin-bottom: 8px; }
+.case-ident strong { color: var(--brown); font-size: .8rem; }
+.case-ident span { color: var(--muted); font-size: .8rem; }
+.case-content h4 { font-size: clamp(1.29rem, 2.25vw, 1.88rem); margin-bottom: 8px; }
+.case-content p { line-height: 1.58; }
+.case-result { margin-top: 11px; }
+.case-result strong {
+  color: var(--wine);
+  padding: .12em .40em .15em;
+  background: rgba(174, 116, 126, .32);
+  border-radius: 8px;
+  font-weight: 800;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.case-card:nth-child(even) .case-result strong { background: rgba(220, 231, 245, .94); }
+.case-links { margin-top: 14px; }
+.case-links .btn { font-size: .81rem; padding-inline: 13px; }
+.case-note { margin-top: 9px; color: var(--muted); font-size: .76rem; }
+#research .case-grid { grid-template-columns: repeat(6, minmax(0,1fr)); }
+#research .case-card:not(.featured) { grid-column: span 2; }
+#research .case-card:nth-last-child(-n+2) { grid-column: span 3; }
+#research .case-card:not(.featured) h4 { font-size: clamp(1.22rem, 1.85vw, 1.57rem); }
+.education, .review { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 14px; }
+.education > article, .quote, .contact { padding: clamp(17px, 3vw, 32px); border-radius: var(--radius); }
+.education h3, .tool h3 { margin-bottom: 7px; }
+.education .pearl-list { margin-top: 10px; gap: 4px; }
+.education-main { background: var(--olive-panel); }
+.education-rose { background: var(--pink-panel); }
+.label, .eyebrow { display: block; color: var(--wine); font-size: .79rem; font-weight: 800; line-height: 1.4; margin-bottom: 7px; }
+.tools { display: flex; flex-wrap: wrap; gap: 10px; }
+.tool {
+  --glaze: rgba(255, 250, 242, .83);
+  --tile: url('images/artwork/tile-botanical.jpg');
+  flex: 1 1 180px;
+  min-width: 0;
+  padding: 14px 17px;
+  border-radius: var(--small-radius);
+  background: linear-gradient(var(--glaze), var(--glaze)), var(--tile) center / cover;
+}
+.tool.brown { --glaze: rgba(58, 33, 27, .82); --tile: url('images/artwork/tile-floral.jpg'); }
+.tool.olive { --glaze: rgba(48, 52, 26, .81); --tile: url('images/artwork/tile-olive.jpg'); }
+.tool.brown, .tool.olive, .tool.brown h3, .tool.olive h3 { color: var(--milk); }
+.tool.blue { --glaze: rgba(220, 231, 245, .80); --tile: url('images/artwork/tile-flower.jpg'); }
+.tool.blush { --glaze: rgba(245, 220, 228, .80); --tile: url('images/artwork/tile-rose.jpg'); }
+.tool h3 { font-size: .93rem; letter-spacing: -.016em; }
+.tool p { font-size: .85rem; }
+.quote { background: var(--neutral-panel); }
+.quote:nth-child(2) {
+  background: linear-gradient(120deg, rgba(57, 12, 28, .91), rgba(57, 12, 28, .78)),
+    url('images/artwork/tile-wine.jpg') center / cover, var(--wine);
+}
+.quote blockquote { color: var(--wine); font-size: clamp(1.17rem, 2.3vw, 1.6rem); line-height: 1.36; letter-spacing: -.033em; font-weight: 750; margin-top: 14px; }
+.quote cite { display: block; font-size: .86rem; color: var(--muted); font-style: normal; margin: 9px 0 16px; }
+.quote:nth-child(2) :is(.label, blockquote, cite) { color: var(--milk); }
+.review-open { width: 100%; display: grid; justify-items: start; gap: 9px; border: 0; padding: 0; background: transparent; text-align: left; cursor: pointer; }
+.review-open img { border-radius: var(--small-radius); }
+.review-open span { color: var(--wine); font-size: .84rem; font-weight: 800; text-decoration: underline; text-underline-offset: .26em; }
+.contact {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+  background: linear-gradient(110deg, rgba(48, 52, 26, .93), rgba(48, 52, 26, .79)),
+    url('images/artwork/tile-olive.jpg') center / auto 155% repeat-x, var(--dark-olive);
+  margin: clamp(41px, 6vw, 79px) 0 26px;
+}
+.contact h2 { font-size: clamp(1.85rem, 3.4vw, 2.75rem); }
+.contact :is(.label, h2) { color: var(--milk); }
+.quote:nth-child(2) .btn, .contact .btn {
+  color: var(--milk);
+  border-color: rgba(255, 250, 242, .56);
+  background: rgba(255, 250, 242, .10);
+}
+.contact .btn.primary, .contact .btn:hover, .quote:nth-child(2) .btn:hover {
+  color: var(--wine);
+  background: var(--milk);
+}
+.quote:nth-child(2) :focus-visible, .contact :focus-visible { outline-color: var(--milk); }
+.brand-mark a:focus-visible { outline: 2px solid var(--wine); outline-offset: 3px; }
+.modal {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  padding: 0;
+  width: min(850px, calc(100% - 28px));
+  max-width: none;
+  max-height: calc(100% - 28px);
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--ink);
+  background: var(--paper);
+}
+.modal:not([open]) { display: none; }
+.modal::backdrop, .dialog-shade { background: rgba(48, 36, 35, .66); }
+.dialog-shade:not([hidden]) { position: fixed; inset: 0; z-index: 15; }
+.modal-fallback[open] { display: block; z-index: 16; }
+html.dialog-fallback-open { overflow: hidden; }
+.modal-wide { width: min(1000px, calc(100% - 28px)); }
+.modal-head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 8px 12px 8px 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--paper);
+  color: var(--wine);
+  border-bottom: 1px solid var(--line);
+}
+.icon-btn { flex: none; width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--pink-panel); font-size: 1.55rem; color: var(--wine); cursor: pointer; }
+.modal-body { padding: 12px; }
+.gallery { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+.gallery a, .full-slide a { display: block; align-self: start; }
+.gallery img, .full-slide img { margin-inline: auto; border-radius: 9px; }
+.image-viewer .actions { margin-bottom: 10px; }
+.image-scroll { overflow: auto; max-height: 65vh; }
+.image-scroll img { margin-inline: auto; }
+.is-zoomed .image-scroll img { width: var(--original-width); max-width: none; }
+
+@media (max-width: 960px) {
+  .wrap { width: calc(100% - 56px); }
+  .hero { gap: 36px; }
+}
+@media (max-width: 700px) {
+  .wrap { width: calc(100% - 32px); }
+  .top { min-height: 64px; padding: 7px 0; gap: 3px 15px; }
+  .top nav { gap: 0 13px; }
+  .top nav a { padding-block: 5px; font-size: .76rem; }
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(96px, 28%);
+    column-gap: 14px;
+    row-gap: 0;
+    padding: 26px 0 20px;
+  }
+  .hero > div { display: contents; }
+  .hero h1, .hero-role, .hero-intro, .hero .actions { grid-column: 1 / -1; }
+  .hero h1 { font-size: clamp(2.76rem, 10vw, 4.1rem); }
+  .hero-role { margin: 5px 0 13px; }
+  .hero-facts { grid-column: 1; grid-row: 3; font-size: .85rem; line-height: 1.48; align-self: center; }
+  .hero-intro { grid-row: 4; margin: 13px 0 14px; }
+  .hero .actions { grid-row: 5; }
+  .portrait { grid-column: 2; grid-row: 3; width: calc(100% - 7px); margin: 0 7px 0 0; }
+  .portrait-photo { aspect-ratio: .92; object-position: center 43%; border-radius: var(--small-radius); }
+  .portrait-tile { width: 35%; border-radius: 6px; }
+  .portrait::before { right: -5px; bottom: -5px; border-radius: var(--small-radius); }
+  .metrics { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 7px; }
+  .metric { min-height: auto; gap: 5px; padding: 11px 11px 13px; }
+  .metric span { font-size: .78rem; }
+  .help-panel h2 { margin-bottom: 14px; }
+  .help-panel .pearl-list { grid-template-columns: 1fr; gap: 9px; }
+  .work-history-list li { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 3px 12px; }
+  .work-company { grid-column: 1 / -1; }
+  .work-role, .work-period { font-size: .83rem; line-height: 1.36; }
+  .brand-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 7px; }
+  .brand-tile, .brand-tile:nth-last-child(-n+3) { grid-column: auto; padding: 10px; }
+  .brand-tile:last-child { grid-column: span 2; }
+  .case-grid, #research .case-grid { grid-template-columns: minmax(0,1fr); gap: 11px; }
+  #research .case-card:not(.featured), #research .case-card:nth-last-child(-n+2) { grid-column: auto; }
+  .case-card.featured { grid-column: auto; grid-template-columns: minmax(0,1fr); }
+  .featured .case-media { margin-bottom: 0; }
+  .case-content, .featured .case-content { padding: 13px 16px 17px; }
+  .education, .review { grid-template-columns: minmax(0,1fr); gap: 9px; }
+  .tool { flex-basis: 135px; }
+  .gallery { grid-template-columns: minmax(0,1fr); }
+}
+@media (max-width: 360px) {
+  .top { flex-wrap: wrap; align-content: center; }
+  .top .wordmark { width: 100%; }
+  .metric-number { font-size: 1.95rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+  </style>
+</head>
+<body>
+  <header class="top wrap" id="top">
+    <a class="wordmark" href="#top">Софья Бекета</a>
+    <nav aria-label="Навигация">
+      <a href="#overview">Компетенции</a>
+      <a href="#portfolio">Портфолио</a>
+      <a href="#education">Образование</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="name">
+      <div>
+        <h1 id="name">Софья Бекета</h1>
+        <p class="hero-role" lang="en">Strategy &amp; Marketing</p>
+        <p class="hero-facts">
+          <span>2+ года опыта в сфере коммуникаций</span>
+          <span>Окончила НИУ ВШЭ по направлению «Реклама и связи с общественностью».</span>
+        </p>
+        <p class="hero-intro">Разрабатываю маркетинговые и коммуникационные стратегии, исследую рынки, анализирую поведение аудитории и конкурентную среду. Нахожу точки роста бизнеса и формирую позиционирование брендов. Имею опыт реализации стратегий продвижения с измеримыми бизнес-результатами.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://t.me/s_beketa" target="_blank" rel="noopener" aria-label="Telegram @s_beketa">@s_beketa</a>
+          <a class="btn" href="mailto:beketasofya@yandex.ru">beketasofya@yandex.ru</a>
+        </div>
+      </div>
+
+      <figure class="portrait" id="portrait">
+        <div class="portrait-tiles" aria-hidden="true">
+          <img class="portrait-tile" src="images/artwork/tile-clover.jpg" width="173" height="185" alt="">
+          <img class="portrait-tile" src="images/artwork/tile-botanical.jpg" width="176" height="183" alt="">
+          <img class="portrait-tile" src="images/artwork/tile-rose.jpg" width="176" height="178" alt="">
+          <img class="portrait-tile" src="images/artwork/tile-flower.jpg" width="175" height="183" alt="">
+          <img class="portrait-tile" src="images/artwork/tile-floral.jpg" width="225" height="234" alt="">
+          <img class="portrait-tile" src="images/artwork/tile-cameo.jpg" width="176" height="183" alt="">
+        </div>
+        <picture>
+          <source type="image/webp"
+            srcset="images/artwork/sofya-portrait-256.webp 256w, images/artwork/sofya-portrait-480.webp 480w, images/artwork/sofya-portrait-640.webp 640w, images/artwork/sofya-portrait-790.webp 790w"
+            sizes="(max-width: 700px) 27vw, (max-width: 960px) 36vw, 400px">
+          <img class="portrait-photo" src="images/artwork/sofya-portrait-790.jpg" srcset="images/artwork/sofya-portrait-256.jpg 256w, images/artwork/sofya-portrait-480.jpg 480w, images/artwork/sofya-portrait-790.jpg 790w" sizes="(max-width: 700px) 27vw, (max-width: 960px) 36vw, 400px" alt="Софья Бекета в розовом худи" width="790" height="853" fetchpriority="high">
+        </picture>
+      </figure>
+    </section>
+
+    <section aria-label="Главные достижения">
+      <div class="metrics">
+        <div class="metric wine"><strong class="metric-number">700 <small>тыс. ₽+</small></strong><span>выручки от клиентов из соцсетей без рекламного бюджета</span></div>
+        <div class="metric brown"><strong class="metric-number">120 <small>тыс.</small></strong><span>суммарный охват коммуникационной кампании ПИК</span></div>
+        <div class="metric rose"><strong class="metric-number">30%+</strong><span>рост охватов в 9 из 12 Telegram-каналов по моей стратегии</span></div>
+        <div class="metric olive"><strong class="metric-number"><small>До</small> 4 000</strong><span>новых подписчиков с одного партнёрского размещения</span></div>
+      </div>
+    </section>
+
+    <div class="section overview" id="overview">
+      <section class="overview-panel help-panel" aria-labelledby="activities">
+        <h2 id="activities">С чем я могу помочь</h2>
+        <ul class="pearl-list" role="list">
+          <li>Нахожу <strong>точки роста бизнеса</strong> через анализ рынка, аудитории и конкурентов.</li>
+          <li>Помогаю брендам <strong>выделяться и формировать узнаваемый образ</strong>.</li>
+          <li>Выявляю <strong>потребительские инсайты и барьеры</strong> на пути к покупке.</li>
+          <li>Разрабатываю <strong>стратегии продвижения</strong> с учётом целей и бюджета бизнеса.</li>
+          <li>Привлекаю новую аудиторию через <strong>рекламные интеграции и партнёрства</strong>.</li>
+          <li>Организую <strong>работу команд и подрядчиков</strong> для реализации маркетинговых проектов.</li>
+        </ul>
+        <p class="help-summary">Помогаю бизнесу достигать своих целей через продуманную стратегию и эффективный маркетинг.</p>
+      </section>
+      <section class="overview-panel skills-panel" aria-labelledby="skills">
+        <h2 id="skills">Ключевые навыки</h2>
+        <ul class="skills-list" role="list">
+          <li>Brand Strategy</li>
+          <li>Маркетинговые исследования</li>
+          <li>Сегментация ЦА</li>
+          <li>CJM</li>
+          <li>Brand Ladder</li>
+          <li>Конкурентный анализ</li>
+          <li>Медиапланирование</li>
+          <li>Коммуникационная стратегия</li>
+          <li>Статистический анализ</li>
+          <li>Анализ KPI</li>
+          <li>Influence Marketing</li>
+          <li>Project Management</li>
+          <li>Управление подрядчиками</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="section work-history" id="work-history" aria-labelledby="work-history-title">
+      <h2 id="work-history-title">Опыт работы</h2>
+      <ol class="work-history-list" role="list">
+        <li>
+          <strong class="work-company">SMIT TATTOO</strong>
+          <span class="work-role">Продвижение в TikTok и Instagram</span>
+          <span class="work-period"><time datetime="2026-05">Май 2026</time> — настоящее время</span>
+        </li>
+        <li>
+          <strong class="work-company">Telegram-каналы</strong>
+          <span class="work-role">Контент-менеджер / PR-специалист</span>
+          <span class="work-period"><time datetime="2023-09">Сентябрь 2023</time> — <time datetime="2026-04">апрель 2026</time></span>
+        </li>
+        <li>
+          <strong class="work-company">ГК ПИК</strong>
+          <span class="work-role">Маркетолог / PR (стажировка)</span>
+          <span class="work-period"><time datetime="2025-07">Июль</time> — <time datetime="2025-10">октябрь 2025</time></span>
+        </li>
+        <li>
+          <strong class="work-company">BARANOVA&amp;LAWGROUP</strong>
+          <span class="work-role">Ассистент PR-специалиста</span>
+          <span class="work-period"><time datetime="2023-08">Август</time> — <time datetime="2023-12">декабрь 2023</time></span>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Проектная деятельность</h2>
+      <ul class="brand-grid" role="list">
+        <li class="brand-tile"><div class="brand-mark pik"><img src="images/brands/pik.png" alt="ПИК" width="370" height="112" loading="lazy" decoding="async"></div><span>Коммуникационная стратегия</span></li>
+        <li class="brand-tile"><div class="brand-mark yandex"><a href="https://ya.ru/" target="_blank" rel="noopener" aria-label="Яндекс"><img src="images/brands/yandex.png" alt="Яндекс" width="400" height="116" loading="lazy" decoding="async"></a></div><span>Стратегия анонса образовательной программы совместно с ПИК</span></li>
+        <li class="brand-tile"><div class="brand-mark lamoda"><img src="images/brands/lamoda.png" alt="Lamoda" width="215" height="58" loading="lazy" decoding="async"></div><span>Performance-кампания</span></li>
+        <li class="brand-tile"><div class="brand-mark raffaello"><img src="images/brands/raffaello.png" alt="Raffaello" width="212" height="140" loading="lazy" decoding="async"></div><span>Позиционирование</span></li>
+        <li class="brand-tile"><div class="brand-mark iks"><img src="images/brands/iks.png" alt="ИКС Холдинг" width="309" height="98" loading="lazy" decoding="async"></div><span>HR-бренд</span></li>
+        <li class="brand-tile"><div class="brand-mark ikea"><img src="images/brands/ikea.png" alt="IKEA" width="350" height="140" loading="lazy" decoding="async"></div><span>Анализ рекламных трендов</span></li>
+        <li class="brand-tile"><div class="brand-mark aviasales"><img src="images/brands/aviasales.png" alt="Aviasales" width="400" height="92" loading="lazy" decoding="async"></div><span>Исследование рекламных коммуникаций</span></li>
+        <li class="brand-tile"><div class="brand-mark nazivin"><img src="images/brands/nazivin.png" alt="Називин" width="377" height="136" loading="lazy" decoding="async"></div><span>Анализ бренд-метрик</span></li>
+        <li class="brand-tile"><div class="brand-mark pola"><img src="images/brands/pola.png" alt="POLA STORE" width="70" height="33" loading="lazy" decoding="async"></div><span>Рекламная концепция</span></li>
+        <li class="brand-tile"><div class="brand-mark happy">Happy Dog</div><span>Анализ клиентского пути</span></li>
+        <li class="brand-tile"><div class="brand-mark sunny"><img src="images/brands/sunny.svg" alt="Солнечный город" width="152" height="46" loading="lazy" decoding="async"></div><span>Медиааналитика</span></li>
+      </ul>
+    </section>
+
+    <section class="section" id="portfolio" aria-labelledby="portfolio-title">
+      <header class="portfolio-head">
+        <h2 id="portfolio-title">Портфолио</h2>
+        <p>Нажмите на обложку, чтобы посмотреть материалы проекта.</p>
+        <nav class="portfolio-jump" aria-label="Направления портфолио">
+          <a href="#communication">Коммуникации</a>
+          <a href="#brand">Бренд-стратегия</a>
+          <a href="#influence">Influence и digital</a>
+          <a href="#campaigns">Кампании</a>
+          <a href="#research">Исследования</a>
+        </nav>
+      </header>
+      <section class="portfolio-group" id="communication" aria-labelledby="communication-title">
+        <h3 id="communication-title">Коммуникационные стратегии</h3>
+        <div class="case-grid">
+          <article class="case-card" aria-labelledby="school-title">
+            <button class="case-media" type="button" data-gallery="pik-landing" aria-haspopup="dialog" aria-label="Смотреть материалы — ПИК">
+              <picture>
+                <source type="image/webp" srcset="images/covers/school-440.webp 440w, images/covers/school-900.webp 860w" sizes="(max-width: 700px) calc(100vw - 52px), (max-width: 1216px) 45vw, 540px">
+                <img src="images/covers/school.jpg" alt="Фотография из материалов «Школы с отличием»" width="860" height="484" loading="lazy" decoding="async">
+              </picture>
+            </button>
+            <div class="case-content">
+              <p class="case-ident"><strong>ПИК</strong><span>Коммуникационная стратегия</span></p>
+              <h4 id="school-title">«Школы с отличием»</h4>
+              <p>Сформировала концепцию и смысловое наполнение лендинга об образовательной инфраструктуре ПИК. Выстроила подачу вокруг преимуществ школ для семей, которые выбирают жилой комплекс.</p>
+              <p class="case-result">Концепция лендинга показывает семьям, <strong>как школы дополняют жилую среду</strong>.</p>
+              <div class="actions case-links">
+                <button class="btn" type="button" data-gallery="pik-landing" aria-haspopup="dialog">Смотреть материалы</button>
+              </div>
+            </div>
+          </article>
+          <article class="case-card" aria-labelledby="iot-title">
+            <button class="case-media" type="button" data-gallery="pik-article" aria-haspopup="dialog" aria-label="Читать материал — ПИК и Яндекс">
+              <picture>
+                <source type="image/webp" srcset="images/covers/iot-440.webp 440w, images/covers/iot-900.webp 900w" sizes="(max-width: 700px) calc(100vw - 52px), (max-width: 1216px) 45vw, 540px">
+                <img src="images/covers/iot.jpg" alt="Иллюстрации из материалов программы «Интернет вещей»" width="900" height="506" loading="lazy" decoding="async">
+              </picture>
+            </button>
+            <div class="case-content">
+              <p class="case-ident"><strong>ПИК и Яндекс</strong><span>Стратегия анонса</span></p>
+              <h4 id="iot-title">«Интернет вещей»</h4>
+              <p>Совместно с командой Яндекса разработала стратегию анонса программы «Лаборатории ПИК». Для продвижения образовательных программ ПИК подготовила цепочки писем для родителей: ключевые сообщения, последовательность и призывы подать заявку.</p>
+              <p class="case-result">Суммарный охват всей коммуникационной кампании ПИК — <strong>120&nbsp;тыс.</strong></p>
+              <div class="actions case-links">
+                <button class="btn" type="button" data-gallery="pik-article" aria-haspopup="dialog">Читать материал</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="portfolio-group" id="brand" aria-labelledby="brand-title">
+        <h3 id="brand-title">Позиционирование и бренд-стратегия</h3>
+        <div class="case-grid">
+          <article class="case-card featured" aria-labelledby="iks-title">
+            <a class="case-media" href="https://drive.google.com/file/d/1v-GujA4dPVt5rilUcWdimjeBTO6TO9rz/view" target="_blank" rel="noopener" aria-label="Смотреть презентацию — ИКС Холдинг">
+              <picture>
+                <source type="image/webp" srcset="images/covers/iks-440.webp 440w, images/covers/iks-900.webp 900w" sizes="(max-width: 700px) calc(100vw - 52px), (max-width: 1216px) 45vw, 540px">
+                <img src="images/covers/iks.jpg" alt="Обложка презентации по позиционированию ИКС Холдинга" width="900" height="507" loading="lazy" decoding="async">
+              </picture>
+            </a>
+            <div class="case-content">
+              <p class="case-ident"><strong>ИКС Холдинг</strong><span>HR-бренд</span></p>
+              <h4 id="iks-title">Бренд-платформа для привлечения инженеров и IT-специалистов</h4>
+              <p>Разработала бренд-платформу технологического холдинга. Выделила три сегмента аудитории, сформулировала ценностное предложение и сообщения для каждого этапа воронки.</p>
+              <p class="case-result">Подготовила <strong>контент-план на полгода</strong>, предложила KPI и распределение бюджета.</p>
+              <div class="actions case-links">
+                <a class="btn" href="https://drive.google.com/file/d/1v-GujA4dPVt5rilUcWdimjeBTO6TO9rz/view" target="_blank" rel="noopener">Смотреть презентацию</a>
+              </div>
+            </div>
+          </article>
+          <article class="case-card" aria-labelledby="raffaello-title">
+            <a class="case-media" href="https://drive.google.com/file/d/1zHxk89sqq98XmWPq4BMaJcIFuDCT9nLU/view" target="_blank" rel="noopener" aria-label="Смотреть презентацию — Raffaello">
+              <picture>
+                <source type="image/webp" srcset="images/covers/raffaello-440.webp 440w, images/covers/raffaello-900.webp 900w" sizes="(max-width: 700px) calc(100vw - 52px), (max-width: 1216px) 45vw, 540px">
+                <img src="images/covers/raffaello.jpg" alt="Обложка презентации Raffaello" width="900" height="506" loading="lazy" decoding="async">
+              </picture>
+            </a>
+            <div class="case-content">
+              <p class="case-ident"><strong>Raffaello</strong><span>Позиционирование</span></p>
+              <h4 id="raffaello-title">«Любовь в каждом моменте»</h4>
+              <p>Разработала позиционирование по модели Brand Ladder: сформулировала потребительский инсайт, функциональные и эмоциональные преимущества. Предложила коммуникационную концепцию о заботе и внимании к близким.</p>
+              <p class="case-result">Новые сценарии покупки: Raffaello как способ <strong>выразить чувства в повседневной жизни</strong>.</p>
+              <div class="actions case-links">
+                <a class="btn" href="https://drive.google.com/file/d/1zHxk89sqq98XmWPq4BMaJcIFuDCT9nLU/view" target="_blank" rel="noopener">Смотреть презентацию</a>
+              </div>
+            </div>
+          </article>
+          <article class="case-card" aria-labelledby="scramble-title">
+            <a class="case-media" href="https://drive.google.com/file/d/1dx3DRL-BsyrNHrKLVme8Hjd5XB2mNx-T/view" target="_blank" rel="noopener" aria-label="Смотреть презентацию — SCRAMBLE">
+              <picture>
+                <source type="image/webp" srcset="images/covers/scramble-440.webp 440w, images/covers/scramble-900.webp 900w" sizes="(max-width: 700px) calc(100vw - 52px), (max-width: 1216px) 45vw, 540px">
+                <img src="images/covers/scramble.jpg" alt="Обложка презентации SCRAMBLE" width="900" height="507" loading="lazy" decoding="async">
+              </picture>
+            </a>
+            <div class="case-content">
+              <p class="case-ident"><strong>SCRAMBLE</strong><span>Концепция медиа</span></p>
+              <h4 id="scramble-title">Студенческое медиа о креативных индустриях</h4>
+              <p>Участвовала в разработке концепции студенческого медиа. Работала над позиционированием и анализировала аудиторию и конкурентную среду.</p>
+              <p class="case-result">Проект вошёл в <strong>шорт-лист лучших студенческих инициатив</strong>.</p>
+              <div class="actions case-links">
+                <a class="btn" href="https://drive.google.com/file/d/1dx3DRL-BsyrNHrKLVme8Hjd5XB2mNx-T/view" target="_blank" rel="noopener">Смотреть презентацию</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="portfolio-group" id="influence" aria-labelledby="influence-title">
+        <h3 id="influence-title">Influence-маркетинг и digital-продвижение</h3>
+        <div class="case-grid">
+          <article class="case-card" aria-labelledby="telegram-title">
+            <button class="case-media" type="button" data-gallery="telegram" aria-haspopup="dialog" aria-label="Смотреть публикации — Telegram-каналы">
+              <span class="case-cover telegram-cover">
+                <img class="telegram-logo" src="images/covers/telegram-logo.png" width="180" height="180" alt="Telegram" loading="lazy" decoding="async">
+                <span class="telegram-post">
+                  <picture>
+                    <source type="image/webp" srcset="images/covers/telegram-post-fashion.webp">
+                    <img src="images/posts/chanel.jpg" alt="Публикация о Коко Шанель" width="768" height="1874" loading="lazy" decoding="async">
+                  </picture>
+                </span>
+                <span class="telegram-post">
+                  <picture>
+                    <source type="image/webp" srcset="images/covers/telegram-post-etiquette.webp">
+                    <img src="images/posts/simple-clean.jpg" alt="Публикация «Про „будь проще“»" width="926" height="728" loading="lazy" decoding="async">
+                  </picture>
+                </span>
+              </span>
+            </button>
+            <div class="case-content">
+              <p class="case-ident"><strong>Telegram-каналы</strong><span>Партнёрства и рекламные интеграции</span></p>
+              <h4 id="telegram-title">Развитие сети из 12 Telegram-каналов</h4>
+              <p>В течение 2,5 года работала с рекламодателями и партнёрами. Готовила 15–20 интеграций в месяц и координировала 5–7 авторов одновременно.</p>
+              <p class="case-result">Самое успешное размещение привело <strong>до 4&nbsp;000 подписчиков</strong>, а новая контент-стратегия дала <strong>рост охватов более чем на 30%</strong> в 9 из 12 каналов.</p>
+              <div class="actions case-links">
+                <button class="btn" type="button" data-gallery="telegram" aria-haspopup="dialog">Смотреть публикации</button>
+              </div>
+            </div>
+          </article>
+          <article class="case-card" aria-labelledby="smit-title">
+            <button class="case-media" type="button" data-gallery="analytics" aria-haspopup="dialog" aria-label="Смотреть статистику TikTok — SMIT TATTOO">
+              <span class="case-cover smit-cover">
+                <picture>
+                  <source type="image/webp" srcset="images/covers/smit-carousel-440.webp 440w, images/covers/smit-carousel-900.webp 900w" sizes="(max-width: 700px) 60vw, (max-width: 1216px) 30vw, 360px">
+                  <img src="images/covers/smit-carousel.jpg" alt="Портрет тату-мастера из карусели «Обо мне»" width="958" height="1197" loading="lazy" decoding="async">
+                </picture>
+                <span class="smit-wordmark" aria-hidden="true">SMIT<br>TATTOO</span>
+              </span>
+            </button>
+            <div class="case-content">
+              <p class="case-ident"><strong>SMIT TATTOO</strong><span>Продвижение личного бренда</span></p>
+              <h4 id="smit-title">Соцсети как канал привлечения клиентов</h4>
+              <p>С мая 2026 года развиваю органическое продвижение тату-мастера. Анализировала конкурентов, тестировала форматы и масштабировала успешные ролики: TikTok набрал 5,7 млн просмотров за 6 месяцев.</p>
+              <p class="case-result"><strong>700&nbsp;тыс.&nbsp;₽+ выручки</strong> от клиентов из соцсетей без рекламного бюджета, по данным клиента.</p>
+              <p class="case-note">На скриншотах TikTok указан отчётный период 15.11.2025–14.11.2026.</p>
+              <div class="actions case-links">
+                <button class="btn" type="button" data-gallery="analytics" aria-haspopup="dialog">Смотреть статистику TikTok</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="portfolio-group" id="campaigns" aria-labelledby="campaigns-title">
+        <h3 id="campaigns-title">Разработка маркетинговых кампаний</h3>
+        <div class="case-grid">
+          <article class="case-card" aria-labelledby="lamoda-title">
+            <a class="case-media" href="https://drive.google.com/file/d/1ZafuO0Qkaxx4FaT5-Cj5JguGmSZXbwmI/view" target="_blank" rel="noopener" aria-label="Смотреть презентацию — Lamoda">
+              <picture>
+                <source type="image/webp" srcset="images/covers/lamoda-440.webp 440w, images/covers/lamoda-900.webp 900w" sizes="(max-width: 700px) calc(100vw - 52px), (max-width: 1216px) 45vw, 540px">
+                <img src="images/covers/lamoda.jpg" alt="Обложка презентации Lamoda Back to Office" width="900" height="506" loading="lazy" decoding="async">
+              </picture>
+            </a>
+            <div class="case-content">
+              <p class="case-ident"><strong>Lamoda</strong><span>Performance-кампания</span></p>
+              <h4 id="lamoda-title">Back to Office</h4>
+              <p>Вместе с командой разработала сезонную кампанию для привлечения новых покупателей и роста онлайн-продаж. Проработала сегменты, клиентский путь, сообщения на этапах воронки и медиаплан для Яндекс Директа и VK Ads.</p>
+              <p class="case-result">По плану кампании: <strong>27&nbsp;млн&nbsp;₽+ выручки и 5&nbsp;500+ заказов</strong> при бюджете 2,5 млн ₽.</p>
+              <div class="actions case-links">
+                <a class="btn" href="https://drive.google.com/file/d/1ZafuO0Qkaxx4FaT5-Cj5JguGmSZXbwmI/view" target="_blank" rel="noopener">Смотреть презентацию</a>
+              </div>
+            </div>
+          </article>
+          <article class="case-card" aria-labelledby="pola-title">
+            <a class="case-media" href="https://drive.google.com/file/d/1ZuWM1yKv5SnPrxZ-DKdbcuFhhcPjYxHz/view" target="_blank" rel="noopener" aria-label="Смотреть презентацию — POLA STORE">
+              <picture>
+                <source type="image/webp" srcset="images/covers/pola-440.webp 440w, images/covers/pola-900.webp 900w" sizes="(max-width: 700px) calc(100vw - 52px), (max-width: 1216px) 45vw, 540px">
+                <img src="images/covers/pola.jpg" alt="Обложка презентации рекламной концепции POLA STORE" width="900" height="507" loading="lazy" decoding="async">
+              </picture>
+            </a>
+            <div class="case-content">
+              <p class="case-ident"><strong>POLA STORE</strong><span>Рекламная концепция</span></p>
+              <h4 id="pola-title">Плёночная фотография как связь поколений</h4>
+              <p>В команде разработала концепцию продвижения магазина и участвовала в подготовке трёх сценариев роликов. Сравнила подрядчиков и предложила модель производства под плановый бюджет до 150 тыс. ₽.</p>
+              <p class="case-result">Идеи команды <strong>использовали в стратегии продвижения магазина</strong>.</p>
+              <div class="actions case-links">
+                <a class="btn" href="https://drive.google.com/file/d/1ZuWM1yKv5SnPrxZ-DKdbcuFhhcPjYxHz/view" target="_blank" rel="noopener">Смотреть презентацию</a>
+              <a class="btn" href="https://drive.google.com/file/d/104kpn6wb6f3eBbxvTtkUVpROWnnbIe8K/view" target="_blank" rel="noopener">Подбор подрядчиков</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="portfolio-group" id="research" aria-labelledby="research-title">
+        <h3 id="research-title">Маркетинговые исследования и аналитика</h3>
+        <div class="case-grid">
+          <article class="case-card featured" aria-labelledby="hr-title">
+            <a class="case-media" href="https://drive.google.com/file/d/1q__8t49vQucLOkiAGEdCGBDs2ryZJ3Nl/view" target="_blank" rel="noopener" aria-label="Смотреть исследование — HR-бренд на IT-рынке">
+              <picture>
+                <source type="image/webp" srcset="images/covers/hr-440.webp 440w, images/covers/hr-900.webp 900w" sizes="(max-width: 700px) calc(100vw - 52px), (max-width: 1216px) 45vw, 540px">
+                <img src="images/covers/hr.jpg" alt="Обложка исследования HR-бренда на IT-рынке" width="900" height="507" loading="lazy" decoding="async">
+              </picture>
+            </a>
+            <div class="case-content">
+              <p class="case-ident"><span>Исследование выбора работодателя</span></p>
+              <h4 id="hr-title">HR-бренд на IT-рынке</h4>
+              <p>Исследовала, как экономическая нестабильность влияет на выбор работодателя. Провела 10 интервью, проанализировала ответы 194 участников и проверила гипотезы в SPSS.</p>
+              <p class="case-result">В выборке <strong>58,3%&nbsp;junior и 27,8%&nbsp;senior</strong> выбрали сильный HR-бренд при оплате ниже рынка. Предложила адаптировать коммуникации работодателя под разные грейды.</p>
+              <div class="actions case-links">
+                <a class="btn" href="https://drive.google.com/file/d/1q__8t49vQucLOkiAGEdCGBDs2ryZJ3Nl/view" target="_blank" rel="noopener">Смотреть исследование</a>
+              </div>
+            </div>
+          </article>
+          <article class="case-card" aria-labelledby="nazivin-title">
+            <a class="case-media" href="https://drive.google.com/file/d/1RJjmNtBjcXqgETaHBI4P3liOvsDVkmfn/view" target="_blank" rel="noopener" aria-label="Смотреть презентацию — Називин">
+              <picture>
+                <source type="image/webp" srcset="images/covers/nazivin-440.webp 440w, images/covers/nazivin-900.webp 900w" sizes="(max-width: 700px) calc(100vw - 52px), (max-width: 1216px) 30vw, 350px">
+                <img src="images/covers/nazivin.jpg" alt="Обложка анализа бренд-метрик Називина" width="900" height="506" loading="lazy" decoding="async">
+              </picture>
+            </a>
+            <div class="case-content">
+              <p class="case-ident"><strong>Називин</strong><span>Анализ бренд-метрик</span></p>
+              <h4 id="nazivin-title">Где теряется конверсия в покупку</h4>
+              <p>Изучила конкурентов на рынке средств от насморка. Построила карты брендов и воронки конверсии, проанализировала NPS.</p>
+              <p class="case-result">За исследуемый период выявила <strong>потенциал роста переходов от знания продукта к покупке</strong> и предложила меры для укрепления лояльности.</p>
+              <div class="actions case-links">
+                <a class="btn" href="https://drive.google.com/file/d/1RJjmNtBjcXqgETaHBI4P3liOvsDVkmfn/view" target="_blank" rel="noopener">Смотреть презентацию</a>
+              </div>
+            </div>
+          </article>
+          <article class="case-card" aria-labelledby="sunny-title">
+            <a class="case-media" href="https://drive.google.com/file/d/1y5ifrHv18AnlRVcPQSaNz-izzXphT9cb/view" target="_blank" rel="noopener" aria-label="Смотреть презентацию — Солнечный город">
+              <picture>
+                <source type="image/webp" srcset="images/covers/sunny-440.webp 440w, images/covers/sunny-900.webp 900w" sizes="(max-width: 700px) calc(100vw - 52px), (max-width: 1216px) 30vw, 350px">
+                <img src="images/covers/sunny.jpg" alt="Слайд из исследования медиаполя фонда «Солнечный город»" width="900" height="506" loading="lazy" decoding="async">
+              </picture>
+            </a>
+            <div class="case-content">
+              <p class="case-ident"><strong>Солнечный город</strong><span>Медиааналитика</span></p>
+              <h4 id="sunny-title">Анализ медиаполя благотворительного фонда</h4>
+              <p>Проанализировала около 60 тыс. тематических сообщений через Brand Analytics и Медиалогию. На ВКонтакте пришлось 50,5% выборки, прямых упоминаний фонда в ней не было.</p>
+              <p class="case-result">Выявила <strong>возможность повысить узнаваемость через темы, которые уже обсуждает аудитория</strong>.</p>
+              <div class="actions case-links">
+                <a class="btn" href="https://drive.google.com/file/d/1y5ifrHv18AnlRVcPQSaNz-izzXphT9cb/view" target="_blank" rel="noopener">Смотреть презентацию</a>
+              </div>
+            </div>
+          </article>
+          <article class="case-card" aria-labelledby="happy-title">
+            <a class="case-media" href="https://drive.google.com/file/d/1ZhZxMQ-19vjfelJ8PQNHe7_ZatKbN6Pa/view" target="_blank" rel="noopener" aria-label="Смотреть презентацию — Happy Dog">
+              <picture>
+                <source type="image/webp" srcset="images/covers/happy-440.webp 440w, images/covers/happy-900.webp 900w" sizes="(max-width: 700px) calc(100vw - 52px), (max-width: 1216px) 30vw, 350px">
+                <img src="images/covers/happy.jpg" alt="Карта клиентского пути студии груминга Happy Dog" width="900" height="573" loading="lazy" decoding="async">
+              </picture>
+            </a>
+            <div class="case-content">
+              <p class="case-ident"><strong>Happy Dog</strong><span>Анализ клиентского пути</span></p>
+              <h4 id="happy-title">Что мешает записать питомца на груминг</h4>
+              <p>Составила карту клиентского пути студии груминга. Разобрала точки контакта, мотивацию владельцев и их ожидания на каждом этапе.</p>
+              <p class="case-result">Выделила <strong>барьер доверия</strong> и предложила показывать работу мастеров, результаты стрижек и отзывы до записи.</p>
+              <div class="actions case-links">
+                <a class="btn" href="https://drive.google.com/file/d/1ZhZxMQ-19vjfelJ8PQNHe7_ZatKbN6Pa/view" target="_blank" rel="noopener">Смотреть презентацию</a>
+              </div>
+            </div>
+          </article>
+          <article class="case-card" aria-labelledby="ikea-title">
+            <a class="case-media" href="https://drive.google.com/file/d/1jEV6TPUgJ2owtSyelwQeXcIjfIxW0NgM/view" target="_blank" rel="noopener" aria-label="Смотреть исследование — IKEA">
+              <picture>
+                <source type="image/webp" srcset="images/covers/ikea-440.webp 440w, images/covers/ikea-900.webp 900w" sizes="(max-width: 700px) calc(100vw - 52px), (max-width: 1216px) 45vw, 540px">
+                <img src="images/covers/ikea.jpg" alt="Обложка исследования рекламных кампаний IKEA" width="900" height="507" loading="lazy" decoding="async">
+              </picture>
+            </a>
+            <div class="case-content">
+              <p class="case-ident"><strong>IKEA</strong><span>Анализ рекламных трендов</span></p>
+              <h4 id="ikea-title">Естественность в рекламе</h4>
+              <p>В командном исследовании разобрала кампании IKEA и работы об аутентичности в рекламе. Изучила переход от идеализированных образов к повседневным ситуациям.</p>
+              <p class="case-result">Предложила использовать <strong>узнаваемые бытовые ситуации</strong> с учётом продукта и позиционирования бренда.</p>
+              <div class="actions case-links">
+                <a class="btn" href="https://drive.google.com/file/d/1jEV6TPUgJ2owtSyelwQeXcIjfIxW0NgM/view" target="_blank" rel="noopener">Смотреть исследование</a>
+              </div>
+            </div>
+          </article>
+          <article class="case-card" aria-labelledby="aviasales-title">
+            <a class="case-media" href="https://drive.google.com/file/d/1kUzhZpRWAZlo9FuUTxuLMn0yYb6RYWNL/view" target="_blank" rel="noopener" aria-label="Смотреть исследование — Aviasales">
+              <picture>
+                <source type="image/webp" srcset="images/covers/aviasales-440.webp 440w, images/covers/aviasales-900.webp 900w" sizes="(max-width: 700px) calc(100vw - 52px), (max-width: 1216px) 45vw, 540px">
+                <img src="images/covers/aviasales.jpg" alt="Обложка исследования рекламных коммуникаций Aviasales" width="900" height="507" loading="lazy" decoding="async">
+              </picture>
+            </a>
+            <div class="case-content">
+              <p class="case-ident"><strong>Aviasales</strong><span>Исследование рекламных коммуникаций</span></p>
+              <h4 id="aviasales-title">Провокация в продвижении</h4>
+              <p>Вместе с командой разобрала кампании Aviasales и научные работы о провокационной рекламе. Изучила, как юмор и ситуативный маркетинг привлекают внимание.</p>
+              <p class="case-result">Сформулировала рекомендации по оценке <strong>репутационного риска</strong> с учётом культурного контекста и ценностей аудитории.</p>
+              <div class="actions case-links">
+                <a class="btn" href="https://drive.google.com/file/d/1kUzhZpRWAZlo9FuUTxuLMn0yYb6RYWNL/view" target="_blank" rel="noopener">Смотреть исследование</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section class="section" id="education" aria-labelledby="education-title">
+      <h2 id="education-title">Образование</h2>
+      <div class="education">
+        <article class="education-main">
+          <h3>НИУ ВШЭ</h3>
+          <p><strong>Реклама и связи с общественностью</strong><br>Бакалавриат, 2022–2026</p>
+          <ul class="pearl-list" role="list">
+            <li>Специализация — «Культура и коммуникации»</li>
+            <li>Майнор — «Школа бизнес-трекеров»</li>
+          </ul>
+        </article>
+        <article class="education-rose">
+          <span class="eyebrow">Дополнительное образование</span>
+          <h3>Образовательный центр «Сириус»</h3>
+          <p>Программа «Литературное творчество»: сторителлинг, копирайтинг, драматургия.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section tile-divider" id="tools" aria-labelledby="tools-title">
+      <h2 id="tools-title">Профессиональные инструменты</h2>
+      <div class="tools">
+        <article class="tool brown"><h3>Статистический анализ</h3><p>SPSS Statistics</p></article>
+        <article class="tool blue"><h3>Маркетинговая аналитика</h3><p>Excel, Google Sheets</p></article>
+        <article class="tool olive"><h3>Исследование медиаполя</h3><p>Brand Analytics, Медиалогия</p></article>
+        <article class="tool blush"><h3>Digital-аналитика</h3><p>TikTok Studio, Instagram Insights</p></article>
+        <article class="tool tool-paper"><h3>Визуализация и презентации</h3><p>Figma, Canva</p></article>
+      </div>
+    </section>
+
+    <section class="section review-section" id="reviews" aria-labelledby="reviews-title">
+      <h2 id="reviews-title">Что говорят о работе со мной</h2>
+      <div class="review">
+        <article class="quote review-original">
+          <span class="label">SMIT TATTOO / клиент</span>
+          <button class="review-open" type="button" data-post="review" aria-haspopup="dialog" aria-label="Смотреть отзыв тату-мастера в полном размере">
+            <img src="images/stats/smit-review-clean.png" alt="Скриншот отзыва тату-мастера" width="951" height="644" loading="lazy">
+            <span>Смотреть в полном размере</span>
+          </button>
+        </article>
+        <article class="quote">
+          <span class="label">ГК ПИК / руководитель группы</span>
+          <blockquote>«Софья способна не только выполнять операционные задачи, но и анализировать информацию и видеть общую картину».</blockquote>
+          <cite>Из рекомендательного письма от 21 ноября 2025 г.</cite>
+          <button class="btn" type="button" data-gallery="pik-letter" aria-haspopup="dialog">Смотреть письмо</button>
+        </article>
+      </div>
+    </section>
+
+    <footer class="contact" id="contact">
+      <div><span class="label">Связаться со мной</span><h2>Софья Бекета</h2></div>
+      <div class="actions">
+        <a class="btn primary" href="https://t.me/s_beketa" target="_blank" rel="noopener" aria-label="Telegram @s_beketa">@s_beketa</a>
+        <a class="btn" href="mailto:beketasofya@yandex.ru">beketasofya@yandex.ru</a>
+      </div>
+    </footer>
+  </main>
+
+  <div id="dialog-shade" class="dialog-shade" aria-hidden="true" hidden></div>
+  <dialog id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <header class="modal-head">
+      <strong id="modal-title"></strong>
+      <button id="close" class="icon-btn" type="button" aria-label="Закрыть">×</button>
+    </header>
+    <div id="modal-body" class="modal-body"></div>
+  </dialog>
+
+  <template id="post-review">
+    <article class="image-viewer review-image-viewer" style="--original-width: 951px">
+      <div class="actions">
+        <button class="btn" type="button" data-image-zoom aria-pressed="false">Увеличение</button>
+        <a class="btn" href="images/stats/smit-review-clean.png" target="_blank" rel="noopener">Открыть оригинал</a>
+      </div>
+      <div class="image-scroll" role="region" aria-label="Полный скриншот отзыва тату-мастера" tabindex="0">
+        <img data-src="images/stats/smit-review-clean.png" alt="Оригинальный отзыв тату-мастера о совместной работе" width="951" height="644">
+      </div>
+    </article>
+  </template>
+
+  <script>
+const root = 'images/';
+const galleries = {
+  analytics: ['Статистика TikTok', ['stats/00-00-31.jpg', 'stats/00-00-34.jpg'], 942, 2048],
+  'pik-landing': ['Школы с отличием', [1, 2, 3].map(id => `projects/pik-${id}.jpg`), 900, 1272],
+  'pik-article': ['Интернет вещей', [4, 5].map(id => `projects/pik-${id}.jpg`), 900, 1272],
+  telegram: ['Примеры публикаций в Telegram', [
+    ['posts/chanel.jpg', 768, 1874], ['posts/simple-clean.jpg', 926, 728]
+  ]],
+  'pik-letter': ['Рекомендательное письмо ПИК', ['projects/pik-reference.jpg'], 1200, 1706]
+};
+
+function attachImages(container) {
+  for (const image of container.querySelectorAll('img[data-src]')) {
+    if (image.dataset.srcset) {
+      image.srcset = image.dataset.srcset;
+      image.removeAttribute('data-srcset');
+    }
+    image.src = image.dataset.src;
+    image.removeAttribute('data-src');
+  }
+}
+
+const modal = document.getElementById('modal');
+const modalBody = document.getElementById('modal-body');
+const closeButton = document.getElementById('close');
+const dialogShade = document.getElementById('dialog-shade');
+const nativeDialog = typeof modal.showModal === 'function';
+let opener = null;
+
+function openModal(title, content, trigger) {
+  opener = trigger;
+  document.getElementById('modal-title').textContent = title;
+  if (typeof content === 'string') {
+    modalBody.innerHTML = content;
+  } else {
+    modalBody.textContent = '';
+    attachImages(content);
+    modalBody.appendChild(content);
+  }
+  modal.classList.toggle('modal-wide', Boolean(modalBody.querySelector('.review-image-viewer')));
+  if (!modal.hasAttribute('open')) {
+    if (nativeDialog) {
+      modal.showModal();
+    } else {
+      modal.classList.add('modal-fallback');
+      modal.setAttribute('open', '');
+      dialogShade.hidden = false;
+      document.documentElement.classList.add('dialog-fallback-open');
+    }
+  }
+  modal.scrollTop = 0;
+  closeButton.focus({ preventScroll: true });
+}
+
+function closeModal() {
+  if (!modal.hasAttribute('open')) return;
+  const trigger = opener;
+  opener = null;
+  modalBody.textContent = '';
+  if (nativeDialog) {
+    modal.close();
+  } else {
+    modal.removeAttribute('open');
+    dialogShade.hidden = true;
+    document.documentElement.classList.remove('dialog-fallback-open');
+  }
+  if (trigger) trigger.focus({ preventScroll: true });
+}
+
+function clickOutside(event) {
+  const bounds = modal.getBoundingClientRect();
+  return event.target === modal && (event.clientX < bounds.left || event.clientX > bounds.right ||
+    event.clientY < bounds.top || event.clientY > bounds.bottom);
+}
+
+let startedOutside = false;
+modal.addEventListener('pointerdown', event => { startedOutside = clickOutside(event); });
+modal.addEventListener('click', event => {
+  if (startedOutside && clickOutside(event)) closeModal();
+  startedOutside = false;
+});
+modal.addEventListener('cancel', event => {
+  event.preventDefault();
+  closeModal();
+});
+closeButton.addEventListener('click', closeModal);
+if (!nativeDialog) {
+  dialogShade.addEventListener('click', closeModal);
+  document.addEventListener('focusin', event => {
+    if (modal.hasAttribute('open') && !modal.contains(event.target)) closeButton.focus();
+  });
+  document.addEventListener('keydown', event => {
+    if (!modal.hasAttribute('open')) return;
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeModal();
+    } else if (event.key === 'Tab') {
+      const items = Array.from(modal.querySelectorAll('a[href], button, [tabindex="0"]'))
+        .filter(element => !element.disabled && element.getClientRects().length);
+      const from = event.shiftKey ? items[0] : items[items.length - 1];
+      const to = event.shiftKey ? items[items.length - 1] : items[0];
+      if (document.activeElement === from && to) {
+        event.preventDefault();
+        to.focus();
+      }
+    }
+  });
+}
+
+function linkedImage(path, caption, width, height) {
+  return `<a href="${root + path}" target="_blank" rel="noopener" aria-label="${caption}. Открыть изображение в полном размере">
+    <img src="${root + path}" alt="${caption}" width="${width}" height="${height}" loading="lazy" decoding="async">
+  </a>`;
+}
+
+function openGallery(key, trigger) {
+  const [title, files, width, height] = galleries[key];
+  const thumbnails = files.map((file, i) => {
+    const [path, imageWidth, imageHeight] = typeof file === 'string' ? [file, width, height] : file;
+    return linkedImage(path, `${title}, изображение ${i + 1}`, imageWidth, imageHeight);
+  });
+  const layout = files.length === 1 ? 'full-slide' : 'gallery';
+  openModal(title, `<div class="${layout}">${thumbnails.join('')}</div>`, trigger);
+}
+
+document.addEventListener('click', event => {
+  const button = event.target.closest('button');
+  if (!button) return;
+  if (button.dataset.gallery) {
+    openGallery(button.dataset.gallery, button);
+  } else if (button.dataset.post === 'review') {
+    const template = document.getElementById('post-review');
+    openModal('Отзыв тату-мастера', template.content.cloneNode(true), button);
+  } else if (button.hasAttribute('data-image-zoom')) {
+    const viewer = button.closest('.image-viewer');
+    const zoomed = viewer.classList.toggle('is-zoomed');
+    button.setAttribute('aria-pressed', String(zoomed));
+  }
+});
+  </script>
+</body>
+</html>
