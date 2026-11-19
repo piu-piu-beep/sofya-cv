@@ -1089,7 +1089,9 @@ const galleries = {
   'pik-landing': ['Школы с отличием', [1, 2, 3].map(id => `projects/pik-${id}.jpg`), 900, 1272],
   'pik-article': ['Интернет вещей', [4, 5].map(id => `projects/pik-${id}.jpg`), 900, 1272],
   telegram: ['Примеры публикаций в Telegram', [
-    ['posts/chanel.jpg', 768, 1874], ['posts/simple-clean.jpg', 926, 728]
+    ['posts/chanel.jpg', 768, 1874],
+    ['posts/simple-clean.jpg', 926, 728],
+    ['posts/gym.jpg', 694, 1369, 'Пост «Почему мы так боимся идти в зал?»']
   ]],
   'pik-letter': ['Рекомендательное письмо ПИК', ['projects/pik-reference.jpg'], 1200, 1706]
 };
@@ -1104,6 +1106,13 @@ function attachImages(container) {
     image.removeAttribute('data-src');
   }
 }
+
+const smitPicture = document.querySelector('.smit-cover picture');
+const smitWebp = smitPicture.querySelector('source');
+const smitPhoto = smitPicture.querySelector('img');
+const useSmitJpeg = () => smitWebp.remove();
+smitPhoto.addEventListener('error', useSmitJpeg, { once: true });
+if (smitPhoto.complete && smitPhoto.naturalWidth === 0) useSmitJpeg();
 
 const modal = document.getElementById('modal');
 const modalBody = document.getElementById('modal-body');
@@ -1201,8 +1210,9 @@ function linkedImage(path, caption, width, height) {
 function openGallery(key, trigger) {
   const [title, files, width, height] = galleries[key];
   const thumbnails = files.map((file, i) => {
-    const [path, imageWidth, imageHeight] = typeof file === 'string' ? [file, width, height] : file;
-    return linkedImage(path, `${title}, изображение ${i + 1}`, imageWidth, imageHeight);
+    const [path, imageWidth, imageHeight, caption = `${title}, изображение ${i + 1}`] =
+      typeof file === 'string' ? [file, width, height] : file;
+    return linkedImage(path, caption, imageWidth, imageHeight);
   });
   const layout = files.length === 1 ? 'full-slide' : 'gallery';
   openModal(title, `<div class="${layout}">${thumbnails.join('')}</div>`, trigger);
