@@ -353,19 +353,6 @@ img { display: block; max-width: 100%; height: auto; }
 .telegram-post:first-of-type { top: 12%; left: 32%; width: 36%; height: 82%; transform: rotate(-6deg); }
 .telegram-post:last-of-type { top: 30%; right: 5%; width: 39%; transform: rotate(7deg); }
 .smit-cover { background: #222; }
-.smit-cover picture {
-  position: absolute;
-  width: 66%;
-  right: 0;
-  top: -17%;
-}
-.smit-cover::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #222 58%, rgba(34, 34, 34, 0) 66%);
-  pointer-events: none;
-}
 .smit-wordmark {
   position: absolute;
   z-index: 1;
@@ -499,6 +486,9 @@ html.dialog-fallback-open { overflow: hidden; }
 .icon-btn { flex: none; width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--pink-panel); font-size: 1.55rem; color: var(--wine); cursor: pointer; }
 .modal-body { padding: 12px; }
 .gallery { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+@media (min-width: 701px) {
+  .gallery-telegram > a:first-child { grid-row: span 2; }
+}
 .gallery a, .full-slide a { display: block; align-self: start; }
 .gallery img, .full-slide img { margin-inline: auto; border-radius: 9px; }
 .image-viewer .actions { margin-bottom: 10px; }
@@ -833,13 +823,11 @@ html.dialog-fallback-open { overflow: hidden; }
           </article>
           <article class="case-card" aria-labelledby="smit-title">
             <button class="case-media" type="button" data-gallery="analytics" aria-haspopup="dialog" aria-label="Смотреть статистику TikTok — SMIT TATTOO">
-              <span class="case-cover smit-cover">
-                <picture>
-                  <source type="image/webp" srcset="images/covers/smit-carousel-440.webp 440w, images/covers/smit-carousel-900.webp 900w" sizes="(max-width: 700px) 60vw, (max-width: 1216px) 30vw, 360px">
-                  <img src="images/covers/smit-carousel.jpg" alt="Портрет тату-мастера из карусели «Обо мне»" width="958" height="1197" loading="lazy" decoding="async">
-                </picture>
-                <span class="smit-wordmark" aria-hidden="true">SMIT<br>TATTOO</span>
-              </span>
+              <picture class="smit-cover">
+                <source type="image/webp" srcset="images/covers/smit-project-cover-480.webp 480w, images/covers/smit-project-cover-960.webp 960w" sizes="(max-width: 700px) calc(100vw - 52px), (max-width: 1216px) 45vw, 540px">
+                <img src="images/covers/smit-project-cover.jpg" alt="Портрет тату-мастера из карусели «Обо мне»" width="960" height="540" loading="lazy" decoding="async">
+              </picture>
+              <span class="smit-wordmark" aria-hidden="true">SMIT<br>TATTOO</span>
             </button>
             <div class="case-content">
               <p class="case-ident"><strong>SMIT TATTOO</strong><span>Продвижение личного бренда</span></p>
@@ -1107,7 +1095,7 @@ function attachImages(container) {
   }
 }
 
-const smitPicture = document.querySelector('.smit-cover picture');
+const smitPicture = document.querySelector('.smit-cover');
 const smitWebp = smitPicture.querySelector('source');
 const smitPhoto = smitPicture.querySelector('img');
 const useSmitJpeg = () => smitWebp.remove();
@@ -1215,7 +1203,8 @@ function openGallery(key, trigger) {
     return linkedImage(path, caption, imageWidth, imageHeight);
   });
   const layout = files.length === 1 ? 'full-slide' : 'gallery';
-  openModal(title, `<div class="${layout}">${thumbnails.join('')}</div>`, trigger);
+  const galleryClass = key === 'telegram' ? `${layout} gallery-telegram` : layout;
+  openModal(title, `<div class="${galleryClass}">${thumbnails.join('')}</div>`, trigger);
 }
 
 document.addEventListener('click', event => {
